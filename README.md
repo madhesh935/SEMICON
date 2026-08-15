@@ -2,6 +2,15 @@
 
 PyTorch restorer for **KLA Problem Statement 01**. It takes a noisy low-resolution grayscale semiconductor inspection array, suppresses speckle and Gaussian-like degradation, and writes a restored image at **exactly 2×** height and width.
 
+<p align="left">
+<img src="docs/readme_gallery/gallery_01.png" width="220" height="220" alt="128 to 256 and 256 to 512 restoration" />
+<img src="docs/readme_gallery/gallery_02.png" width="220" height="220" alt="Noisy input, restored output, and GT reference" />
+<img src="docs/readme_gallery/gallery_03.png" width="220" height="220" alt="Training-set noisy, restored, and ground truth" />
+<br>
+<img src="docs/readme_gallery/gallery_04.png" width="220" height="220" alt="Official test noisy input versus restored output" />
+<img src="docs/readme_gallery/gallery_05.png" width="220" height="220" alt="Example NoisyLR and ground truth pair" />
+</p>
+
 The evaluator is [`evaluate.py`](evaluate.py). It loads the committed checkpoint [`weights/best.pt`](weights/best.pt), does not need source edits, does not read ground truth, and does not download a model.
 
 ```text
@@ -48,19 +57,6 @@ All quality scores are the **480-image seed-42 validation split** (`128×128 →
 Sources: [`reports/validation_summary.json`](reports/validation_summary.json), [`reports/bicubic_summary.json`](reports/bicubic_summary.json), [`reports/official_inference_summary.json`](reports/official_inference_summary.json).
 
 **Verdict:** keep `weights/best.pt`. A smaller faster challenger lost 0.197 dB PSNR and 0.011 SSIM. Mean quality is clearly above bicubic. A small tail of extreme-noise images stays difficult; that is recorded, not hidden.
-
-## Output images
-
-<p align="left">
-<img src="docs/readme_gallery/gallery_01.png" width="220" height="220" alt="128 to 256 and 256 to 512 restoration" />
-<img src="docs/readme_gallery/gallery_02.png" width="220" height="220" alt="Noisy input, restored output, and GT reference" />
-<img src="docs/readme_gallery/gallery_03.png" width="220" height="220" alt="Training-set noisy, restored, and ground truth" />
-<br>
-<img src="docs/readme_gallery/gallery_04.png" width="220" height="220" alt="Official test noisy input versus restored output" />
-<img src="docs/readme_gallery/gallery_05.png" width="220" height="220" alt="Example NoisyLR and ground truth pair" />
-</p>
-
-Row 1: 128→256 / 256→512 restore · noisy / restored / GT · train-set GT check. Row 2: official test 128→256 · NoisyLR vs GT pair.
 
 More panels: [`reports/figures/`](reports/figures/) and [`reports/final_model_test_figures/`](reports/final_model_test_figures/).
 
