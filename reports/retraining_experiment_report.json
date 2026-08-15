@@ -1,0 +1,53 @@
+{
+  "verdict": "NO_CANDIDATE_APPROVED",
+  "split": {
+    "path": "splits/split_seed42.json",
+    "seed": 42,
+    "train_count": 2720,
+    "validation_count": 480
+  },
+  "baseline": {
+    "architecture": "RangeAwareLiteNAFSR",
+    "parameters": 956609,
+    "psnr": 27.869329127248292,
+    "ssim": 0.7489683585877321,
+    "lpips": 0.3007189181749709
+  },
+  "completed_candidate": {
+    "parameters": 335521,
+    "epochs": 20,
+    "seed": 42,
+    "patch_size": 64,
+    "psnr": 27.67266314747503,
+    "ssim": 0.737952285720825,
+    "lpips": 0.320541,
+    "psnr_difference": -0.196665979773262,
+    "ssim_difference": -0.011015986849907,
+    "lpips_difference": 0.019822,
+    "training_loss_first": 0.0854201009058777,
+    "training_loss_last": 0.05975639798733241,
+    "validation_psnr_first": 25.058623069206085,
+    "validation_psnr_last": 27.67266314747503,
+    "validation_improved_through_final_epoch": true,
+    "overfitting_reversal_observed": false
+  },
+  "new_same_architecture_attempt": {
+    "architecture": "RangeAwareLiteNAFSR",
+    "parameters": 956609,
+    "seed": 42,
+    "learning_rate": 0.0001,
+    "epoch_budget": 30,
+    "batch_size_8_result": "failed: Windows/PyTorch bad allocation during first backward pass",
+    "batch_size_4_result": "failed: CUDA out of memory during first backward pass",
+    "validation_metric_available": false,
+    "promoted": false
+  },
+  "protected_artifacts": {
+    "checkpoint_sha256": "10FE2F02EAA5ABEAFAA5050F8022D60282C03BF89AB864F871C51C41CE0A20AE",
+    "checkpoint_bytes": 3993611,
+    "official_outputs": 400,
+    "repository_checkpoint_overwritten": false,
+    "official_outputs_overwritten": false,
+    "datasets_modified": false
+  }
+}

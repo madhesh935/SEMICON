@@ -1,0 +1,5 @@
+# Minimal offline evaluator environment verified with the final checkpoint.
+# PyTorch CUDA wheels are resolved from the official PyTorch package index.
+--extra-index-url https://download.pytorch.org/whl/cu130
+numpy==2.4.4
+torch==2.11.0+cu130

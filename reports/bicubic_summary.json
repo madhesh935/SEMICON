@@ -1,0 +1,73 @@
+{
+  "baseline": "clipped_input_bicubic_2x_torch_align_corners_false",
+  "device": "cuda",
+  "split_path": "splits\\split_seed42.json",
+  "dataset_fingerprint": "cf110aa74b939bc359e747ffb526de6482c81abae57c722de2fbd3115a3516ca",
+  "subset": false,
+  "evaluated_images": 480,
+  "metrics": {
+    "128x128_to_256x256": {
+      "psnr": {
+        "count": 480,
+        "mean": 23.173148688792516,
+        "median": 22.62341665466281,
+        "std": 3.404555728190399,
+        "min": 10.232663231283329,
+        "max": 39.4213575514165
+      },
+      "ssim": {
+        "count": 480,
+        "mean": 0.5395103217384112,
+        "median": 0.575912988473432,
+        "std": 0.19847763755618245,
+        "min": 0.10635657816616678,
+        "max": 0.9574201801085472
+      },
+      "image_count": 480
+    },
+    "combined": {
+      "psnr": {
+        "count": 480,
+        "mean": 23.173148688792516,
+        "median": 22.62341665466281,
+        "std": 3.404555728190399,
+        "min": 10.232663231283329,
+        "max": 39.4213575514165
+      },
+      "ssim": {
+        "count": 480,
+        "mean": 0.5395103217384112,
+        "median": 0.575912988473432,
+        "std": 0.19847763755618245,
+        "min": 0.10635657816616678,
+        "max": 0.9574201801085472
+      },
+      "image_count": 480
+    },
+    "256x256_to_512x512": {
+      "psnr": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "min": null,
+        "max": null
+      },
+      "ssim": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "min": null,
+        "max": null
+      },
+      "image_count": 0
+    }
+  },
+  "timing": {
+    "total_model_inference_ms": 84.35679999638523,
+    "mean_model_inference_ms": 0.17574333332580258,
+    "throughput_images_per_second": 5690.116268286237,
+    "note": "Per-image interpolation only; CUDA synchronized before and after every timed operation."
+  }
+}

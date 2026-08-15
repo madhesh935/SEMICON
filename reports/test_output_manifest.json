@@ -1,0 +1,5240 @@
+{
+  "format_version": 1,
+  "generated_date": "2026-08-14",
+  "provenance": "Authoritative official-test restorations; all 400 were regenerated after the evaluator-only OpenBLAS startup guard and verified byte-for-byte identical without overwriting this folder.",
+  "weights": {
+    "path": "weights/best.pt",
+    "bytes": 3993611,
+    "sha256": "10FE2F02EAA5ABEAFAA5050F8022D60282C03BF89AB864F871C51C41CE0A20AE"
+  },
+  "evaluator": {
+    "path": "evaluate.py",
+    "bytes": 7605,
+    "sha256": "6D3A24B8F8A0C9641575EFDB32FC7D72BE9FD9F75D1BD3E5EA92B7C5123DCA7E"
+  },
+  "source_test_inputs": {
+    "not_included": true,
+    "count": 400,
+    "relative_filename_set_matches_outputs": true
+  },
+  "outputs": {
+    "root": "restored_test_outputs",
+    "count": 400,
+    "disk_bytes": 104908800,
+    "filename_set_sha256": "0BE077E6FE5338753159BFCB8633AA8A1669A9C74BF771DBDF625AFFBADD675B",
+    "shape_distribution": {
+      "256x256": 400
+    },
+    "dtype_distribution": {
+      "float32": 400
+    },
+    "global_min": 0.0,
+    "global_max": 1.0,
+    "nan_count": 0,
+    "inf_count": 0,
+    "all_finite": true,
+    "all_in_0_1": true
+  },
+  "files": [
+    {
+      "path": "000000.npy",
+      "sha256": "DDBF7DCCFF182AC6B3FF02563FBA23F8641F20437B57FEA72B518C01974399DF",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.015516813844442368,
+      "max": 0.9667573571205139,
+      "finite": true
+    },
+    {
+      "path": "000001.npy",
+      "sha256": "778769BC275A44D7F189D101080E4C6F5813AF0476209D611FEE86EDC7431A8F",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0035309973172843456,
+      "max": 0.9797956943511963,
+      "finite": true
+    },
+    {
+      "path": "000002.npy",
+      "sha256": "551FA7861984E3E201D444473F16F6B030C7DB349C7830B46B2AE31A4891A9DE",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000003.npy",
+      "sha256": "93B8682362D1EB7D04FAD2F0EC3964761053D34E1ED03669C197D2F5B888CB55",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.021755915135145187,
+      "max": 0.6874105334281921,
+      "finite": true
+    },
+    {
+      "path": "000004.npy",
+      "sha256": "81A47A49B0F5D60EC9C756F7714F96953C2273AE28158014B7BB40361EE0596E",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000005.npy",
+      "sha256": "DD03F40A04A913C2E5294961C103E1132CF781DFC4ACF3280FC4569DE843BE67",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.016210803762078285,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000006.npy",
+      "sha256": "419BD86E0EC59EFA18266D518F3D97621FAA24C253E44E46ACE2BEBB9EF50F49",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000007.npy",
+      "sha256": "3140D250A67CBD57F6B4612BF5328450304AFD7759E8E0469BAA25415BC025D7",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9535235166549683,
+      "finite": true
+    },
+    {
+      "path": "000008.npy",
+      "sha256": "0CB1C8AE3FCFF85181E4141A43E5A88385A134A9C940C88F7A5D6067E569579A",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9996083974838257,
+      "finite": true
+    },
+    {
+      "path": "000009.npy",
+      "sha256": "9C7463F939E1A86012F950AC0D8A56C1E2D4AABA01530B1AF521F7D5C36AC19B",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9632760286331177,
+      "finite": true
+    },
+    {
+      "path": "000010.npy",
+      "sha256": "8257FFAFFEBD4394BB3786153E1F7D035533526B9D3FE086CC0533BC5CECEC56",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9930629730224609,
+      "finite": true
+    },
+    {
+      "path": "000011.npy",
+      "sha256": "206F935344E21C172BF6DBF775EBD563AEA8BCD2A9289B65E0955A226E5903CF",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000012.npy",
+      "sha256": "6FC8EAD4A4C7EB422725501927010D7FB13EF78CE7B6D4968896D17541F22D80",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000013.npy",
+      "sha256": "8187071A712E1526C4AE452BF44539CB8BBDD1370DF08721A95AC0F68411B848",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.992189884185791,
+      "finite": true
+    },
+    {
+      "path": "000014.npy",
+      "sha256": "F84F843FFAE5F58DE31EE48EA4B5CBA55FC55E89357DDDEA8A14E7D4A50DCA4C",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000015.npy",
+      "sha256": "EB87A8B783C55BDB941E6721098C97808A7B9F2682E1CF9F58B803378C9986E4",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9635260105133057,
+      "finite": true
+    },
+    {
+      "path": "000016.npy",
+      "sha256": "DAB78F90D3ECC9CBCF6321E57F6D2A54E1837F14F967DA87F966324BC52D9356",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000017.npy",
+      "sha256": "FF6C62A9DE730334E5B1E990ED55E7050FE045AC9B9E2FAAF81E4337279743CE",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9897680282592773,
+      "finite": true
+    },
+    {
+      "path": "000018.npy",
+      "sha256": "FD7FBAC24E3E380B25E5BAE5ABE22F2E04C3CC28197372B7DBC038844A2B64DC",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.059310056269168854,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000019.npy",
+      "sha256": "98C4AC9419D5BD3293F1110AA4EC680AC0A55240F2C0899CD6ADB6FF798C683E",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000020.npy",
+      "sha256": "D5F73B7DDBA145AE752D640625DC6205612987B38E524B2BFDC63544F0AFA6B0",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0019797554705291986,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000021.npy",
+      "sha256": "EEFFE4E9DC835555E74B13AD0D93014DB4D55DE4B1430D2BC6AD680AAC83E293",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.015337405726313591,
+      "max": 0.977685809135437,
+      "finite": true
+    },
+    {
+      "path": "000022.npy",
+      "sha256": "06FA3A451822F18DC1B71B7969BA4064F147D9A25037661AF5B7B0D891154D0D",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.009700372815132141,
+      "max": 0.9988727569580078,
+      "finite": true
+    },
+    {
+      "path": "000023.npy",
+      "sha256": "141F929A6E2C09F7A52002944D18CE75B5DC0E072D8DE26B44093886827BE478",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.987798810005188,
+      "finite": true
+    },
+    {
+      "path": "000024.npy",
+      "sha256": "3BB2813EABBAC667B848DAE0A744CFA630B2B33081A8C91903A21E6CCE28FD12",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.007395762950181961,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000025.npy",
+      "sha256": "DCE951B914E797A8BBFEA3585D3EF8F54CD4C42D4A1D5DCC1FD14644041E39C0",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.01390160620212555,
+      "max": 0.9981355667114258,
+      "finite": true
+    },
+    {
+      "path": "000026.npy",
+      "sha256": "C17E1B200D072183F5A54A08E8211C73B70B2E2FA10764DC7351DFD58915BB94",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9010583162307739,
+      "finite": true
+    },
+    {
+      "path": "000027.npy",
+      "sha256": "59362B66F4E5F1CFCDD6D33495EB2E6BD8C59B1C3534DEDB4D5E8874078D2AEC",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.02777404710650444,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000028.npy",
+      "sha256": "C494C8239D51188F4BEAB4DB4C3E7474E44BD6FA77EF9D3356404F92FD410E8B",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9446766376495361,
+      "finite": true
+    },
+    {
+      "path": "000029.npy",
+      "sha256": "F88332AC18AAC24E96BD8ADFB6B6545C3FEC4608481FC5C6F946D9F437F9845A",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000030.npy",
+      "sha256": "BD15B8A4402A95FD90D77EA8ACCF5B8B146A93880CEA84E548CC3E974A47EAD8",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000031.npy",
+      "sha256": "9F81429C7526E116E5C4A28D8369464428A803967D228206796D36B30874EC6E",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000032.npy",
+      "sha256": "C36B36F69B09DCFBDB8749EC546E0BD146684DC62FEA429A312BB2759D25F442",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000033.npy",
+      "sha256": "8A7259B99724D19548D6601F24B0F7543F87356576B61CDA19A2E68F15272F78",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.05080913007259369,
+      "max": 0.9105908870697021,
+      "finite": true
+    },
+    {
+      "path": "000034.npy",
+      "sha256": "650A4A502D4692FFA6DF98D328747F5AE59D2C33DEE24A89D92A2C5B95D22823",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.013922251760959625,
+      "max": 0.9829578399658203,
+      "finite": true
+    },
+    {
+      "path": "000035.npy",
+      "sha256": "F012C4D418856369470692641A2D95BA26A706AA102F76A054DB61E9C35324FF",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9794505834579468,
+      "finite": true
+    },
+    {
+      "path": "000036.npy",
+      "sha256": "D207CDE20DC22974F081EE6B8890108193700E9C984098096D81F3778955D09E",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.047035470604896545,
+      "max": 0.9496251344680786,
+      "finite": true
+    },
+    {
+      "path": "000037.npy",
+      "sha256": "2F0C96DE258B3D4C63E638C8F273402E5AFAE2CF7AD2EFD9E19EA50A6EC0A4DE",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000038.npy",
+      "sha256": "8F2A63C7DD179DD6BF5791E9E51799BCF27F1D4F983C5ED482295DAB5D9499D5",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000039.npy",
+      "sha256": "5B38C28B3B14B1E2D37070BDBD445F29F6F3D60CED5161A904362C9C17BD868E",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.01796879433095455,
+      "max": 0.9421827793121338,
+      "finite": true
+    },
+    {
+      "path": "000040.npy",
+      "sha256": "8420E020B927FE64130AE0D1E287351E2AFB4965074DACDDFAFB0A2416AA9121",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9876195192337036,
+      "finite": true
+    },
+    {
+      "path": "000041.npy",
+      "sha256": "E3019D2303C5B2A70B9C830B9B48ABCDE820CC35503F93E5610D8EAB7E60841F",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.016944866627454758,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000042.npy",
+      "sha256": "4D77BE8E38D64D67872FA751489CF231F9FF92A2E5CA7C14DFC160343AE46141",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9370525479316711,
+      "finite": true
+    },
+    {
+      "path": "000043.npy",
+      "sha256": "0B24E43C3F9747576FC8C7DB86A71DEB3A6BF1424E2B178E81E3B1094EBCE8B8",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.011043060570955276,
+      "max": 0.9673542976379395,
+      "finite": true
+    },
+    {
+      "path": "000044.npy",
+      "sha256": "D621B778CEEC14B7297DC1BED411CE668DBB792E74FB804D8A99999E32A4FBA0",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.8711632490158081,
+      "finite": true
+    },
+    {
+      "path": "000045.npy",
+      "sha256": "D950818411189FD7CB7EAF016C1818B288B4AE57730D0D53E7930AE152CF51BC",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000046.npy",
+      "sha256": "6022B3177C8BD0A3FD2F57E8AAA96D7827A28EB980B1BA774C20ABE9FD2CA33F",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.980948805809021,
+      "finite": true
+    },
+    {
+      "path": "000047.npy",
+      "sha256": "184608F899CED24AF3C66C07DFA5CBFFEE5F32F54134F997E26225D0DC1BBCA1",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9428050518035889,
+      "finite": true
+    },
+    {
+      "path": "000048.npy",
+      "sha256": "5D30062257CEA6B9619FE5A45C91928F9257A3FADF084F71697C77D6EA11647F",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000049.npy",
+      "sha256": "D238144C1EA8EF5F87D2278A4FA2FBC9DCA5EB3501F261A7D9E0B1A0D8513F86",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.8113222718238831,
+      "finite": true
+    },
+    {
+      "path": "000050.npy",
+      "sha256": "A6809FC8BFD273B3F9F33ECA81796A2301C0B2F84B96F3898FFCA982DC39DBE6",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.027732864022254944,
+      "max": 0.997919499874115,
+      "finite": true
+    },
+    {
+      "path": "000051.npy",
+      "sha256": "AC39AEB8D01EC909B51665F9433C11A02BDFC0180EA83D2FD190F7EFAC47CCD8",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9769447445869446,
+      "finite": true
+    },
+    {
+      "path": "000052.npy",
+      "sha256": "AB4552C0DECEAD580709A77F385ED3C81BCE214BF82F98BACC84466F6F2F0282",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.02352711744606495,
+      "max": 0.9750832319259644,
+      "finite": true
+    },
+    {
+      "path": "000053.npy",
+      "sha256": "6D01C2F052A7B4EDBC24D5E890845362A06AA90D43897F6D152EEE6E7C6129E9",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9861374497413635,
+      "finite": true
+    },
+    {
+      "path": "000054.npy",
+      "sha256": "E034C9E4593E6D30DAC89E0968B23F253BA36CEB7963F64132DF4B3DA32F9381",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.7858861088752747,
+      "finite": true
+    },
+    {
+      "path": "000055.npy",
+      "sha256": "A2348B450359E16AA2867C75EA470A3D71E51ED7E23028362A2C489F90076228",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000056.npy",
+      "sha256": "5B95BDE115517CC38F7215ECBBB9947440F5E5CA3E0C0A66CFD32EBBCFB07339",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.004245956894010305,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000057.npy",
+      "sha256": "B8D030F6DE0F47053A069D5E384B5DEB8B8DFE5A679330A65B21BFD300B86676",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000058.npy",
+      "sha256": "6CBBF67D88A84A2FE16FF4C1D4BD4897864CD40B904931C5271EB6BE47132FB2",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9799290895462036,
+      "finite": true
+    },
+    {
+      "path": "000059.npy",
+      "sha256": "8DC830373BF596CDFCE4B2ECB082F9B1DD6D2D81228C9A9D85CA049C8D56D8D4",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9822806119918823,
+      "finite": true
+    },
+    {
+      "path": "000060.npy",
+      "sha256": "0017040AFC6A003A8E5105AD9562151D340B4CEEFE456E8709A0C1BD63471FA3",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.00935695692896843,
+      "max": 0.8696896433830261,
+      "finite": true
+    },
+    {
+      "path": "000061.npy",
+      "sha256": "CECB90E59BFA445863D425D9A3136BF2B3AF3D98E755A90FAC23978EAA171283",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0016428455710411072,
+      "max": 0.9904943704605103,
+      "finite": true
+    },
+    {
+      "path": "000062.npy",
+      "sha256": "9D39C27C4CB031F5268CD23C69DBDEB27C60F193EAAFCD91D92161B0554704E6",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000063.npy",
+      "sha256": "152F1001F8A6A1D680E288CE9C44EFBEB6213D5FAC4ADEF50488D81431F7715E",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000064.npy",
+      "sha256": "CB47BDA09E84E4D3862688DF586256E839B58ED69E8EA2D8BAEB2D43CB1DD093",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.022910110652446747,
+      "max": 0.9661368131637573,
+      "finite": true
+    },
+    {
+      "path": "000065.npy",
+      "sha256": "719F54DDDB25B4E1B356306EE8CE8CF1384AAFA8F200B20CCEC5BA3FF00FC1E8",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000066.npy",
+      "sha256": "04C751B379C21195C74DB2E83D695298DEDD91A5193E24746522EEDD5A2AEF60",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.021690530702471733,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000067.npy",
+      "sha256": "1EA95C65181A281B30054F969AB00F7CB02DA45EED1B5E388FF967FE55A99F52",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000068.npy",
+      "sha256": "902FDF23A16F4B7B6B6DD8AC77601B883BE923D8ECB9137C67F572592B1DEAB9",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9448997974395752,
+      "finite": true
+    },
+    {
+      "path": "000069.npy",
+      "sha256": "A6A75692C1E8DA42F888A2C79C78EB324DDD9EBC964BAC76E43157093683D5FD",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.027077049016952515,
+      "max": 0.6224401593208313,
+      "finite": true
+    },
+    {
+      "path": "000070.npy",
+      "sha256": "BEB6C5EB6C6E270756BFD4EDD883197D642745906C53110396EE06BFA1DABD13",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.03422432392835617,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000071.npy",
+      "sha256": "25099E49017BE7B87F2D41616B92617EF0902C24629C99301CCD479759A106E6",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.007669229991734028,
+      "max": 0.9876784086227417,
+      "finite": true
+    },
+    {
+      "path": "000072.npy",
+      "sha256": "EFB4FC0EDBD04609A22D8825E39F905C3C0C9180C8F64D9F52F9B3BD5BB108D7",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.020960383117198944,
+      "max": 0.9621521234512329,
+      "finite": true
+    },
+    {
+      "path": "000073.npy",
+      "sha256": "0F11882FA11A7CC64C30EEC18EB20C0719A4E8802CED6E8850FD565A085BDBE2",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.08772408962249756,
+      "max": 0.7847004532814026,
+      "finite": true
+    },
+    {
+      "path": "000074.npy",
+      "sha256": "1C8894BB00DA916BECB4BFB1F04ACD49586252305E0CF262CBD9607A68D28E57",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9564458131790161,
+      "finite": true
+    },
+    {
+      "path": "000075.npy",
+      "sha256": "E6341EDE7B038DAC1843929B3A323CC144E96A3BC0BF8A8B7CC95536DD76043C",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.10798890888690948,
+      "max": 0.9976010322570801,
+      "finite": true
+    },
+    {
+      "path": "000076.npy",
+      "sha256": "02B317C51BBBB959B1BDAA09133D60A35D503DBEC7FFA3B6B6F1C9905CB1FA56",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0032342036720365286,
+      "max": 0.9701524376869202,
+      "finite": true
+    },
+    {
+      "path": "000077.npy",
+      "sha256": "B9A999A221BA21870AC30E47386326F75C6F79ECDD4A833563DF3186B2E429C9",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9612016677856445,
+      "finite": true
+    },
+    {
+      "path": "000078.npy",
+      "sha256": "44B84261C18AA2CADAADCBFD6E04532483768F8EF989B7484BABA368A03B33ED",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000079.npy",
+      "sha256": "4E712A2140070BBFA69E8C4E5E97D22F167FD672C2176167358532ACB827DC06",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000080.npy",
+      "sha256": "8363AA77A9B87DA85664C9EF1B0EDDDC15C2EBED230F5A3E64BB7204FEDD6089",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.014882616698741913,
+      "max": 0.9999399781227112,
+      "finite": true
+    },
+    {
+      "path": "000081.npy",
+      "sha256": "35B05082A1B614F9D4879E5F5661C6D693E3CA35E3DD290C86A239FDDA444AB7",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.007824711501598358,
+      "max": 0.9776746034622192,
+      "finite": true
+    },
+    {
+      "path": "000082.npy",
+      "sha256": "D4183249D33A59950E451B33CCF53C9EC15459037D97229594FF6182023FBC04",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9220371246337891,
+      "finite": true
+    },
+    {
+      "path": "000083.npy",
+      "sha256": "037AC6B2605B8043C189DCEB11A4A75AC09B8DE90DE4DFD162BB1EC80CC9FEB4",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000084.npy",
+      "sha256": "3AFC58B8C25C0D27854BC09A3D7E577C708846ADA6B86FF6E51A0FFF89DB1834",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.11609844118356705,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000085.npy",
+      "sha256": "A31A3E62D2F44965E0620587DE6525239F03D800B3506D8E51931F9EFF28C523",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9683274030685425,
+      "finite": true
+    },
+    {
+      "path": "000086.npy",
+      "sha256": "80E29DC93FEDCD09D9D3D7ACCE83A31CA7A270DC831D1F631797A261E6AD53E0",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000087.npy",
+      "sha256": "14ED7074D5CF61D814D8F03CA2E9017FDFFCF15200E50CC3378653B2480894A0",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000088.npy",
+      "sha256": "3C6E70F73D6C76AA0EE1683EF54B45A5B71057AE6C42AAB4EF700B38BEDBCE90",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9464269280433655,
+      "finite": true
+    },
+    {
+      "path": "000089.npy",
+      "sha256": "43F0F12204DB38C6BAE028494B4FFC8238D7FDFD654AAD460D3ED61EB99353A6",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.8500816226005554,
+      "finite": true
+    },
+    {
+      "path": "000090.npy",
+      "sha256": "B98BA70E210F564170EC4A0801D80E3F27AF3CE7A9302E1FD251EB8DE05897CE",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.008215358480811119,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000091.npy",
+      "sha256": "29C63595CEAD29AF7B7944A260419B92D5ABE5567285E39A319D5DED0DB8A185",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9290077686309814,
+      "finite": true
+    },
+    {
+      "path": "000092.npy",
+      "sha256": "AE55DD8701810A5AB0DFDE7F39068B601882FE8A8B6309C2E9FE52D923826BC3",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0010938271880149841,
+      "max": 0.932287335395813,
+      "finite": true
+    },
+    {
+      "path": "000093.npy",
+      "sha256": "E526F23588A34889AC3D507F292BD21EB06465A91BAAF96B72806AE5AD7EA6B6",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000094.npy",
+      "sha256": "90DBE0098994C873D183D00ADE9A171F41871C8A3264BE0AB454A4EE930C0FD8",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.03475462645292282,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000095.npy",
+      "sha256": "6BA5E5662BDA87AC73F2388A719805EF75970ABE01353EAA4C3B85B1394391DD",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9648736119270325,
+      "finite": true
+    },
+    {
+      "path": "000096.npy",
+      "sha256": "0CCC2B48902AC90E52B85DF87B8A6968906F13739F53F97D6915DB6A92B70DA9",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9926823377609253,
+      "finite": true
+    },
+    {
+      "path": "000097.npy",
+      "sha256": "B3EAD9F0B01B78A87BF4F7A708B20BCF0C4288C76F44090C8B722D41CE0C590D",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.16245248913764954,
+      "max": 0.9747369289398193,
+      "finite": true
+    },
+    {
+      "path": "000098.npy",
+      "sha256": "E83A743487DF8238E5F7D21354E33FA8F4BCA182946B6AA15AFF324D9DFEE3B9",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0003976970911026001,
+      "max": 0.7733737230300903,
+      "finite": true
+    },
+    {
+      "path": "000099.npy",
+      "sha256": "CDD16BCB7CD84026ABA4260BFDCFD4A6466E5B4ED43643BFEF2255BFA41F0D36",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.8258891701698303,
+      "finite": true
+    },
+    {
+      "path": "000100.npy",
+      "sha256": "EE4A2601E1F7F0421463941B33555A1AE4BB56DAD8005783F905B7D25F10D8C4",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9674695134162903,
+      "finite": true
+    },
+    {
+      "path": "000101.npy",
+      "sha256": "E162080DF6335E7CD7A6ABBD9C0113D85B57B18C033FB19EA80A686059D37780",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9298292398452759,
+      "finite": true
+    },
+    {
+      "path": "000102.npy",
+      "sha256": "8048388E4AAFAA66AE88DFCD210E71FEE7AB49C1EDF3669CA3CD587D0445C2AA",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.07733854651451111,
+      "max": 0.9073891639709473,
+      "finite": true
+    },
+    {
+      "path": "000103.npy",
+      "sha256": "0F7B7E25FCAE2C9436271B359B01569A5170D48F259F74765F06451033FD2C9E",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000104.npy",
+      "sha256": "F7921A466E83D9BC23D5EEEFF24B52448E2288B8DB9A184208B9AE5913AEDF76",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.8670581579208374,
+      "finite": true
+    },
+    {
+      "path": "000105.npy",
+      "sha256": "201CE50E6E5A9F1309BCF4DC8945E133D92844655E8F6DBFC98A40AA57A60F76",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000106.npy",
+      "sha256": "658B357CB6B4AE6C4323B3FE1EFDA6AD4E1831B93F29F3E2B3171765F50CDA57",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.004327287897467613,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000107.npy",
+      "sha256": "F7FEB157CD897CA308F0D2F48AA3B5A851A52651E914817BDFD0414C332BEF41",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9759740829467773,
+      "finite": true
+    },
+    {
+      "path": "000108.npy",
+      "sha256": "DFA326FAFCE4814FF525481ED597AFBCD17D92D1D5DE7F4A71FD6324F4FCC228",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.028767665848135948,
+      "max": 0.934647798538208,
+      "finite": true
+    },
+    {
+      "path": "000109.npy",
+      "sha256": "37C4822F2ED3EC46927DD8C50755418D50484910A8BF8CD425AE8DD3F8C91765",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9861700534820557,
+      "finite": true
+    },
+    {
+      "path": "000110.npy",
+      "sha256": "DF7507A50E18EF920701E0A2097A091D99C18563C7F45245E644D539346294D7",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0025870460085570812,
+      "max": 0.8604847192764282,
+      "finite": true
+    },
+    {
+      "path": "000111.npy",
+      "sha256": "04AD1D87B7BAAE0DC03E43B5A9C821F0FA35AAE62FFD78EA2F3D72E5ED8F5633",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.02536296844482422,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000112.npy",
+      "sha256": "6FA6AA0E5AA8C7BC085A2F4478D9B7708D9D6CDA3F1E4AA73CB41DE6CF5CE70F",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.02108129672706127,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000113.npy",
+      "sha256": "2E785BB3BA7CF3706D2A5F57FF5E62C95F8DE3E336B4DECB1D19C06E4C5D1FF7",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.04728845879435539,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000114.npy",
+      "sha256": "60787D0A38DEDA16437D3641926931CA9FB5E9CE131310A9373AA00A255DBD74",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000115.npy",
+      "sha256": "12AD3C091F22EDB17B80CB5E102D5868D1B57AAF10463AD067B2BB49028BF22E",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000116.npy",
+      "sha256": "21E5AF8561DFB199107705D826FDAD43BF4E019FF11F550D0DE811836EA7B609",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9863346815109253,
+      "finite": true
+    },
+    {
+      "path": "000117.npy",
+      "sha256": "14425CE38F167448C7240A7B1549008BFB253CC39A744803E323C5F7D9B16062",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.001479028258472681,
+      "max": 0.9940056204795837,
+      "finite": true
+    },
+    {
+      "path": "000118.npy",
+      "sha256": "B09BE6C54E025A8F82B1B97588739A8103BAA083C3E77DFBB809D2E5C6E2E2AA",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9740955829620361,
+      "finite": true
+    },
+    {
+      "path": "000119.npy",
+      "sha256": "A4D3DD55C89BCE224D76C3BFD5A6273C2AC4BA766FF7596996173CB9239E8CFA",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.007829510606825352,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000120.npy",
+      "sha256": "EB38B69D90A01A83C18A5DC61CF405BB31B0F38A71AD7F3567B1C171DA0E0973",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000121.npy",
+      "sha256": "F0052991F011A2ACE5992AD092A9B5D2D3C8EF9A9CE282CE4B8CD5D8ECB0224A",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000122.npy",
+      "sha256": "F8C4A752CAC8127C88F16BF05FBAE7CAD2B9BE0B17FE437F68CC587F2DD57AC8",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9396874904632568,
+      "finite": true
+    },
+    {
+      "path": "000123.npy",
+      "sha256": "2992E8C938A7424BE0B6E0EA3EF8466BBAA2DDFFFB3948540192C35CEC083F3A",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.03160253167152405,
+      "max": 0.9168390035629272,
+      "finite": true
+    },
+    {
+      "path": "000124.npy",
+      "sha256": "C6688EEE49B5918B1846336D6697E32BB28740883AE0C8DF486648814A3C8359",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9314174652099609,
+      "finite": true
+    },
+    {
+      "path": "000125.npy",
+      "sha256": "8AA6FD2C224DE2B2A5845B1A9B23283E64BB4E8EF3794F8425A7BA00E8504CC8",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.021126333624124527,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000126.npy",
+      "sha256": "25137F3F281E80BC2A37139A84517FC2BA6305B78A4C55748CDE2700DA0D72F6",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000127.npy",
+      "sha256": "3779844B64F3C29A74E68A063CB2054BB82437CE8106DA18E06AFD9740DB3A04",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0074134827591478825,
+      "max": 0.9972572326660156,
+      "finite": true
+    },
+    {
+      "path": "000128.npy",
+      "sha256": "E15877E4539DE1F20EFFDB45A309BF97DC27674BC3B6891FC1203D58C23B5802",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9608688354492188,
+      "finite": true
+    },
+    {
+      "path": "000129.npy",
+      "sha256": "FA4356F99ADD922B8C2C5E2583D152AFE7D728A6305C82676C032D93DE76F73A",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9575831890106201,
+      "finite": true
+    },
+    {
+      "path": "000130.npy",
+      "sha256": "78A44A34EA10B7DD988FFCD9F7B5735CD817F9FD9259DA46974BA1467EC673C1",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.018283389508724213,
+      "max": 0.896756649017334,
+      "finite": true
+    },
+    {
+      "path": "000131.npy",
+      "sha256": "752D588F5A997CB3052308694A0F2A36366024CFF2F6AC060C7230946265C246",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000132.npy",
+      "sha256": "20EEA8412B947CBABFF7C4EDFE30E76651D519BFF253D155A59D37EE24AF3027",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9869935512542725,
+      "finite": true
+    },
+    {
+      "path": "000133.npy",
+      "sha256": "59D1F7D9EBB76A962D09B118303167D57E367FA6B4DCB4C272526707DDFAA417",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.8666300773620605,
+      "finite": true
+    },
+    {
+      "path": "000134.npy",
+      "sha256": "5DC0003C959568DDFF225CB71858F92FCA9484116BA1EB4533EE603DFD59356C",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.005021664313971996,
+      "max": 0.9931603074073792,
+      "finite": true
+    },
+    {
+      "path": "000135.npy",
+      "sha256": "3C2F4C5EDDCABB8D818F1B52125CDC1A8A644B6A4F697DCB578FE4131DB587C7",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0021272446028888226,
+      "max": 0.9773305654525757,
+      "finite": true
+    },
+    {
+      "path": "000136.npy",
+      "sha256": "30383D0819B4FF51D41A87FFF41A7CA768974F1CF116366FB91EFCBAB40353E6",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0006700290832668543,
+      "max": 0.9745733737945557,
+      "finite": true
+    },
+    {
+      "path": "000137.npy",
+      "sha256": "D38BE9235CD83AD14A07DF3DF5C7A994576E1ECDDEE8911EB87B6AD4F1D68C57",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000138.npy",
+      "sha256": "9A761D2A0106F746B74A2F9A039CC1D0F302AD646AD9EDE42F18616A47A98C12",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0836721807718277,
+      "max": 0.7832750678062439,
+      "finite": true
+    },
+    {
+      "path": "000139.npy",
+      "sha256": "1C832285175ADF6E72B13ACC354B7867F84F6684F02AC8F086223DBD0BAE0E25",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.012017196044325829,
+      "max": 0.9151413440704346,
+      "finite": true
+    },
+    {
+      "path": "000140.npy",
+      "sha256": "616A6E5896BA7D3C94158383C1D1CF834B3F1A9DDCF7FDB421594A1F59D4725B",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.009336651302874088,
+      "max": 0.9896800518035889,
+      "finite": true
+    },
+    {
+      "path": "000141.npy",
+      "sha256": "808BE3C9197C2AB01A5B4A786AD6194473CC6016FC21B9E542E6EF2922B6F12B",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9528359174728394,
+      "finite": true
+    },
+    {
+      "path": "000142.npy",
+      "sha256": "7D7F7F033F8482EF1520F5CCE07F451C23F2DCEFBB9591976D912C3AF702CEE3",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000143.npy",
+      "sha256": "9B917F93F073B96325E4125FB25C43FFBD638E6545706D6F1815463F1161B6D1",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000144.npy",
+      "sha256": "08292E130C38CA445B3DF6306B9DA6E18D9E5BAD2115889A246912A9FE252C0E",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.03887452930212021,
+      "max": 0.9039807319641113,
+      "finite": true
+    },
+    {
+      "path": "000145.npy",
+      "sha256": "6A50910C312CDE229DB9CE61C310B37D930B92969F1E28924E6B83C6AE673478",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.01436043344438076,
+      "max": 0.914284884929657,
+      "finite": true
+    },
+    {
+      "path": "000146.npy",
+      "sha256": "919093D1B7747FDA65BCAC438DA0D4F55FC1C55C94FFF0C056492280BA12C2B2",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.967139720916748,
+      "finite": true
+    },
+    {
+      "path": "000147.npy",
+      "sha256": "D21ABEFE5BE4691C5A8763C8213C7506DCA97FBE5D7483D2F9693DC7B46FB361",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9850162267684937,
+      "finite": true
+    },
+    {
+      "path": "000148.npy",
+      "sha256": "2E960BA2E1E7BF6C6B6B96107891C6B76CE447EE25B9B19D2CAEA987184C4840",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000149.npy",
+      "sha256": "5E9604BB1215A5599F5363FF748B86C2624E091B87184A8AC6F2A33D19C8537E",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9649636745452881,
+      "finite": true
+    },
+    {
+      "path": "000150.npy",
+      "sha256": "5434863FA2FFFC1872943D34C1C36EF2A4D25DCCC8EF32F60C42ECB7C72941F9",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.025668703019618988,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000151.npy",
+      "sha256": "7BEE5393C6D3106A0FCB3C002B54F98EF7BE9B630B763EA792E569ABEDCDBAA2",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.007373111322522163,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000152.npy",
+      "sha256": "F4996454D3B27D6064CA603D5D511A9F66EA0445B3C11204F74698744CBD1D9D",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.01370600238442421,
+      "max": 0.9796329140663147,
+      "finite": true
+    },
+    {
+      "path": "000153.npy",
+      "sha256": "E412E717EBA4D3BE61413119A59F5F335CE903EE73522D65485C640B6C532855",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.04105336591601372,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000154.npy",
+      "sha256": "616720A92BA6E1B6ED18FDF9EA296B09CADB774A2BF2490B613B788A68D82C3B",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.05932817608118057,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000155.npy",
+      "sha256": "4A1093A9DA81E3E4CB7C7B12EEFFF9A8F1D9F6E5696AF563F4EF4E62F5899FB8",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.002505466341972351,
+      "max": 0.8988863229751587,
+      "finite": true
+    },
+    {
+      "path": "000156.npy",
+      "sha256": "74F741FC5DAC82C3936F2E374D4D171B578B50E1B995370E638E18E76213A396",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000157.npy",
+      "sha256": "48F9F806F14A3BB7A8B27BE3180B82BD1DAF455586591F70795CAE520648E0C9",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000158.npy",
+      "sha256": "B87AF0BA5BD83FCC56290782F9D99ED3A0047D95E8B49F2572792C28A162B91D",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000159.npy",
+      "sha256": "0192B9C23DB32B604C6452014D89E712FA3734845554F6B15F7125875C18DA29",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.8730034828186035,
+      "finite": true
+    },
+    {
+      "path": "000160.npy",
+      "sha256": "54768B6C5CFB82CDA119A2634230C4767268A3B3D58312F4D16D7AB07EB5CC4E",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.08180658519268036,
+      "max": 0.931961178779602,
+      "finite": true
+    },
+    {
+      "path": "000161.npy",
+      "sha256": "C0F35E482C04BAAD288736DCC6F58C7E91143C63ADCE44881B2667F09DCAD316",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.010177797637879848,
+      "max": 0.9573181867599487,
+      "finite": true
+    },
+    {
+      "path": "000162.npy",
+      "sha256": "42E7C0DC03AB3FFAEA4793BA9950C546732418C7ED6F36698D9153CEBFD7DDC9",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9535213112831116,
+      "finite": true
+    },
+    {
+      "path": "000163.npy",
+      "sha256": "98DD6C2C24B64376597DD8B0D1D2A5DD7D47A66A3313DED54183D5B82ECB6D70",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.00344529515132308,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000164.npy",
+      "sha256": "EE70A65F5FCC864C6F30BF6E08876199E23464E41A33AE5C43DC3B5AFDF886F1",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9787560701370239,
+      "finite": true
+    },
+    {
+      "path": "000165.npy",
+      "sha256": "A0A3FD9FB7815760F3710308CFBDF6B54AAD06F7A00A3EA096932C2E167C6BE5",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.012120522558689117,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000166.npy",
+      "sha256": "4BCB5EF679016040751A1DF7DE268FBC1C36C02F49BD6EF6D0375F08ECA2044F",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9378758668899536,
+      "finite": true
+    },
+    {
+      "path": "000167.npy",
+      "sha256": "218AF59CBC5FD02B57E6F701F89577886ADD3CCB618B514A25B429598A0AB33C",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000168.npy",
+      "sha256": "93CFC9423D6E324E2030F8DC0A78F6FC2B717E52B7F99BE24591529D2919F569",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000169.npy",
+      "sha256": "4D4679A89352C2DC5328377FDD7E273BFA17B56BBFFDE4AA9236287D9A98B2A1",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0019001569598913193,
+      "max": 0.9194297790527344,
+      "finite": true
+    },
+    {
+      "path": "000170.npy",
+      "sha256": "46B1D3905F1B054217F76CB2615084EF769758B053AD052F9A3DD4C750AF7307",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9829897880554199,
+      "finite": true
+    },
+    {
+      "path": "000171.npy",
+      "sha256": "FB3DC67BC264601C3C880CFCFC2C725A22B06B90C0D2E6696A03C5E91131B870",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.977534294128418,
+      "finite": true
+    },
+    {
+      "path": "000172.npy",
+      "sha256": "E72EF07C57ACBDED3E928C7B260ECB597B715ACB31E0E6F8D15F7DD13077991E",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000173.npy",
+      "sha256": "B60DA2A6AE9E23F39E107BB948ED5B6DC8AD83A26F8757CB57A4AD925CB45E73",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000174.npy",
+      "sha256": "15E1E11DE56D008C89CA00B846618364AD4405A2C640A60953B5235E74246454",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.004335053265094757,
+      "max": 0.9456894397735596,
+      "finite": true
+    },
+    {
+      "path": "000175.npy",
+      "sha256": "EBBDF4F8E68C9FC491910DF74905AD48F070EEB166CA97188F80BD6F020248F3",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9517454504966736,
+      "finite": true
+    },
+    {
+      "path": "000176.npy",
+      "sha256": "6E19AB947D3BA9AF4E378ABE805F50C0CB0BE4D494F30622CFEEA94935D00317",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000177.npy",
+      "sha256": "7272296FDFD6A3AC43AF86FE63EAABF3661243B423DE42F6F12587EB3636E6F3",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0059356894344091415,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000178.npy",
+      "sha256": "89C8DBC378F6D5713E02B6435497FFD79D5455E3FBCAC3AB8C5309B4E4A9BDAC",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000179.npy",
+      "sha256": "EDE91CA5E3ECE22042377A8CACE82E2F8AEB4689290320CE308EB123BF7B731D",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.05493658035993576,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000180.npy",
+      "sha256": "4108178373505555803513DD81DB5260957AA2602D8A5FEFED0388517DA440BA",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9827940464019775,
+      "finite": true
+    },
+    {
+      "path": "000181.npy",
+      "sha256": "8FF94DD994FE1B6EB59E8FB3AA129183BE3C1E382BC890540F74A0C358615B6B",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000182.npy",
+      "sha256": "83066A5FC1ED6D9C63927AAADEFFDE3BED9DD29631098EADC85D8494ACE46718",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000183.npy",
+      "sha256": "B410B098339D6897DB4E57661F7FEE40F02142721C5091310D6519995EFB117A",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.09299169480800629,
+      "max": 0.9676899909973145,
+      "finite": true
+    },
+    {
+      "path": "000184.npy",
+      "sha256": "EA805D0AE967573D8F356FAAF887053BE4D7B18E6CBE683E65CA429CF8AEF43F",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.011283104307949543,
+      "max": 0.8486413359642029,
+      "finite": true
+    },
+    {
+      "path": "000185.npy",
+      "sha256": "39FEB87AD3D5EF3323225E98654FA82CE98FC74B6A7E63B623361E35782EB97E",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.8393951654434204,
+      "finite": true
+    },
+    {
+      "path": "000186.npy",
+      "sha256": "08ED70133C4024D5B22A8AE0CD28CE8FDAAC4B23E2382F55E2170B06D18EB55D",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000187.npy",
+      "sha256": "886CAD0DAF0ED13755B418EEBDC4D080DBBFF0F88F1C3803A513E5F1CDE29372",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.02931854873895645,
+      "max": 0.9844260215759277,
+      "finite": true
+    },
+    {
+      "path": "000188.npy",
+      "sha256": "C89C800F9C93AF8F2C9CD06B3597FEDB655A82E05D62B2A6262E8C704E7C5E8E",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000189.npy",
+      "sha256": "CC4751F388EC0A811E2A9DA37FE14616D81E075C9F467A2BD82FA98FC9AE60F1",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.025885872542858124,
+      "max": 0.9890226125717163,
+      "finite": true
+    },
+    {
+      "path": "000190.npy",
+      "sha256": "B1BCC3DD8F3E721D99707D44EA9C9F5E3119B89CA88FCB81E3BE46599891F74C",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0014803921803832054,
+      "max": 0.982494056224823,
+      "finite": true
+    },
+    {
+      "path": "000191.npy",
+      "sha256": "7697C57E68BAA6ED12BCD917860D0F4DD3BF317A7A6ABA9AE98B819B33FC80FA",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9887719750404358,
+      "finite": true
+    },
+    {
+      "path": "000192.npy",
+      "sha256": "AA31D754E6D9189C7796ACE7DFABC0BDFBDFE0DC34B719C7D07F260A8067061F",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000193.npy",
+      "sha256": "86288A21822BA8E67C0AA066D22B7926495DBC16B25288EF7DB8C26FEDB27E41",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000194.npy",
+      "sha256": "129850669C4209C3530D998F16B6881FAADF3D765737ADB3AFC4C1711AF9D9A1",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.22931471467018127,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000195.npy",
+      "sha256": "1C12DDCD39D1812AAC5B620B2FF8A40E2431F66ACFFDCE89BAD8952632337D6D",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000196.npy",
+      "sha256": "6D1548A2E4480ADA267D5EC90A2BDE97E557090086D3CEC9BD2EEE3A19965736",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.013609983958303928,
+      "max": 0.9955838918685913,
+      "finite": true
+    },
+    {
+      "path": "000197.npy",
+      "sha256": "A80F98EFDB54216304734DAC7972C4CD0D5D68D3EC845EE28C298B50177DDEB8",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000198.npy",
+      "sha256": "B2A9012036185E5BA10651E26F2CEA63B7593557E25FF94E425983323FAC5DC4",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.007743668742477894,
+      "max": 0.7871608138084412,
+      "finite": true
+    },
+    {
+      "path": "000199.npy",
+      "sha256": "DE779E72FE39C609A07140AF5320B093445944290A9D7900922386785E9724B7",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.8531348705291748,
+      "finite": true
+    },
+    {
+      "path": "000200.npy",
+      "sha256": "523FD2C7333B91DFF5F861193586C2EA1BF157EFC4D37A5C06B3C619411D17C8",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.039656415581703186,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000201.npy",
+      "sha256": "FA48EEAA1238C90E36D62754369C4C32E33F6C5B260B326FA89CF48D5916D41F",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000202.npy",
+      "sha256": "228044ABD22D271D0C20962A23B7E25B019C26F7ABEBF91728E9201C7E19D2C1",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000203.npy",
+      "sha256": "C51737527D749080195E3862A1BB59905A833C81376B26FD70F4F6C353517AA3",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000204.npy",
+      "sha256": "2044DD06E796CC4715ABD530D219C24EB9DD07D32EF6B33AA2481C470036EB7B",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.949939489364624,
+      "finite": true
+    },
+    {
+      "path": "000205.npy",
+      "sha256": "015339E7863C4D82993A840E4C2623E7D38BDF7DF02CC24C8586C81420A50458",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.019467821344733238,
+      "max": 0.9717756509780884,
+      "finite": true
+    },
+    {
+      "path": "000206.npy",
+      "sha256": "8891E4EC75F7B481C8FF9EF3F6582FDB788A6C34913CA17C3C5C064CFA1333AD",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9657812714576721,
+      "finite": true
+    },
+    {
+      "path": "000207.npy",
+      "sha256": "E7595B3B2D663AC0D2D6A1D1DE09A9E61D988D6AEDE5510B727ADBB33600F8F6",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000208.npy",
+      "sha256": "434703A501E9A80D10ACE5C55C48EFF02793198411097A6BF9D4E85F70019286",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.005038216710090637,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000209.npy",
+      "sha256": "176F213242960ACD65B305F29F8324350BA60A2C07148EE5486EFDDB73414876",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.01890418492257595,
+      "max": 0.8163647055625916,
+      "finite": true
+    },
+    {
+      "path": "000210.npy",
+      "sha256": "BF0A6340D861D2B5C829D0331162CB1A38A722AFEA17F700884F8DB2B14D4B15",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.031052127480506897,
+      "max": 0.9664204120635986,
+      "finite": true
+    },
+    {
+      "path": "000211.npy",
+      "sha256": "B25756D614C1A1A19531AE8D341F923E636C8FB9CE027A3EB1E707385CF5A1DD",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9417175054550171,
+      "finite": true
+    },
+    {
+      "path": "000212.npy",
+      "sha256": "90729069CE238FF9B73F9E15C9F15496D0BE18F8486A0166C6E7B428A94FE240",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.004523605573922396,
+      "max": 0.99691241979599,
+      "finite": true
+    },
+    {
+      "path": "000213.npy",
+      "sha256": "A05F4C8E5072B15977B287B3FCFE8B67F4FA9DA0AFFD339664BC7CFF2D05392D",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.019954266026616096,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000214.npy",
+      "sha256": "F766C476194AE55523C702D5FB6E975697F48ABB7B722CEDB30CD3DBCA88D568",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.06693314015865326,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000215.npy",
+      "sha256": "CF6F1394CEC84215192F477CFE2F662B03753086ACBEA3AE4A0C6BE35017BD03",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000216.npy",
+      "sha256": "4F2CD01A74456FBB29DE94E66B964703F9EEC288F336D743DEF3E0FB33CEEB94",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.05376911163330078,
+      "max": 0.8951423764228821,
+      "finite": true
+    },
+    {
+      "path": "000217.npy",
+      "sha256": "D4C00B03C1DA06CFEBE6C41B4B81C3FA14C54C0A24DA11CCCA2E3D25A006EA9B",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.01081097312271595,
+      "max": 0.9568390846252441,
+      "finite": true
+    },
+    {
+      "path": "000218.npy",
+      "sha256": "FB0C2903C8E3E43B3B5A2DBEDF096A887F2A226D33D33FF3DB20141BE98578EC",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9815441370010376,
+      "finite": true
+    },
+    {
+      "path": "000219.npy",
+      "sha256": "A41C1C9F74E22C4333D1FAE366FC7920778B396ADCD91770BB0C671C45AF45C1",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.8902060985565186,
+      "finite": true
+    },
+    {
+      "path": "000220.npy",
+      "sha256": "51CD4994787E7895F6BC83C3483993B0913C5FD19BEEC7514A2FE02A0CF29BAE",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9836139678955078,
+      "finite": true
+    },
+    {
+      "path": "000221.npy",
+      "sha256": "DD2CE20DEB477E259F55F65760D68FAFEAA26E8BE0F5C5DBE39FDEDBE3D494A3",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9618126153945923,
+      "finite": true
+    },
+    {
+      "path": "000222.npy",
+      "sha256": "C963FDA5C213A0A3BB8224C02AA79F937FA95C4E6BD8D46DB28A06F2D2DF1806",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.007905383594334126,
+      "max": 0.9567742347717285,
+      "finite": true
+    },
+    {
+      "path": "000223.npy",
+      "sha256": "125A0E2FB99C6EA19333616FBA129CFBD3CEAF48F9A620A5E492D01061FBB4D6",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000224.npy",
+      "sha256": "BB8E46D0E20F7584D7334EEE9C6C25FD176175D1340D1AC7D818CD67B4445BE4",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000225.npy",
+      "sha256": "628042DE21486AC410683891A2B8FB17DB8FE8E404BBE6C4C5337334A6E7E36D",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.06309613585472107,
+      "max": 0.951299786567688,
+      "finite": true
+    },
+    {
+      "path": "000226.npy",
+      "sha256": "0286E2F92EDDAFC7BCFAAA21F10699C63FC202D191B936F00B9BD933069CC5EA",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.8376760482788086,
+      "finite": true
+    },
+    {
+      "path": "000227.npy",
+      "sha256": "DF694917F3B0104D5CF2399AFA94BA0D6D6B1270C017DD2F451FD73DD79B666B",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000228.npy",
+      "sha256": "8CA4DD9E6EBD859202680E849D681524F889322AB3D8848869E3532CA0FE240C",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0024189557880163193,
+      "max": 0.9242829084396362,
+      "finite": true
+    },
+    {
+      "path": "000229.npy",
+      "sha256": "8660DBAB699B14990A0D842266EB34676D6035C739B029EBDB2C0502ADE3EC73",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000230.npy",
+      "sha256": "98A640B4BC8C8D399D2831ACF628F2782FA171909FF8550026DD46DEF85C3A0C",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.010186741128563881,
+      "max": 0.8569018840789795,
+      "finite": true
+    },
+    {
+      "path": "000231.npy",
+      "sha256": "1E92282C39AF10F085EC84C1BF7D1B10E6298FD4812D57036993E4BBA6195D78",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.02414095029234886,
+      "max": 0.9933161735534668,
+      "finite": true
+    },
+    {
+      "path": "000232.npy",
+      "sha256": "A3C72B45597C1445192F6935DD88C91150F6D5E732E0B3A169EC16A64D2CB9E7",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000233.npy",
+      "sha256": "943C23A2352065BB8E66A14398F426608E613EAD3D507ABFDD8BCF1B7F8064C0",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.018573293462395668,
+      "max": 0.8456224799156189,
+      "finite": true
+    },
+    {
+      "path": "000234.npy",
+      "sha256": "79A4728E2FFED65B1682B501BF97999C63204586BB37A7D7A8E52ED264415263",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.012073524296283722,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000235.npy",
+      "sha256": "56F4276A0F0D41C791D26C32BA37D224C9C904C558B1496F64DF76E12B7B4D72",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000236.npy",
+      "sha256": "04BED02F7213BE80B1977A72671F39CED636E7E25DF1E42FA6DB079DEFABB863",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000237.npy",
+      "sha256": "916EC9E44C818E66DE4343F38CCC7952B0C3838589B76E323F22079AFDDEF3E1",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000238.npy",
+      "sha256": "86B85B534F8DDD3F27F8D329998979F733A09DD049651C9C82546B4014D3CD62",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9502716064453125,
+      "finite": true
+    },
+    {
+      "path": "000239.npy",
+      "sha256": "CAC473B41CF0573BBF1265D341B787AA51E38C1E9FD6AC7F0E26B5071105C13E",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000240.npy",
+      "sha256": "27E290CB24A50995D93E5C2CB58A4BEE6D85642BCE36B2BD7C9C4A5D2183DB5E",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9356215000152588,
+      "finite": true
+    },
+    {
+      "path": "000241.npy",
+      "sha256": "FD93C2576644756A17B9ACF4519EC4B7DAC2C42C76D87E385E83A3D6E293D4C3",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000242.npy",
+      "sha256": "B7A521AF6453E74CB5A61D4C3BE9D04D33893E4E90612C25CB9A96DA236931D7",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.000548921525478363,
+      "max": 0.9346194267272949,
+      "finite": true
+    },
+    {
+      "path": "000243.npy",
+      "sha256": "1BF5833D9029E818AECA028E6229353E6A43A4D0DC3C9486E572CD82EB30498E",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000244.npy",
+      "sha256": "D0D778478699F60C64240C38940C2AD71BD22AE7A7E395CF0711264C74944F64",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.025063861161470413,
+      "max": 0.9023503065109253,
+      "finite": true
+    },
+    {
+      "path": "000245.npy",
+      "sha256": "E6ACE042BA8E3666F1E91B86AE59ADA96F18D1E88683D363B47B8151E859E26F",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.018088489770889282,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000246.npy",
+      "sha256": "AB54CCBC7F5509AADE2901AF114F750A441C2682BDE53CC406C0D8BE37ACFF8F",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000247.npy",
+      "sha256": "FB63FC9AC92D33CE927B32B9A91B681CF6297BD61B932F4400FD4B3AAFA255AC",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.027019616216421127,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000248.npy",
+      "sha256": "90649AF6D37364CF0E6C7ACAC63B7E5857E084844661B7D67D00CE889D150C91",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9402540922164917,
+      "finite": true
+    },
+    {
+      "path": "000249.npy",
+      "sha256": "CA2B34E761D4A3B83B1DB578B5E50FABFCC755F035CD8F7BB5460E74C516761B",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.968326210975647,
+      "finite": true
+    },
+    {
+      "path": "000250.npy",
+      "sha256": "601F9DA375F8C446FBC5325EAAC09E31FB118F893AE4FDA0C6D78E1B20B299D7",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.02804584801197052,
+      "max": 0.9530837535858154,
+      "finite": true
+    },
+    {
+      "path": "000251.npy",
+      "sha256": "C361D3EF7680DC89001EC2E609A4682FAAE88272FDDFC411941CB15A2F53DDEE",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.029532495886087418,
+      "max": 0.9830527305603027,
+      "finite": true
+    },
+    {
+      "path": "000252.npy",
+      "sha256": "2ED7F6426EA7DEDD0E559307D97C98DA2F401E0C0DE3065B6904388D73A1CAF5",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000253.npy",
+      "sha256": "DEC5260F0A85AF74C22E024B4F9E22E22BBB9BB3FB7812047087C7E1ADCDD8EF",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9612716436386108,
+      "finite": true
+    },
+    {
+      "path": "000254.npy",
+      "sha256": "3D06509693D9947B3130E3DF18BAFAD9D31BFCE8929C2486826BD567AD05E06F",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9492214322090149,
+      "finite": true
+    },
+    {
+      "path": "000255.npy",
+      "sha256": "77987CF369E3FB5824F9C561338375B5FA10CC3A04142D0F3496C144430C86A4",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.944029688835144,
+      "finite": true
+    },
+    {
+      "path": "000256.npy",
+      "sha256": "B8D20EF07DCB1E52DC1F7D656F8941E703A62EED5A3EAC23ACF3899CEF14B29C",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000257.npy",
+      "sha256": "2FAE40820D5CFF8B24C509D1C948D764CC2C215954CA39A0B41E5A12AB1294D1",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000258.npy",
+      "sha256": "DD0392D1E7FAF243A8A8C918F3567CCA831C1EF6B9B20AE69FA4661866A3204C",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000259.npy",
+      "sha256": "0CEB917F6AEDDF65803F02F58FD38DA22C7BAB25584E3EF724E917E50F4C2B0C",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.012130660004913807,
+      "max": 0.9049872159957886,
+      "finite": true
+    },
+    {
+      "path": "000260.npy",
+      "sha256": "E9A1C6F80BF85D5175D343E009D161A7C37BB97DF6A009243852B0398A18AFEF",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.01990608125925064,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000261.npy",
+      "sha256": "782DBFBD989BEC47E95C3F295BE88281D1D6992E9E2F691B3EC5FDF90DE338A2",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.985689640045166,
+      "finite": true
+    },
+    {
+      "path": "000262.npy",
+      "sha256": "B1EBA4786836A201B01490F6CB9E6D03B1BCA1097766BB851EB2DB60C30F954A",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.004457386676222086,
+      "max": 0.9726560711860657,
+      "finite": true
+    },
+    {
+      "path": "000263.npy",
+      "sha256": "5880D01CF293A77938F195203F592DBCA477812DD0A63490108A53C32DA7CEFE",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.8950253129005432,
+      "finite": true
+    },
+    {
+      "path": "000264.npy",
+      "sha256": "E17977839C67959EBD8A51BD7061370F57D10D2821F88649CB024E93A5DBFE22",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.00590908620506525,
+      "max": 0.980730414390564,
+      "finite": true
+    },
+    {
+      "path": "000265.npy",
+      "sha256": "23812E9D007C73565CE0B676F528877A14AF06BB316025DC43BB3B88DA0710A6",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9913469552993774,
+      "finite": true
+    },
+    {
+      "path": "000266.npy",
+      "sha256": "CF718CF30518E922FE9A18F9CEF3F6C17EAB7B2531CD797271074C444289113A",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9882944822311401,
+      "finite": true
+    },
+    {
+      "path": "000267.npy",
+      "sha256": "28C4B0F27507B39B26CDD9F6DDBB7BBDDEEE94D2A1DDFD47F3621F6768A266CC",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0629613846540451,
+      "max": 0.9131124019622803,
+      "finite": true
+    },
+    {
+      "path": "000268.npy",
+      "sha256": "1CD730220D634C4AC5C86B90EA69FB8D58D1F4ACEF62218A0CD8180BDF834C0D",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000269.npy",
+      "sha256": "814DE203A0A656A16BCA1BD82FD24723E14758AB4DC9445F9D1B7EBA9657E333",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.05101197212934494,
+      "max": 0.8920975923538208,
+      "finite": true
+    },
+    {
+      "path": "000270.npy",
+      "sha256": "5E7A8BE51CF5EC1F717BA07BA93AD41F28C0380A857E63B4EAB71B1D6DC10944",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.19712716341018677,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000271.npy",
+      "sha256": "E61FF83C67EB75CF920B44B494C67DD5025C4994C7799B4546F93039B2CD4401",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9373396635055542,
+      "finite": true
+    },
+    {
+      "path": "000272.npy",
+      "sha256": "60B1DBF7D98A98191762532831D67B94B0EFB7AC6571DA490FB4E23C444BCCC0",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.8992990255355835,
+      "finite": true
+    },
+    {
+      "path": "000273.npy",
+      "sha256": "663A7D880D761F74ADDF7F065BD13A533905161751E0499E000F4A36C62F3C0C",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000274.npy",
+      "sha256": "F22CE36667462347A853A63BC96BD76D0D2718D04209FA1278D6D8AAFA7F3A5D",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.01305856741964817,
+      "max": 0.9527570009231567,
+      "finite": true
+    },
+    {
+      "path": "000275.npy",
+      "sha256": "CDEB8722ADF9658F18D53B4FC7110BBDB4BDA0837E6E405E94D67DEA78681899",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.005965739488601685,
+      "max": 0.9390163421630859,
+      "finite": true
+    },
+    {
+      "path": "000276.npy",
+      "sha256": "806B75957B1BE1343BD67BB522D1F6565ED8D5DE83E8A7CA6D1F393FC6980616",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0034226253628730774,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000277.npy",
+      "sha256": "92E9EC3A6AB22786A3B6BB7D78D7746BC523C0E1BBC7C81A81E7F5A281B0494F",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9810500144958496,
+      "finite": true
+    },
+    {
+      "path": "000278.npy",
+      "sha256": "0EBA1826036B46CEA9FD3CD4DF2AA8675366EA0FD1654AB1ABFFEE159C7AF212",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.05067271739244461,
+      "max": 0.870711088180542,
+      "finite": true
+    },
+    {
+      "path": "000279.npy",
+      "sha256": "69F7BDC698B1004409C60F740CF8AB9C72D18E4B3076D6AB2F8727E485F7ED46",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000280.npy",
+      "sha256": "629E494FBC12AF155FD5E8F0E9610F613C9E11753E34FBF5A8C6E171CCCBEE9D",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.012507770210504532,
+      "max": 0.920798659324646,
+      "finite": true
+    },
+    {
+      "path": "000281.npy",
+      "sha256": "6869BF7A0F33400A4D75F3082CD42A0B719FDFDA0A1570EDB4B9976DE62961BE",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000282.npy",
+      "sha256": "D2E354012913DBC1DE6176B6BD16179CA0E8C63D2815E6A41957E17B19D38C9B",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9367258548736572,
+      "finite": true
+    },
+    {
+      "path": "000283.npy",
+      "sha256": "063A400C8AE154F7E2B2DCDA30946A2A15BC930D97C3CF05ECB774426398856D",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.11422302573919296,
+      "max": 0.9402415752410889,
+      "finite": true
+    },
+    {
+      "path": "000284.npy",
+      "sha256": "813DE669C66085637E2BA89595F896DAB65E1A82FE8DDF50CF34FE0D66CDB4D3",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.025812454521656036,
+      "max": 0.9811217784881592,
+      "finite": true
+    },
+    {
+      "path": "000285.npy",
+      "sha256": "ED3010782FF92E4FD0AE6553B57E85EA604BF05CFE9B69C0FBBFC6AC7E1ACF38",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9462745189666748,
+      "finite": true
+    },
+    {
+      "path": "000286.npy",
+      "sha256": "3C9B4B619E0B33C6708DBF6A2C237A41B75555EA91DBB583CDC5554E80B42197",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.016383163630962372,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000287.npy",
+      "sha256": "0D53F5F882FF0F237132EC08EAC344176D6F3546F298A2819F0F5B239AFE1498",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9913332462310791,
+      "finite": true
+    },
+    {
+      "path": "000288.npy",
+      "sha256": "41496DD4F8C92BFFA5D275C089A96B64EB771401EF8E3A3FDD0123846CCDBD32",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.004125851206481457,
+      "max": 0.94990074634552,
+      "finite": true
+    },
+    {
+      "path": "000289.npy",
+      "sha256": "962E5BFF018591E768AF797CFE9E7D380FC0B8E818525D2C4BC0D9A65A972E4B",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.013772666454315186,
+      "max": 0.956423282623291,
+      "finite": true
+    },
+    {
+      "path": "000290.npy",
+      "sha256": "2E0A5635C8474470B2F1B403AD3F3C9E779F0AFEAC546B0AF2B25480C8B6C113",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.027015244588255882,
+      "max": 0.9857523441314697,
+      "finite": true
+    },
+    {
+      "path": "000291.npy",
+      "sha256": "1AC41AA9279FE89F51B0D88F8E38E635190A3801459C78E3696F350E9C2A6E36",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000292.npy",
+      "sha256": "57EC12F991725E5974D280B7DAA31840458B4EA45564FE38EF3C5BC848F8977E",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9767961502075195,
+      "finite": true
+    },
+    {
+      "path": "000293.npy",
+      "sha256": "C72D76B4953D3A1A0EE3CE53AF94FB6A3ACC9448610B0288040DAFD3F53DED9F",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000294.npy",
+      "sha256": "118F0C4B4B04758A5B7B14F7E70F0A4CA9524A0FEA9B4F4C9593932FC37D4DDE",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9396193027496338,
+      "finite": true
+    },
+    {
+      "path": "000295.npy",
+      "sha256": "A543E6B16F073CED950F9E4F098B30A0C69EF4373B4B79D7B886D202E9705D12",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.033969148993492126,
+      "max": 0.774717390537262,
+      "finite": true
+    },
+    {
+      "path": "000296.npy",
+      "sha256": "B42606BB2E5068170843BA6AA09F21ECA36E44E72E87B0101B40A49B38FA41DC",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.007267357781529427,
+      "max": 0.9113873243331909,
+      "finite": true
+    },
+    {
+      "path": "000297.npy",
+      "sha256": "37DF97CCA3129F0B4B08398559DA95DE4B5B2A827EAD573712566FE9A1E9A550",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9967982769012451,
+      "finite": true
+    },
+    {
+      "path": "000298.npy",
+      "sha256": "DF066FA9C59B797D1C15B51438A059802D9019F5E08F9F98014129DEE53606F1",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9912359714508057,
+      "finite": true
+    },
+    {
+      "path": "000299.npy",
+      "sha256": "0EA7FD6761AA4737D12D41ECF8DB80BBF82B9307315553105DA73D9D199026A1",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9460219144821167,
+      "finite": true
+    },
+    {
+      "path": "000300.npy",
+      "sha256": "5A67CAF6DB2BBD96A5263D91FA2A2897907EA90A25EBCC1B550705CDE5201931",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.008761750534176826,
+      "max": 0.9568268060684204,
+      "finite": true
+    },
+    {
+      "path": "000301.npy",
+      "sha256": "E76ECB0FF696C7A30AC135E6B9E98F77524447B8D1F6984078F02E619D24F389",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9276111125946045,
+      "finite": true
+    },
+    {
+      "path": "000302.npy",
+      "sha256": "5E2713DFC2DA7FC08B20CF26F16BE6B1817DAB0D2FC90429C462FF8B61E7B795",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.005463076289743185,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000303.npy",
+      "sha256": "CF15F62010D1E3953B69B0B596F4879555656B011C453E9C598B1FE580BB3AE9",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000304.npy",
+      "sha256": "D79A75EAD580F825E7CA7748BFA1831342746D78576A4453E9B91B8040699AB3",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.009835010394454002,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000305.npy",
+      "sha256": "0146211BD5F156B979ADC46B4B343460A04F8320DBE574CDCA468A325A817E3E",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9543014764785767,
+      "finite": true
+    },
+    {
+      "path": "000306.npy",
+      "sha256": "C58E6B59C9D7FCFDC9214368A116B4F2D1D6C3D0748F664367B23717BEE2D45E",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.01504775881767273,
+      "max": 0.9793006777763367,
+      "finite": true
+    },
+    {
+      "path": "000307.npy",
+      "sha256": "E1A0A80543A9D319E38858A697DFFB28F9302211BCC00EDBC5F795A12DAE4823",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000308.npy",
+      "sha256": "1EC5D08C375894FD02889BF37ABBD9B87F0D23AA40525A862A2B4B1BBB537452",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.8958498239517212,
+      "finite": true
+    },
+    {
+      "path": "000309.npy",
+      "sha256": "3997B4EB76A650553FBA824D932D98277F6C857AA78F9AB119A45C2F036AF870",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.021402616053819656,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000310.npy",
+      "sha256": "6898B16B992FD5341D9345517BF6BB73A0ABE3A130374D9E138BC7F30DE4F533",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000311.npy",
+      "sha256": "1E1CAD9156E2DAE1715FC945949001A8F7703F81B8EEE89CDEF4D6043154E868",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.016698196530342102,
+      "max": 0.999951958656311,
+      "finite": true
+    },
+    {
+      "path": "000312.npy",
+      "sha256": "5F1E205CB72D70B2BF016C6A0E020957C77C62D9B73B9698EB8448ACDF49E942",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000313.npy",
+      "sha256": "4BBF52DFF9116527B48F597D12C0C4C3EC64A0E6F0715B19E8ED9E121B1F0097",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000314.npy",
+      "sha256": "C28FF295F260DF773766D7D3ED1075CAD6F5B46F6BF91B19072310FCEF929612",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000315.npy",
+      "sha256": "5FE0765E4E2DBEC059BFB46B275212AC1E627D80344DCE522E3045DF785645C6",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.8617507219314575,
+      "finite": true
+    },
+    {
+      "path": "000316.npy",
+      "sha256": "125D30FB88475EA9CC5339E98FA66840AAED9EB424B316A0D79E2BBC06CE8A60",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.08397607505321503,
+      "max": 0.9977785348892212,
+      "finite": true
+    },
+    {
+      "path": "000317.npy",
+      "sha256": "5A0BB57B667DC38F0647CB56687D41780AA93D15628FCC0CB28F7E7BF198B1AB",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0072838375344872475,
+      "max": 0.9731892347335815,
+      "finite": true
+    },
+    {
+      "path": "000318.npy",
+      "sha256": "1487D31DB8E0BB2D9628857D0E67DB409932345E39EDAA686E1BD0D623587BB5",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.009727608412504196,
+      "max": 0.9947229623794556,
+      "finite": true
+    },
+    {
+      "path": "000319.npy",
+      "sha256": "645EC357A0207535893903436BF11DAB33BF97FAD187A8B59CD13DDF838F5721",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.8441810607910156,
+      "finite": true
+    },
+    {
+      "path": "000320.npy",
+      "sha256": "7C889E96AD9828C50E4AFEFD0696CBE98DFCA81ADD09AEF74778613A1C5AACCD",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.8517249822616577,
+      "finite": true
+    },
+    {
+      "path": "000321.npy",
+      "sha256": "787096AC90129A9EABBEC0DA7A2C32E448751CDB740D7CA7ED18195B71AA0FE7",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9530601501464844,
+      "finite": true
+    },
+    {
+      "path": "000322.npy",
+      "sha256": "48E36CD5B95ED847B72AC0B009300ABED982AFE2B39497E9F17195D744ED40A2",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000323.npy",
+      "sha256": "5FFB47EDD2D2898ABFB4E947F2BBF11FAC9A800484129B15C0BCBB3570C0AC9F",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.018205683678388596,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000324.npy",
+      "sha256": "4AA4BC255A288E1CA6C3DA7C919255849A949D74C244ED7F413F64C471708ADF",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.031247247010469437,
+      "max": 0.9446512460708618,
+      "finite": true
+    },
+    {
+      "path": "000325.npy",
+      "sha256": "2F4D95D08384F15CE6FA85E8A5DB6537E6283A763177DAF3A635C2CEE8DBC557",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9876902103424072,
+      "finite": true
+    },
+    {
+      "path": "000326.npy",
+      "sha256": "4B8E3D6A5E8D937425B4F678A2404E0F07DE34EB8EB79367DA48942986CF2598",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.009261950850486755,
+      "max": 0.9712417125701904,
+      "finite": true
+    },
+    {
+      "path": "000327.npy",
+      "sha256": "9A4FEE58A44BD68AFB8A2698C0DCD9AF8F307ECF028CF8CDC66C6390B9C15A0E",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.8722747564315796,
+      "finite": true
+    },
+    {
+      "path": "000328.npy",
+      "sha256": "13F6AC6FFDEE47A8DA82C93E7CCFB5F3E692732D870ACE691E4AB5137C4D5694",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.8213871717453003,
+      "finite": true
+    },
+    {
+      "path": "000329.npy",
+      "sha256": "10233268260B2036E97211F71068DCB62D380D3A646E82D9F27F5EF2AD64761B",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000330.npy",
+      "sha256": "36DF192156DAC0DF6428D355898D83C9A9B72A9ED1F253AC7CFA385D6960E53B",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.010198846459388733,
+      "max": 0.9554332494735718,
+      "finite": true
+    },
+    {
+      "path": "000331.npy",
+      "sha256": "F2648EC1E2BA9E5B0F3273DFC9EB23C06C3EAC0D760AF783E12996F454F936C4",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000332.npy",
+      "sha256": "5FCA862C0FCC63A4ED2CACF998D0603C7E505E752E0287781C3F5A85CA3A36F6",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9571497440338135,
+      "finite": true
+    },
+    {
+      "path": "000333.npy",
+      "sha256": "4B75DBB56A23370343273409316773AE663A4280F1B85BF54B9BA9EFF5B39940",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.04484793543815613,
+      "max": 0.9138925075531006,
+      "finite": true
+    },
+    {
+      "path": "000334.npy",
+      "sha256": "DD161DB4DE740F129CDF1378D67F329FD859FACD3AD0301F5CCBA07902A6B019",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.006149051710963249,
+      "max": 0.5470077991485596,
+      "finite": true
+    },
+    {
+      "path": "000335.npy",
+      "sha256": "18E8E338793D12DDE3F4BC345AA40D128C99246F8F1212B2498E23E5B51414FB",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9781923294067383,
+      "finite": true
+    },
+    {
+      "path": "000336.npy",
+      "sha256": "7A60737F84C184D66E771258E76E3C76D4AFB982553C43DFE30CD0004C4A7103",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.001589648425579071,
+      "max": 0.9358192682266235,
+      "finite": true
+    },
+    {
+      "path": "000337.npy",
+      "sha256": "0BCF8BFCED795F36A4FFA930A8A5A1D2E6F3ACFD3DEFA9214E413695FE45AFAF",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.029460253193974495,
+      "max": 0.9541504383087158,
+      "finite": true
+    },
+    {
+      "path": "000338.npy",
+      "sha256": "3741BFB69861EDA0C70DDA6210052F7D00446FFFDF15C24B25C01DEA6D82700D",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.005257032811641693,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000339.npy",
+      "sha256": "D0B94B4D7A406FFE0998EC06C227F4D20A9CAAFD6E9D9127FF24764F722E1243",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.03767111897468567,
+      "max": 0.988915205001831,
+      "finite": true
+    },
+    {
+      "path": "000340.npy",
+      "sha256": "7EFFCC60B1E454CF20C9B5DF4D87D4928DD0473B158E45CCFD2AE510D0962C8A",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000341.npy",
+      "sha256": "9470C2F65C1EC2C4D079D135D0133DF8BE18F6989D158F509A87C4BFA99E325C",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.041829466819763184,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000342.npy",
+      "sha256": "EA3E9FDEF54ABAC9375431DF8EB7B7716763554D45F31DBE7AB481951487EE8D",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.03466855362057686,
+      "max": 0.9908318519592285,
+      "finite": true
+    },
+    {
+      "path": "000343.npy",
+      "sha256": "AD248EB795AD6127B8447C9F4A250F19C5669FC2825C948A815886EF0C5BA18E",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.007042307406663895,
+      "max": 0.9491956233978271,
+      "finite": true
+    },
+    {
+      "path": "000344.npy",
+      "sha256": "DF00267261AACD49D13F58239984B85659019A38E8544D7565A3982BA545A10F",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000345.npy",
+      "sha256": "4D09A4B4878578772819F54EBFAB27BF1FB612E5D2817D1541E5188507C54062",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000346.npy",
+      "sha256": "412E12D0DB53F7BC01E43F2BF362E6D4A0F01C2D940E24F0F65200E55DA21CED",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000347.npy",
+      "sha256": "5DA1B530A8CD36EF41BB300DFB5598A87867489D581F617C3F7EF2342C5E1F1C",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9802230596542358,
+      "finite": true
+    },
+    {
+      "path": "000348.npy",
+      "sha256": "326A3CB740A71F617503E75D0C90A28958597527C38F0F476A58D076B7FBD583",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.08486073464155197,
+      "max": 0.9023631811141968,
+      "finite": true
+    },
+    {
+      "path": "000349.npy",
+      "sha256": "9A36DD6B89F27B09BA39A3713BF50A4B5BFD4E18D57F99521EC15751CAFBB77C",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.005054807290434837,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000350.npy",
+      "sha256": "1901BA2AA75A2097CE8019AB750362CB4232C7839453B27D51993DD336924236",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.012650522403419018,
+      "max": 0.9471465349197388,
+      "finite": true
+    },
+    {
+      "path": "000351.npy",
+      "sha256": "D227D63E52A256137FDE5C31FF3C1F11AEFFE8280A7DA6F77D75CCE489B4BD34",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9530202150344849,
+      "finite": true
+    },
+    {
+      "path": "000352.npy",
+      "sha256": "627DBE6F9A1763B00623752B9C2A5746F799A38DA21BE179E0DD233C8F637E8E",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9671785831451416,
+      "finite": true
+    },
+    {
+      "path": "000353.npy",
+      "sha256": "4539FF28852570CD4E6DC2013EE9D6C87E4E9A648BB369AD7562C536EB98C735",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.006046459078788757,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000354.npy",
+      "sha256": "AA4C7BFF03B13E8B81DAB461D611B105491215007604B67E6C1DA2F44746DA5B",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000355.npy",
+      "sha256": "019C525276D01B4BA0CD111F88B21AC0B2379657C968D73364D4EEA98853CAFD",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000356.npy",
+      "sha256": "ABEEE7ACD6FBCF10F8B9F1B4735E2EAD323D4CD3C6BEABB06BF2E12CC7156233",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000357.npy",
+      "sha256": "B0E04098A31CD1C62037E46E12EA243FB5346630A3DE71A5311ABBCC63146FC9",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000358.npy",
+      "sha256": "EF3C1081DDCA2CE72F612D39866C4BCD6AF656506A9C4B4C68A9444056FA1FDA",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.06170780956745148,
+      "max": 0.9676387310028076,
+      "finite": true
+    },
+    {
+      "path": "000359.npy",
+      "sha256": "3DD61EC130362DA85612C0891764F86D17CD7045DD07981FFC88E212CB635E4F",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.976085364818573,
+      "finite": true
+    },
+    {
+      "path": "000360.npy",
+      "sha256": "FCC4EFA997EA4ADEC3A1B0E104789BB3B79EA390699F1058757594B5096851BA",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.8324043154716492,
+      "finite": true
+    },
+    {
+      "path": "000361.npy",
+      "sha256": "071A1338A2E6349BDA9BC0EE82375747286D2FDC0DF7EDD85E27FBC096018CFD",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.988945722579956,
+      "finite": true
+    },
+    {
+      "path": "000362.npy",
+      "sha256": "B9FE303DE111249DC2A367D6FDD187EA868B933D3F2EA8143BB5338633514249",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.8929158449172974,
+      "finite": true
+    },
+    {
+      "path": "000363.npy",
+      "sha256": "8824C8AC917C9F795B47D58B48255E78D7B878AB32B28FB977D21435729C9614",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000364.npy",
+      "sha256": "3AC04B13857F903329DEE99733320B7F37EF5121BBFCE751723E49D65609A3FE",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.020042158663272858,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000365.npy",
+      "sha256": "B880D0AEF61E4FADF70201F3C81561FAEB41A424CE10549BEEBC91F2A4081236",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9176565408706665,
+      "finite": true
+    },
+    {
+      "path": "000366.npy",
+      "sha256": "552BE84957FF5EB251E02C5C2B2E7ED24FF2E5C5F9F7AC291E7736C26D7E49EF",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9302377104759216,
+      "finite": true
+    },
+    {
+      "path": "000367.npy",
+      "sha256": "E78A2AA94440F3F92E2D6D4AF79FC66CAF0140DCC82260A8B4DC3CC621EEC2EF",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.009326420724391937,
+      "max": 0.9592586755752563,
+      "finite": true
+    },
+    {
+      "path": "000368.npy",
+      "sha256": "1CFC5C700A47C37AF66412F419D425E1B36DC56D71D9BC317D6A74381334847C",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000369.npy",
+      "sha256": "8ED397964B90BB48E5A2BFB8347F9E7E6C8A19A16CA24C11312F81632340A011",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.005830512382090092,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000370.npy",
+      "sha256": "C4216C878C0A412C88BFD88D058F192E3573F73AB2B427AB36A9715A53B89302",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.04323553293943405,
+      "max": 0.9037570953369141,
+      "finite": true
+    },
+    {
+      "path": "000371.npy",
+      "sha256": "3348EB26221758A12B5D0A6A959BDB7D3AEF245659D497EF9CDCB313DDC74534",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9328104853630066,
+      "finite": true
+    },
+    {
+      "path": "000372.npy",
+      "sha256": "D5352F89E91F1D7AA6F822381459741936F2520A52271D4956A9A5416A3B25FC",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9768327474594116,
+      "finite": true
+    },
+    {
+      "path": "000373.npy",
+      "sha256": "86A2007561E79665078A375B22F2865F2AABBC76F432D41E7E4F064596902113",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9388298392295837,
+      "finite": true
+    },
+    {
+      "path": "000374.npy",
+      "sha256": "BE76BB2F490376C25FD96636E0D548C4A90A02C5B035FE10187D26267D0AB2BE",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000375.npy",
+      "sha256": "99CAD8AB8ED177CE82FB66797B361DB88A03A72DF43DD2C4438E4BE9B09E0F71",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000376.npy",
+      "sha256": "16D0080F5C99D00BCE300466D6494FCB35C08FBB6FE8BE91792968B1D4AF88D7",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9675389528274536,
+      "finite": true
+    },
+    {
+      "path": "000377.npy",
+      "sha256": "8D6E477FD3F1DB6ACBA9C12CFA7B29C225252DA2CD97BF85E8850C46B655691D",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.047263529151678085,
+      "max": 0.9902012348175049,
+      "finite": true
+    },
+    {
+      "path": "000378.npy",
+      "sha256": "6F956D2B1D1FDA2DA337A80FD7B28BA45B5098FD391FEF1DF67B52E00AAFDC30",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.02187994495034218,
+      "max": 0.9453713297843933,
+      "finite": true
+    },
+    {
+      "path": "000379.npy",
+      "sha256": "0C81F1A5533ACB13F687F4D0A8AE69B7B1DD0FBBD73B4C450543D99D8F4C7706",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.002452515996992588,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000380.npy",
+      "sha256": "48CE7DC22C13F369F5987FFDE05130BD4D20A6222311564BC4D6E577E90E9F7F",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9927120208740234,
+      "finite": true
+    },
+    {
+      "path": "000381.npy",
+      "sha256": "120DADCD565B0A7BE9F7FA4610CDA890F594961367CCD3BFAADF5F72A9C674D2",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000382.npy",
+      "sha256": "8021638EF725A23B510B6ACC09FBCCF2CB34223811CF6C572D7AAF14ABEB9271",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.024092571809887886,
+      "max": 0.9097249507904053,
+      "finite": true
+    },
+    {
+      "path": "000383.npy",
+      "sha256": "460DAB7B82F2A7A91C3D8CE938563899FD2AC725B1723F05D6FDBA97BCA55099",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000384.npy",
+      "sha256": "0E9B0AA5BCAF87C023D8FCCE58E7AEF15C9FEC298A41365414E1FE9165E52DE0",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.10701021552085876,
+      "max": 0.9419064521789551,
+      "finite": true
+    },
+    {
+      "path": "000385.npy",
+      "sha256": "639ECDDDADC846472E1E382B2765AD700702738666F3D183EBF193402AEE2207",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9835699796676636,
+      "finite": true
+    },
+    {
+      "path": "000386.npy",
+      "sha256": "44EDFE1A2AE02FD3557AD37B2C1260AB32FC7E300AEE851AA0C92CFCDCDC1012",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.996021032333374,
+      "finite": true
+    },
+    {
+      "path": "000387.npy",
+      "sha256": "C166DB145E742BFD8FD6F041BD9F898E325CD5CD908365DB4B7E2260A5E5D538",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0048714615404605865,
+      "max": 0.9919663071632385,
+      "finite": true
+    },
+    {
+      "path": "000388.npy",
+      "sha256": "2D3FC20CBE971A2DD5876F6B0EAE5A174A18BBB655CE97E0894A0B748048FB1B",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.010862457565963268,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000389.npy",
+      "sha256": "475076AD0CFB159D75DFA6533665C25F313CBBE7EB727219565B25B4DCC7CA6F",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0005690194666385651,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000390.npy",
+      "sha256": "A9632114C2194BD1603A24C0C646DB78A2DAAA9BE6D0988B99E1F7537FCC9CEA",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.948226809501648,
+      "finite": true
+    },
+    {
+      "path": "000391.npy",
+      "sha256": "EF5D31820304E31BA176D333439D97C28B1240EE4AA641AE409BD8A91BCFDF32",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.02741682156920433,
+      "max": 0.9516130685806274,
+      "finite": true
+    },
+    {
+      "path": "000392.npy",
+      "sha256": "7765C7A1E847EF3800437C45AA71D1159D5917A9EFE9C13197DBBB2CA4E25C60",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 0.9796253442764282,
+      "finite": true
+    },
+    {
+      "path": "000393.npy",
+      "sha256": "0A4D635135FD6A151752F1C4C1FC1C3C7E1105B89E776A6907A35B8A49AAB942",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.012068542651832104,
+      "max": 0.957595705986023,
+      "finite": true
+    },
+    {
+      "path": "000394.npy",
+      "sha256": "C5455C9BF64336601EFE0BE28BA145F8E7AAAF9A4EE8E2B9600B1B273F786121",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.011753237806260586,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000395.npy",
+      "sha256": "3722EB7BB876589C1D51032569EE5AB437329E18D215152B8C4C433776E8C197",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.06356695294380188,
+      "max": 0.9811732769012451,
+      "finite": true
+    },
+    {
+      "path": "000396.npy",
+      "sha256": "9F95B337D3DC9FBC4F95E1F7C92A9592CE62F833799BC0F0918D499D941AD8F9",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.030791690573096275,
+      "max": 0.92018723487854,
+      "finite": true
+    },
+    {
+      "path": "000397.npy",
+      "sha256": "56C61F428D77A24D7C2EB37A75C600FEFC3F7B5ED4F7B1187D08EE0FAE2026E7",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.005407769698649645,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000398.npy",
+      "sha256": "5C0358F1A6ACC0F110818E43D50A75BB1059F6DAF153F088461039AA488427C6",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "path": "000399.npy",
+      "sha256": "5EEF03CC578F3BC7C46E247D72950D92D8BC3D59F37547C7E4600464D489CDEC",
+      "bytes": 262272,
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "min": 0.017337113618850708,
+      "max": 0.8578325510025024,
+      "finite": true
+    }
+  ]
+}

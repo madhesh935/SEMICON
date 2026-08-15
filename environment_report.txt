@@ -1,0 +1,47 @@
+KLA PS01 VERIFIED ENVIRONMENT REPORT
+Inspection date: 2026-08-14 (Asia/Calcutta)
+Project root: <repository-root> (local absolute path intentionally redacted)
+
+INITIAL STATE
+- OS: Microsoft Windows 11, build 26200, x64
+- Shell: Windows PowerShell 5.1.26100.9168
+- Git: the initial working directory was not a Git repository
+- Initial active Python: 3.14.6
+- Initial .venv: absent; initial PyTorch/torchvision: absent
+- RAM at initial inspection: 25,439,199,232 bytes total; 12,040,245,248 bytes available
+- Disk C at initial inspection: 434,559,619,072 bytes total; 106,800,812,032 bytes free
+
+VERIFIED TRAINING ENVIRONMENT
+- Virtual environment: .venv
+- Python: 3.13.14
+- torch: 2.11.0+cu130
+- torchvision: 0.26.0+cu130
+- PyTorch CUDA runtime: 13.0
+- cuDNN: 91900 (9.19.0)
+- GPU: NVIDIA GeForce RTX 4050 Laptop GPU
+- VRAM reported by PyTorch: 6,438,780,928 bytes
+- NVIDIA driver: 591.66; nvidia-smi driver capability: CUDA 13.1
+- CUDA verification: a 1024x1024 CUDA matrix multiplication completed with finite values
+- Full resolved training environment: requirements.txt
+- Minimal evaluator environment: requirements-inference.txt
+
+DATASET DISCOVERY (DATA NOT INCLUDED IN THIS REPOSITORY)
+- Training NoisyLR: train (1)/train/NoisyLR (3,200 real .npy files)
+- Training GT: train (1)/train/GT (3,200 real .npy files)
+- Test NoisyLR: Test_NoisyLR (2)/NoisyLR (400 real .npy files)
+- Ignored organizer metadata: __MACOSX, ._* resource forks, and .DS_Store
+- Valid relative-stem pairs: 3,200; missing on either side: 0
+- Every training pair: float32 128x128 -> float32 256x256
+- Every supplied test input: float32 128x128
+- Raw data was audited read-only and is intentionally Git-ignored.
+
+MEASURED EXECUTION
+- Deterministic split: seed 42, 2,720 train / 480 validation
+- Model parameters: 956,609
+- Full training: 20 complete epochs, 6,800 optimizer steps
+- Sum of recorded epoch wall times: 1,891.120 seconds (31 min 31 sec), including full validation each epoch
+- The full run resumed from its valid epoch-1 checkpoint after a host-side PyTorch foreach allocation error; epochs 2-20 completed with scalar gradient clipping and zero skipped AMP steps.
+- Validation and latency were measured on the RTX 4050. Linux/H100 execution and H100 timing were not measured.
+
+OFFICIAL REQUIREMENT SOURCE
+- https://i4c.in/hackathon-2026/#ps (checked 2026-08-14)

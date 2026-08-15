@@ -1,0 +1,15 @@
+{
+  "status": "measured_on_real_training_pairs",
+  "run": "runs/overfit_real4_noema",
+  "pair_count": 4,
+  "epochs": 12,
+  "optimizer_steps": 600,
+  "initial_fixed_patch_composite_loss": 0.034824881702661514,
+  "final_fixed_patch_composite_loss": 0.018220921978354454,
+  "loss_ratio": 0.5232156173257556,
+  "loss_reduction_percent": 47.67843826742444,
+  "same_pair_psnr": 31.83307235259636,
+  "same_pair_ssim": 0.8742891812789342,
+  "published_as_final": false
+}
+

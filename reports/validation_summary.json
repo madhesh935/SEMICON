@@ -1,0 +1,217 @@
+{
+  "weights": "weights/best.pt",
+  "architecture": "RangeAwareLiteNAFSR",
+  "model_config": {
+    "width": 64,
+    "num_blocks": 24,
+    "num_hr_blocks": 1,
+    "expansion": 2,
+    "dropout": 0.0,
+    "scale": 2
+  },
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "torch_version": "2.11.0+cu130",
+  "cuda_runtime": "13.0",
+  "cudnn_version": 91900,
+  "amp": true,
+  "tta": false,
+  "subset": false,
+  "split_identity": {
+    "path": "splits/split_seed42.json",
+    "seed": 42,
+    "dataset_fingerprint": "cf110aa74b939bc359e747ffb526de6482c81abae57c722de2fbd3115a3516ca"
+  },
+  "evaluated_images": 480,
+  "metrics": {
+    "128x128_to_256x256": {
+      "psnr": {
+        "count": 480,
+        "mean": 27.869329127248292,
+        "median": 27.70615280376559,
+        "std": 4.600353479042051,
+        "min": 10.569885382984722,
+        "max": 42.26877415103062
+      },
+      "ssim": {
+        "count": 480,
+        "mean": 0.7489683585877321,
+        "median": 0.7794509622500154,
+        "std": 0.15869762169795026,
+        "min": 0.2245171051430364,
+        "max": 0.9814747267039194
+      },
+      "lpips": {
+        "count": 480,
+        "mean": 0.3007189181749709,
+        "median": 0.25780652463436127,
+        "std": 0.17651008221657183,
+        "min": 0.027188414707779884,
+        "max": 0.9392324686050415
+      },
+      "image_count": 480
+    },
+    "combined": {
+      "psnr": {
+        "count": 480,
+        "mean": 27.869329127248292,
+        "median": 27.70615280376559,
+        "std": 4.600353479042051,
+        "min": 10.569885382984722,
+        "max": 42.26877415103062
+      },
+      "ssim": {
+        "count": 480,
+        "mean": 0.7489683585877321,
+        "median": 0.7794509622500154,
+        "std": 0.15869762169795026,
+        "min": 0.2245171051430364,
+        "max": 0.9814747267039194
+      },
+      "lpips": {
+        "count": 480,
+        "mean": 0.3007189181749709,
+        "median": 0.25780652463436127,
+        "std": 0.17651008221657183,
+        "min": 0.027188414707779884,
+        "max": 0.9392324686050415
+      },
+      "image_count": 480
+    },
+    "256x256_to_512x512": {
+      "psnr": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "min": null,
+        "max": null
+      },
+      "ssim": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "min": null,
+        "max": null
+      },
+      "lpips": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "min": null,
+        "max": null
+      },
+      "image_count": 0
+    }
+  },
+  "validation_subsets": {
+    "val_random": {
+      "psnr": {
+        "count": 480,
+        "mean": 27.869329127248292,
+        "median": 27.70615280376559,
+        "std": 4.600353479042051,
+        "min": 10.569885382984722,
+        "max": 42.26877415103062
+      },
+      "ssim": {
+        "count": 480,
+        "mean": 0.7489683585877321,
+        "median": 0.7794509622500154,
+        "std": 0.15869762169795026,
+        "min": 0.2245171051430364,
+        "max": 0.9814747267039194
+      },
+      "lpips": {
+        "count": 480,
+        "mean": 0.3007189181749709,
+        "median": 0.25780652463436127,
+        "std": 0.17651008221657183,
+        "min": 0.027188414707779884,
+        "max": 0.9392324686050415
+      },
+      "image_count": 480
+    },
+    "val_ood_proxy": {
+      "psnr": {
+        "count": 120,
+        "mean": 28.54033541030635,
+        "median": 28.509553635145757,
+        "std": 4.794401340449689,
+        "min": 19.065297776319483,
+        "max": 42.26877415103062
+      },
+      "ssim": {
+        "count": 120,
+        "mean": 0.7950553666364589,
+        "median": 0.8284755662893364,
+        "std": 0.1538894478685777,
+        "min": 0.2245171051430364,
+        "max": 0.9814747267039194
+      },
+      "lpips": {
+        "count": 120,
+        "mean": 0.2506435378609846,
+        "median": 0.2124474123120308,
+        "std": 0.15718949626357068,
+        "min": 0.027188414707779884,
+        "max": 0.8560997247695923
+      },
+      "image_count": 120
+    }
+  },
+  "model": {
+    "parameter_count": 956609,
+    "checkpoint_size_bytes": 3993611,
+    "conv_macs": {
+      "128x128_to_256x256": 14888833024,
+      "256x256_to_512x512": 59555024896
+    },
+    "mac_note": "Multiply-accumulate count includes Conv2d operations; interpolation, normalization, gates, and elementwise operations are excluded."
+  },
+  "latency": {
+    "128x128_to_256x256": {
+      "device": "cuda",
+      "batch_size": 1,
+      "input_height": 128,
+      "input_width": 128,
+      "warmup_iterations": 20,
+      "timed_iterations": 100,
+      "latency_ms_mean": 30.16327800010913,
+      "latency_ms_median": 30.068849999224767,
+      "latency_ms_p95": 31.851639999331383,
+      "latency_ms_std": 0.7743435401170318,
+      "throughput_images_per_second": 33.15289538479147,
+      "peak_gpu_memory_bytes": 84140544
+    },
+    "256x256_to_512x512": {
+      "device": "cuda",
+      "batch_size": 1,
+      "input_height": 256,
+      "input_width": 256,
+      "warmup_iterations": 20,
+      "timed_iterations": 100,
+      "latency_ms_mean": 103.96980000001349,
+      "latency_ms_median": 103.95389999939653,
+      "latency_ms_p95": 104.63546999963,
+      "latency_ms_std": 0.3850583097847436,
+      "throughput_images_per_second": 9.618177586182432,
+      "peak_gpu_memory_bytes": 293544448
+    }
+  },
+  "validation_timing": {
+    "wall_seconds_including_metrics_and_saves": 22.417372100000648,
+    "per_image_model_inference_ms": {
+      "count": 480,
+      "mean": 35.92515604171543,
+      "median": 34.28245000031893,
+      "std": 31.331217720249064,
+      "min": 29.046600000583567,
+      "max": 717.9686999988917
+    },
+    "timing_note": "CUDA synchronized around each model call; standalone benchmark includes warm-up."
+  },
+  "validation_outputs": null
+}

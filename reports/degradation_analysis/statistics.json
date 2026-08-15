@@ -1,0 +1,267 @@
+{
+  "format_version": 1,
+  "seed": 42,
+  "official_test_data_used": false,
+  "analysis_scope": "saved training fold only for paired degradation; all paired input descriptors with fitting on train fold only for OOD proxy",
+  "data": {
+    "matched_pairs": 3200,
+    "train_fold_pairs_analyzed": 2720,
+    "validation_pairs_described": 480,
+    "input_shape_distribution": {
+      "(128, 128)": 3200
+    },
+    "gt_shape_distribution": {
+      "(256, 256)": 3200
+    },
+    "pairs_128_to_256": 3200,
+    "pairs_256_to_512": 0,
+    "dataset_fingerprint": "cf110aa74b939bc359e747ffb526de6482c81abae57c722de2fbd3115a3516ca",
+    "split_sha256": "4478fa31fd2b93ace5873c9b6bc421f61ce4d4ddaa15dd368da1ec0b49984402"
+  },
+  "basic_restoration_residual": {
+    "definition": "GT - clamp(PyTorch bicubic(clamp(raw LR,0,1)),0,1), align_corners=False; matches benchmark_bicubic.py",
+    "global": {
+      "count": 178257920,
+      "mean": 0.0033606938162205383,
+      "std": 0.08217244635447539,
+      "min": -0.9998592734336853,
+      "max": 0.9999419450759888
+    },
+    "unclipped_model_skip_residual": {
+      "definition": "GT - PyTorch bicubic(clamp(raw LR,0,1)); this is the internal skip seen during training",
+      "global": {
+        "count": 178257920,
+        "mean": 0.0031732728892448388,
+        "std": 0.08249423505030871,
+        "min": -1.1967263221740723,
+        "max": 1.0989112854003906
+      }
+    },
+    "per_pair_rmse": {
+      "count": 2720,
+      "mean": 0.07664220290744732,
+      "std": 0.029825792958183352,
+      "min": 0.008752602152526379,
+      "median": 0.07542016357183456,
+      "max": 0.31088435649871826
+    },
+    "spatial_mean_min": -0.0033466840453911574,
+    "spatial_mean_max": 0.01146148717684542,
+    "spatial_std_min": 0.06466936012630041,
+    "spatial_std_max": 0.11300940197295054
+  },
+  "noise_behavior": {
+    "lr_discrepancy_definition": "raw LR - area-downsampled GT; includes noise, blur/downsampling mismatch, and any registration error",
+    "global": {
+      "count": 44564480,
+      "mean": 4.036879317024821e-06,
+      "std": 0.09048910544187075,
+      "min": -0.6721783876419067,
+      "max": 1.1841576099395752
+    },
+    "correlation_signal_vs_squared_lr_discrepancy": 0.3636461028389966,
+    "variance_models": {
+      "models": {
+        "constant": {
+          "degree": 0,
+          "coefficients_high_to_low": [
+            0.008184581246943446
+          ],
+          "weighted_rmse": 0.007048618598096968,
+          "weighted_r2_vs_constant": 0.0
+        },
+        "linear": {
+          "degree": 1,
+          "coefficients_high_to_low": [
+            0.02580744462148847,
+            -0.003025252262640428
+          ],
+          "weighted_rmse": 0.0012497875525533445,
+          "weighted_r2_vs_constant": 0.9685613153887203
+        },
+        "quadratic": {
+          "degree": 2,
+          "coefficients_high_to_low": [
+            0.017862293017400558,
+            0.009093566434180729,
+            -0.0004260332463507854
+          ],
+          "weighted_rmse": 0.00019537313462277684,
+          "weighted_r2_vs_constant": 0.9992317162171195
+        }
+      },
+      "max_to_min_binned_variance_ratio": 261.2505208616277
+    },
+    "hr_residual_variance_models": {
+      "models": {
+        "constant": {
+          "degree": 0,
+          "coefficients_high_to_low": [
+            0.006368833826565834
+          ],
+          "weighted_rmse": 0.0035786507290667294,
+          "weighted_r2_vs_constant": 0.0
+        },
+        "linear": {
+          "degree": 1,
+          "coefficients_high_to_low": [
+            0.010824422520954015,
+            0.0017053142598720654
+          ],
+          "weighted_rmse": 0.0020348959763568956,
+          "weighted_r2_vs_constant": 0.676670151957459
+        },
+        "quadratic": {
+          "degree": 2,
+          "coefficients_high_to_low": [
+            -0.02495520916063729,
+            0.03429678806549736,
+            -0.0019295160297163692
+          ],
+          "weighted_rmse": 0.0009886652724020713,
+          "weighted_r2_vs_constant": 0.923676209446938
+        }
+      },
+      "max_to_min_binned_variance_ratio": 19.779248603420875
+    },
+    "interpretation_guardrail": "These empirical discrepancies do not by themselves identify a physical noise process."
+  },
+  "out_of_range": {
+    "train_fold_files_below_zero": 1668,
+    "train_fold_files_above_one": 2657,
+    "below_zero_excursion_magnitude": {
+      "count": 126865,
+      "mean": 0.007227975453284988,
+      "std": 0.012992786253973635,
+      "min": 9.028859437876235e-08,
+      "median": 0.0038589132018387318,
+      "max": 0.2785630524158478
+    },
+    "above_one_excursion_magnitude": {
+      "count": 1396701,
+      "mean": 0.1020376492792033,
+      "std": 0.09180339808256062,
+      "min": 1.1920928955078125e-07,
+      "median": 0.07656586170196533,
+      "max": 1.1580049991607666
+    },
+    "raw_oor_value_correlation_with_downsampled_gt": 0.932866472237751,
+    "spatial_below_fraction_min": 0.0,
+    "spatial_below_fraction_max": 0.007352941176470588,
+    "spatial_above_fraction_min": 0.016176470588235296,
+    "spatial_above_fraction_max": 0.04852941176470588
+  },
+  "frequency": {
+    "sample_count": 256,
+    "bicubic_high_frequency_energy_ratio": {
+      "count": 256,
+      "mean": 0.037236296316153966,
+      "std": 0.030857322903235618,
+      "min": 0.00686596228854254,
+      "median": 0.026928040829301846,
+      "max": 0.18132613222300178
+    },
+    "gt_high_frequency_energy_ratio": {
+      "count": 256,
+      "mean": 0.049280553437869384,
+      "std": 0.06274266377541483,
+      "min": 0.002280741837473464,
+      "median": 0.025813359769008136,
+      "max": 0.409768144933077
+    },
+    "bicubic_directional_anisotropy": {
+      "count": 256,
+      "mean": 0.34372453679081383,
+      "std": 0.22227300388950946,
+      "min": 0.01555194339736786,
+      "median": 0.2893134838232501,
+      "max": 0.9332253497713411
+    },
+    "gt_directional_anisotropy": {
+      "count": 256,
+      "mean": 0.39475255872591064,
+      "std": 0.23802413868300568,
+      "min": 0.017265589329023667,
+      "median": 0.34461534720431486,
+      "max": 0.9924187774044706
+    }
+  },
+  "structural_diversity": {
+    "descriptor_count": 33,
+    "descriptor_names": [
+      "mean",
+      "std",
+      "p01",
+      "p50",
+      "p99",
+      "below_zero_fraction",
+      "above_one_fraction",
+      "oor_abs_mean",
+      "gradient_mean",
+      "gradient_std",
+      "gradient_p90",
+      "edge_density_005",
+      "edge_density_010",
+      "orientation_0",
+      "orientation_1",
+      "orientation_2",
+      "orientation_3",
+      "orientation_4",
+      "orientation_5",
+      "orientation_6",
+      "orientation_7",
+      "fft_band_0",
+      "fft_band_1",
+      "fft_band_2",
+      "fft_band_3",
+      "fft_anisotropy",
+      "fft_peak_fraction",
+      "foreground_fraction_025",
+      "foreground_fraction_050",
+      "foreground_fraction_075",
+      "components_per_megapixel",
+      "component_area_mean",
+      "component_area_max_fraction"
+    ],
+    "train_pca_explained_variance_first_two": [
+      0.25667918234815246,
+      0.17983126975601585
+    ],
+    "train_nearest_neighbor_distance": {
+      "count": 2720,
+      "mean": 1.503838948922308,
+      "std": 0.8545880283181363,
+      "min": 0.21145906079939192,
+      "median": 1.3483319446747735,
+      "max": 10.04724336382428
+    },
+    "validation_nearest_train_distance": {
+      "count": 480,
+      "mean": 1.4760965123454228,
+      "std": 0.8104436726037934,
+      "min": 0.31102724834678735,
+      "median": 1.3381937810815567,
+      "max": 4.784439583566063
+    }
+  },
+  "ood_proxy": {
+    "validation_count": 480,
+    "selected_count": 120,
+    "selected_fraction": 0.25,
+    "score": {
+      "count": 480,
+      "mean": 0.5013507199754902,
+      "std": 0.22106881162850894,
+      "min": 0.040257352941176466,
+      "median": 0.48511029411764706,
+      "max": 0.9911764705882353
+    },
+    "split_file": "validation_subsets_seed42.json"
+  },
+  "representative_training_keys_by_residual_rmse": [
+    "002224",
+    "001392",
+    "002060",
+    "000958"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "purpose": "Short pipeline check; checkpoints from this configuration are not final weights.",
+  "command_overrides": {
+    "run_kind": "smoke",
+    "epochs": 2,
+    "steps_per_epoch": 20,
+    "max_train_pairs": 64,
+    "max_val_pairs": 16,
+    "width": 24,
+    "blocks": 4,
+    "hr_blocks": 1,
+    "batch_size": 2,
+    "patch_size": 64
+  }
+}
+

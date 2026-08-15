@@ -1,0 +1,57 @@
+# Virtual environments and Python/tool caches
+.venv/
+.venv_submission/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.pytest_tmp/
+pytest-cache-files-*/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tmp/
+.verification_outputs/
+
+# Organizer data: never commit raw NoisyLR, GT, test inputs, or archives
+/train (1)/
+/Test_NoisyLR (2)/
+/data/
+/datasets/
+**/NoisyLR/
+**/GT/
+**/ground_truth/
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tgz
+
+# Transient training and duplicate inference artifacts
+/runs/
+/fresh_machine_outputs/
+*.log
+events.out.tfevents.*
+/weights/metric_cache/
+
+# Only the final public checkpoint belongs under weights/
+/weights/*
+!/weights/README.md
+!/weights/best.pt
+!/weights/best.metadata.json
+
+# Official restored arrays are mandatory public artifacts
+/restored_test_outputs/*
+!/restored_test_outputs/**/
+!/restored_test_outputs/**/*.npy
+
+# IDE and OS metadata
+.DS_Store
+._*
+Thumbs.db
+.vscode/
+.idea/

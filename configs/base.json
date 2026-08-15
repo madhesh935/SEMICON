@@ -1,0 +1,34 @@
+{
+  "model": {
+    "width": 64,
+    "num_blocks": 24,
+    "num_hr_blocks": 1,
+    "expansion": 2,
+    "dropout": 0.0,
+    "scale": 2,
+    "input_representation": "raw_clipped_oor",
+    "context_kernel": 0,
+    "context_dilation": 1
+  },
+  "training": {
+    "seed": 42,
+    "epochs": 20,
+    "batch_size": 8,
+    "lr_patch_size": 64,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0001,
+    "warmup_epochs": 1,
+    "schedule": "cosine",
+    "gradient_clip_norm": 1.0,
+    "ema_decay": 0.995,
+    "loss": "composite"
+  },
+  "data": {
+    "split": "splits/split_seed42.json",
+    "train_fraction": 0.85,
+    "augmentations": ["horizontal_flip", "vertical_flip", "rotation_0_90_180_270"],
+    "synthetic_degradation": false,
+    "clip_noisy_feature_input": false
+  }
+}

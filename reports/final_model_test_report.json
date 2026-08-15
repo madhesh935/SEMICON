@@ -1,0 +1,123 @@
+{
+  "verdict": "READY FOR SUBMISSION",
+  "repository": "<repo-root>",
+  "git_root_exact": true,
+  "source_checkpoint_dataset_official_outputs_modified": false,
+  "environment": {
+    "python": "3.13.14",
+    "numpy": "2.4.4",
+    "torch": "2.11.0+cu130",
+    "cuda_runtime": "13.0",
+    "cudnn": 91900,
+    "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "gpu_vram_bytes": 6438780928,
+    "cuda_matrix_finite": true,
+    "pip_check": true,
+    "evaluate_import_unnecessary_packages_loaded": false
+  },
+  "dataset": {
+    "training_pairs": 3200,
+    "missing_pairs": 0,
+    "official_test_inputs": 400,
+    "train_noisy_shape": [128, 128],
+    "train_gt_shape": [256, 256],
+    "test_shape": [128, 128],
+    "dtypes": ["float32"],
+    "all_finite": true,
+    "train_noisy_global_min": -0.2785630524158478,
+    "train_noisy_global_max": 2.1580049991607666,
+    "train_gt_global_min": 0.0,
+    "train_gt_global_max": 1.0,
+    "test_global_min": -0.2248806655406952,
+    "test_global_max": 2.1580159664154053,
+    "exact_train_test_noisy_hash_duplicates": 0,
+    "split_seed": 42,
+    "split_train_count": 2720,
+    "split_validation_count": 480
+  },
+  "checkpoint": {
+    "path": "weights/best.pt",
+    "size_bytes": 3993611,
+    "sha256": "10FE2F02EAA5ABEAFAA5050F8022D60282C03BF89AB864F871C51C41CE0A20AE",
+    "architecture": "RangeAwareLiteNAFSR",
+    "parameter_count": 956609,
+    "model_config": {"width": 64, "num_blocks": 24, "num_hr_blocks": 1, "expansion": 2, "dropout": 0.0, "scale": 2},
+    "training_kind": "full",
+    "strict_load_keys_ok": true,
+    "loaded_outside_repository_cwd": true
+  },
+  "tests": {
+    "compile": true,
+    "pytest_passed": 43,
+    "submission_verifier": true,
+    "official_outputs_count": 400,
+    "official_outputs_valid": true,
+    "both_cli_forms": true,
+    "official_cli_hash_differences": 0,
+    "official_vs_committed_hash_differences": 0,
+    "official_vs_committed_max_abs_difference": 0.0,
+    "official_vs_committed_mean_abs_difference": 0.0,
+    "functional_128_to_256": true,
+    "functional_256_to_512": true,
+    "functional_128x160_to_256x320": true,
+    "out_of_range_input": true,
+    "out_of_range_vs_clipped_max_abs_difference": 0.033509910106658936,
+    "cross_working_directory": true,
+    "cpu_fallback_small_input": true,
+    "private_path_or_secret_scan": true
+  },
+  "quality": {
+    "validation_count": 480,
+    "model_psnr": 27.869329127248292,
+    "model_ssim": 0.7489683585877321,
+    "model_lpips": 0.3007189181749709,
+    "bicubic_psnr": 23.173148688792516,
+    "bicubic_ssim": 0.5395103217384112,
+    "psnr_improvement": 4.696180438455777,
+    "ssim_improvement": 0.20945803684932096,
+    "official_test_quality_metric": null,
+    "scale_256_to_512_quality_metric": null
+  },
+  "rotation": {
+    "0": {"psnr": 27.869329127248292, "ssim": 0.7489683585877321, "count": 480},
+    "90": {"psnr": 27.87075084102354, "ssim": 0.7488830341108752, "count": 480},
+    "180": {"psnr": 27.872453317497, "ssim": 0.748999837080, "count": 480},
+    "270": {"psnr": 27.870725553519, "ssim": 0.748898228151, "count": 480},
+    "max_psnr_spread": 0.003124190248
+  },
+  "speed_memory": {
+    "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "warmup_iterations": 20,
+    "timed_iterations": 100,
+    "tta": false,
+    "amp": true,
+    "128_to_256": {"mean_ms": 30.695228000404313, "median_ms": 30.15850000156206, "p95_ms": 32.01383499399526, "peak_gpu_memory_bytes": 84140544},
+    "256_to_512": {"mean_ms": 105.0097459997778, "median_ms": 104.97089999989839, "p95_ms": 106.15996999767958, "peak_gpu_memory_bytes": 293544448},
+    "official_400_positional_total_seconds": 15.248,
+    "official_400_flag_total_seconds": 15.706
+  },
+  "visual_figures": [
+    "reports/final_model_test_figures/final_high_noise_000984.png",
+    "reports/final_model_test_figures/final_strong_edges_002983.png",
+    "reports/final_model_test_figures/final_dark_structure_002225.png",
+    "reports/final_model_test_figures/final_bright_structure_001194.png",
+    "reports/final_model_test_figures/final_difficult_low_psnr_000355.png"
+  ],
+  "repository_size": {
+    "physical_bytes_excluding_git": 3430754726,
+    "physical_mib_excluding_git": 3271.82,
+    "local_venv_bytes": 3312631946,
+    "prospective_git_files": 474,
+    "prospective_git_bytes": 117675516,
+    "prospective_git_mib": 112.22,
+    "prospective_files_over_20_mib": 0,
+    "prospective_files_over_100_mib": 0
+  },
+  "temporary_test_root": "<temporary-test-root>",
+  "warnings": [
+    "256-to-512 was tested functionally and for latency only; no quality ground truth exists.",
+    "No official test PSNR/SSIM/LPIPS is claimed because official test GT is unavailable.",
+    "One initial validate.py invocation used the wrong root and was safely rejected by the frozen split fingerprint; the corrected parent-workspace invocation passed.",
+    "Torchvision emitted deprecation warnings while initializing the cached LPIPS AlexNet weights; metrics completed successfully."
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "weights": "weights/best.pt",
+  "figures": [
+    {
+      "key": "001219",
+      "path": "reports/figures/comparison_001219.png",
+      "zoom_box_hr": [
+        30,
+        0,
+        94,
+        64
+      ],
+      "note": "Display arrays are clipped only for visualization; metric arrays are unchanged."
+    }
+  ]
+}

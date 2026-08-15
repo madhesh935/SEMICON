@@ -1,0 +1,34 @@
+{
+  "status": "measured",
+  "purpose": "Pixel-only versus composite loss under an identical short controlled budget",
+  "shared_protocol": {
+    "training_pairs": 256,
+    "validation_pairs": 64,
+    "epochs": 3,
+    "optimizer_steps": 150,
+    "model_parameters": 104993,
+    "model_width": 32,
+    "lr_blocks": 6,
+    "hr_blocks": 1,
+    "lr_patch_size": 64,
+    "batch_size": 4,
+    "ema": false,
+    "seed": 42
+  },
+  "pixel_only": {
+    "best_psnr": 26.62525416462995,
+    "best_ssim": 0.6584312102635281,
+    "run": "runs/ablation_pixel"
+  },
+  "composite": {
+    "best_psnr": 26.685409214789413,
+    "best_ssim": 0.6617752129602142,
+    "run": "runs/ablation_composite"
+  },
+  "composite_minus_pixel": {
+    "psnr_db": 0.060155050159463,
+    "ssim": 0.0033440026966861
+  },
+  "selection": "composite"
+}
+

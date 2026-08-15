@@ -1,0 +1,61 @@
+{
+  "model_config": {
+    "width": 64,
+    "num_blocks": 24,
+    "num_hr_blocks": 1,
+    "expansion": 2,
+    "dropout": 0.0,
+    "scale": 2
+  },
+  "data_config": {
+    "noisy_dir": "train (1)/train/NoisyLR",
+    "gt_dir": "train (1)/train/GT",
+    "split_path": "splits/split_seed42.json",
+    "patch_size_lr": 64,
+    "augmentation": "joint H/V flip and rotations k*90 degrees",
+    "raw_noisy_clipped": false,
+    "train_records_used": 2720,
+    "validation_records_used": 480
+  },
+  "train_config": {
+    "experiment": "full_litenaf_w64b24",
+    "run_kind": "full",
+    "epochs": 20,
+    "batch_size": 8,
+    "patch_size": 64,
+    "steps_per_epoch": null,
+    "max_train_pairs": null,
+    "max_val_pairs": null,
+    "overfit_pairs": 0,
+    "width": 64,
+    "blocks": 24,
+    "hr_blocks": 1,
+    "expansion": 2,
+    "dropout": 0.0,
+    "loss": "composite",
+    "lr": 0.0002,
+    "min_lr_ratio": 0.02,
+    "weight_decay": 0.0001,
+    "warmup_epochs": 1.0,
+    "grad_clip": 1.0,
+    "ema_decay": 0.995,
+    "no_ema": false,
+    "workers": 0,
+    "seed": 42,
+    "device": "cuda",
+    "no_amp": false,
+    "deterministic_algorithms": false,
+    "validation_interval": 1,
+    "early_stop_patience": 6,
+    "resume": "auto",
+    "finalize": true,
+    "optimizer": "AdamW",
+    "schedule": "linear warmup plus cosine decay",
+    "amp_enabled": true,
+    "parameter_count": 956609
+  },
+  "split_identity": {
+    "seed": 42,
+    "dataset_fingerprint": "cf110aa74b939bc359e747ffb526de6482c81abae57c722de2fbd3115a3516ca"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "status": "measured_full_training",
+  "run": "runs/full_litenaf_w64b24",
+  "split": "splits/split_seed42.json",
+  "dataset_fingerprint": "cf110aa74b939bc359e747ffb526de6482c81abae57c722de2fbd3115a3516ca",
+  "train_pairs": 2720,
+  "validation_pairs": 480,
+  "epochs": 20,
+  "optimizer_steps": 6800,
+  "batch_size": 8,
+  "lr_patch_size": 64,
+  "model_parameters": 956609,
+  "recorded_epoch_wall_seconds": 1891.1202187999988,
+  "recorded_validation_wall_seconds": 462.9435933999994,
+  "best_epoch": 20,
+  "best_training_loop_psnr": 27.86932461868577,
+  "best_training_loop_ssim": 0.7489682718813334,
+  "final_weights": "weights/best.pt",
+  "notes": [
+    "All 20 epochs completed on real paired training data; official test inputs were never used for training.",
+    "The run resumed from its valid epoch-1 checkpoint after a host-side foreach gradient-list allocation error.",
+    "Epochs 2-20 completed with scalar gradient clipping and zero AMP overflow skips."
+  ]
+}
+

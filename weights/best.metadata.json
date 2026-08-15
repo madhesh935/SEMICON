@@ -1,0 +1,45 @@
+{
+  "metadata_format": 1,
+  "checkpoint": "weights/best.pt",
+  "checkpoint_sha256": "10FE2F02EAA5ABEAFAA5050F8022D60282C03BF89AB864F871C51C41CE0A20AE",
+  "training_complete": true,
+  "experiment_name": "full_litenaf_w64b24",
+  "selected_epoch": 20,
+  "optimizer_steps": 6800,
+  "state_used_for_inference": "ema_model_state",
+  "validation_psnr": 27.869329127248292,
+  "validation_ssim": 0.7489683585877321,
+  "validation_lpips": 0.3007189181749709,
+  "model_config": {
+    "width": 64,
+    "num_blocks": 24,
+    "num_hr_blocks": 1,
+    "expansion": 2,
+    "dropout": 0.0,
+    "scale": 2,
+    "input_representation": "raw_clipped_oor",
+    "context_kernel": 0,
+    "context_dilation": 1
+  },
+  "data_config": {
+    "train_pairs": 2720,
+    "validation_pairs": 480,
+    "lr_patch_size": 64,
+    "batch_size": 8,
+    "augmentation": "joint horizontal/vertical flips and rotations by multiples of 90 degrees",
+    "synthetic_degradation": false,
+    "official_test_data_used": false
+  },
+  "optimizer": "AdamW",
+  "learning_rate": 0.0002,
+  "scheduler": "one-epoch linear warm-up then cosine decay to 0.02x",
+  "ema_decay": 0.995,
+  "loss": "0.70 Charbonnier + 0.15 (1-SSIM) + 0.10 Sobel + 0.05 log-FFT magnitude",
+  "split_identity": {
+    "path": "splits/split_seed42.json",
+    "seed": 42,
+    "dataset_fingerprint": "cf110aa74b939bc359e747ffb526de6482c81abae57c722de2fbd3115a3516ca",
+    "split_file_sha256": "4478FA31FD2B93ACE5873C9B6BC421F61CE4D4DDAA15DD368DA1EC0B49984402"
+  },
+  "provenance_note": "Sidecar values come from reports/full_training_log.csv, reports/full_training_config.json, and the fresh full-validation reports. The selected checkpoint itself is preserved byte-for-byte."
+}

@@ -1,0 +1,165 @@
+{
+  "format_version": 1,
+  "project_root": ".",
+  "raw_data_modified": false,
+  "archives_discovered": [],
+  "training_noisy_directories": [
+    "train (1)/train/NoisyLR"
+  ],
+  "ground_truth_directories": [
+    "train (1)/train/GT"
+  ],
+  "test_directories": [
+    "Test_NoisyLR (2)/NoisyLR"
+  ],
+  "pairing": {
+    "method": "exact case-insensitive relative path stem plus verified 2x shape",
+    "matched_pairs": 3200,
+    "missing_gt_count": 0,
+    "missing_gt": [],
+    "missing_noisy_count": 0,
+    "missing_noisy": [],
+    "all_pairs_exactly_2x": true
+  },
+  "roles": {
+    "train_noisy": {
+      "directory": "train (1)/train/NoisyLR",
+      "file_count": 3200,
+      "valid_file_count": 3200,
+      "invalid_file_count": 0,
+      "shape_distribution": {
+        "(128, 128)": 3200
+      },
+      "dtype_distribution": {
+        "float32": 3200
+      },
+      "finite_value_count": 52428800,
+      "min": -0.2785630524158478,
+      "max": 2.1580049991607666,
+      "mean": 0.43353628821395707,
+      "std": 0.2847866113127247,
+      "global_percentiles": {
+        "0.0": -0.2785630524158478,
+        "0.1": -0.0056001045322045685,
+        "1.0": 0.009080030247569084,
+        "5.0": 0.04116313345730305,
+        "25.0": 0.19230501726269722,
+        "50.0": 0.4014992415904999,
+        "75.0": 0.6394934058189392,
+        "95.0": 0.9405319452285763,
+        "99.0": 1.1208454453945158,
+        "99.9": 1.3197359808683564,
+        "100.0": 2.1580049991607666
+      },
+      "global_percentile_method": "deterministic evenly spaced sample, up to 1024 values per file; extrema are exact",
+      "files_with_values_outside_0_1": 3182,
+      "values_outside_0_1": 1779091,
+      "files_with_values_below_zero": 1967,
+      "values_below_zero": 149367,
+      "files_with_values_above_one": 3120,
+      "values_above_one": 1629724,
+      "nan_count": 0,
+      "inf_count": 0,
+      "gt_files_outside_tolerance_minus1e-6_to_1plus1e-6": null,
+      "duplicate_extra_copies": 0
+    },
+    "train_gt": {
+      "directory": "train (1)/train/GT",
+      "file_count": 3200,
+      "valid_file_count": 3200,
+      "invalid_file_count": 0,
+      "shape_distribution": {
+        "(256, 256)": 3200
+      },
+      "dtype_distribution": {
+        "float32": 3200
+      },
+      "finite_value_count": 209715200,
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.4335284413612528,
+      "std": 0.2726460604341478,
+      "global_percentiles": {
+        "0.0": 0.0,
+        "0.1": 0.0008613953593885526,
+        "1.0": 0.009889029394835235,
+        "5.0": 0.04207444302737713,
+        "25.0": 0.1968964822590351,
+        "50.0": 0.41235746443271637,
+        "75.0": 0.649027943611145,
+        "95.0": 0.9063818961381911,
+        "99.0": 0.9750055128335952,
+        "99.9": 0.9985143311619762,
+        "100.0": 1.0
+      },
+      "global_percentile_method": "deterministic evenly spaced sample, up to 1024 values per file; extrema are exact",
+      "files_with_values_outside_0_1": 0,
+      "values_outside_0_1": 0,
+      "files_with_values_below_zero": 0,
+      "values_below_zero": 0,
+      "files_with_values_above_one": 0,
+      "values_above_one": 0,
+      "nan_count": 0,
+      "inf_count": 0,
+      "gt_files_outside_tolerance_minus1e-6_to_1plus1e-6": 0,
+      "duplicate_extra_copies": 0
+    },
+    "test": [
+      {
+        "directory": "Test_NoisyLR (2)/NoisyLR",
+        "file_count": 400,
+        "valid_file_count": 400,
+        "invalid_file_count": 0,
+        "shape_distribution": {
+          "(128, 128)": 400
+        },
+        "dtype_distribution": {
+          "float32": 400
+        },
+        "finite_value_count": 6553600,
+        "min": -0.2248806655406952,
+        "max": 2.1580159664154053,
+        "mean": 0.44274202802813156,
+        "std": 0.2842690490176536,
+        "global_percentiles": {
+          "0.0": -0.2248806655406952,
+          "0.1": -0.021173530291765927,
+          "1.0": 0.0029541438305750495,
+          "5.0": 0.03816932383924723,
+          "25.0": 0.20823227614164352,
+          "50.0": 0.4137212783098221,
+          "75.0": 0.6520562767982483,
+          "95.0": 0.9396634727716444,
+          "99.0": 1.1169416487216954,
+          "99.9": 1.3102673135995972,
+          "100.0": 2.1580159664154053
+        },
+        "global_percentile_method": "deterministic evenly spaced sample, up to 1024 values per file; extrema are exact",
+        "files_with_values_outside_0_1": 398,
+        "values_outside_0_1": 245122,
+        "files_with_values_below_zero": 282,
+        "values_below_zero": 43262,
+        "files_with_values_above_one": 395,
+        "values_above_one": 201860,
+        "nan_count": 0,
+        "inf_count": 0,
+        "gt_files_outside_tolerance_minus1e-6_to_1plus1e-6": null,
+        "duplicate_extra_copies": 0
+      }
+    ]
+  },
+  "leakage_and_duplicates": {
+    "exact_train_test_canonical_hash_matches": 0,
+    "exact_train_test_examples": [],
+    "overlapping_filename_stem_count": 400,
+    "note": "stem overlap alone is not content leakage; canonical hashes are compared"
+  },
+  "split": {
+    "path": "kla-semiconductor-restoration-submission/splits/split_seed42.json",
+    "seed": 42,
+    "strategy": "deterministic_filename_random_no_group_metadata_available",
+    "train_count": 2720,
+    "validation_count": 480,
+    "dataset_fingerprint": "cf110aa74b939bc359e747ffb526de6482c81abae57c722de2fbd3115a3516ca"
+  }
+}

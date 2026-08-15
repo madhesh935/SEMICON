@@ -1,0 +1,34 @@
+{
+  "status": "measured",
+  "input_directory": "Test_NoisyLR (2)/NoisyLR",
+  "output_directory": "restored_test_outputs",
+  "weights": "weights/best.pt",
+  "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "cuda_amp": true,
+  "tta": false,
+  "batch_size": 8,
+  "inputs_discovered": 400,
+  "outputs_saved": 400,
+  "failures": 0,
+  "model_load_seconds": 0.182,
+  "total_wall_seconds": 15.245,
+  "model_inference_seconds": 13.274,
+  "average_model_milliseconds_per_image": 33.186,
+  "launch_working_directory": "parent of repository",
+  "evaluator_sha256": "6D3A24B8F8A0C9641575EFDB32FC7D72BE9FD9F75D1BD3E5EA92B7C5123DCA7E",
+  "published_output_comparison": {
+    "relative_names_equal": true,
+    "byte_identical_files": 400,
+    "byte_differences": 0,
+    "authoritative_outputs_overwritten": false
+  },
+  "contract_verified": {
+    "relative_names_match": true,
+    "dtype_float32": true,
+    "finite": true,
+    "range_0_1": true,
+    "exactly_2x": true
+  },
+  "quality_metrics": null,
+  "quality_metrics_note": "No official test GT was used or available; no test quality score is claimed."
+}
