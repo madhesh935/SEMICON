@@ -1,6 +1,8 @@
-# Range-Aware LiteNAF-SR
+# AI-Based Restoration of Degraded Semiconductor Inspection Images
 
-PyTorch restorer for **KLA Problem Statement 01**. It takes a noisy low-resolution grayscale semiconductor inspection array, suppresses speckle and Gaussian-like degradation, and writes a restored image at **exactly 2×** height and width.
+Range-Aware LiteNAF-SR is a lightweight deep-learning system designed to restore noisy, low-resolution grayscale semiconductor inspection images.
+
+The model combines denoising and 2× super-resolution in a single inference pipeline. It accepts degraded NumPy images, suppresses speckle and Gaussian-like noise, preserves semiconductor structures, and reconstructs an output at exactly twice the input resolution.
 
 <p align="left">
 <img src="docs/readme_gallery/gallery_01.png" width="220" height="220" alt="128 to 256 and 256 to 512 restoration" />
