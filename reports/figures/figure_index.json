@@ -1,16 +1,19 @@
 {
   "weights": "weights/best.pt",
+  "note": "Display arrays are clipped only for visualization; metric arrays are unchanged.",
   "figures": [
-    {
-      "key": "001219",
-      "path": "reports/figures/comparison_001219.png",
-      "zoom_box_hr": [
-        30,
-        0,
-        94,
-        64
-      ],
-      "note": "Display arrays are clipped only for visualization; metric arrays are unchanged."
-    }
-  ]
+    {"key": "000005", "path": "reports/figures/comparison_000005.png"},
+    {"key": "001117", "path": "reports/figures/comparison_001117.png"},
+    {"key": "001219", "path": "reports/figures/comparison_001219.png", "zoom_box_hr": [30, 0, 94, 64]},
+    {"key": "002213", "path": "reports/figures/comparison_002213.png"},
+    {"key": "003193", "path": "reports/figures/comparison_003193.png"}
+  ],
+  "final_model_test_figures": [
+    "reports/final_model_test_figures/final_bright_structure_001194.png",
+    "reports/final_model_test_figures/final_dark_structure_002225.png",
+    "reports/final_model_test_figures/final_difficult_low_psnr_000355.png",
+    "reports/final_model_test_figures/final_high_noise_000984.png",
+    "reports/final_model_test_figures/final_strong_edges_002983.png"
+  ],
+  "demo_preview": "docs/custom_test_256_preview.png"
 }

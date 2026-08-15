@@ -1,0 +1,72 @@
+{
+  "held_out_validation_480": {
+    "all": {
+      "count": 480,
+      "psnr_model": 27.86917309766967,
+      "psnr_bicubic": 23.173148690365338,
+      "psnr_gain": 4.696024407304334,
+      "ssim_model": 0.7559673892954986,
+      "ssim_bicubic": 0.5472807406447828,
+      "oor_fraction": 0.9979166666666667
+    },
+    "in_distribution_360": {
+      "count": 360,
+      "psnr_model": 27.645502029729034,
+      "psnr_bicubic": 22.839666034586116,
+      "psnr_gain": 4.805835995142923,
+      "ssim_model": 0.7411516801350646,
+      "ssim_bicubic": 0.5273350913905435,
+      "oor_fraction": 1.0
+    },
+    "ood_proxy_120": {
+      "count": 120,
+      "psnr_model": 28.54018630149157,
+      "psnr_bicubic": 24.173596657702994,
+      "psnr_gain": 4.36658964378857,
+      "ssim_model": 0.8004145167768002,
+      "ssim_bicubic": 0.6071176884075006,
+      "oor_fraction": 0.9916666666666667
+    }
+  },
+  "ood_extra_speckle_and_blur_40": {
+    "count": 40,
+    "psnr_model": 24.761381431210275,
+    "psnr_bicubic": 24.031173841276956,
+    "psnr_gain": 0.7302075899333189,
+    "ssim_model": 0.6594277925789356,
+    "ssim_bicubic": 0.6084384236484766
+  },
+  "scale_256_to_512_functional": [
+    {
+      "key": "000005",
+      "input_shape": [
+        256,
+        256
+      ],
+      "output_shape": [
+        512,
+        512
+      ],
+      "finite": true,
+      "range_ok": true
+    },
+    {
+      "key": "000005",
+      "input_shape": [
+        256,
+        256
+      ],
+      "output_shape": [
+        512,
+        512
+      ],
+      "finite": true,
+      "range_ok": true
+    }
+  ],
+  "notes": {
+    "psnr_matches_saved_report": true,
+    "gt_used": "train/GT on frozen seed-42 validation keys only; train-set images were not scored",
+    "official_test_has_no_gt": true
+  }
+}

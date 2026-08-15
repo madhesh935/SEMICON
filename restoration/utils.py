@@ -34,19 +34,31 @@ def set_deterministic(seed: int = 42, deterministic_algorithms: bool = False) ->
         torch.use_deterministic_algorithms(True, warn_only=True)
 
 
+def _mps_is_available() -> bool:
+    return bool(getattr(torch.backends, "mps", None) and torch.backends.mps.is_available())
+
+
 def select_device(requested: str = "auto") -> torch.device:
     requested = requested.lower()
     if requested == "auto":
-        return torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        if torch.cuda.is_available():
+            return torch.device("cuda")
+        if _mps_is_available():
+            return torch.device("mps")
+        return torch.device("cpu")
     device = torch.device(requested)
     if device.type == "cuda" and not torch.cuda.is_available():
         raise RuntimeError("CUDA was requested but torch.cuda.is_available() is false")
+    if device.type == "mps" and not _mps_is_available():
+        raise RuntimeError("MPS was requested but torch.backends.mps.is_available() is false")
     return device
 
 
 def synchronize(device: torch.device) -> None:
     if device.type == "cuda":
         torch.cuda.synchronize(device)
+    elif device.type == "mps":
+        torch.mps.synchronize()
 
 
 class ExponentialMovingAverage:

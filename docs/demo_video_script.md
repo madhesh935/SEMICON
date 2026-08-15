@@ -59,4 +59,4 @@ Run:
 
 Narration: “The verifier launches inference from a different working directory, tests both official sizes, and checks output count, names, shape, dtype, range, and finiteness. The project includes reproducible training, weights, reports, and all 400 actual test predictions.”
 
-End on the GitHub URL and team name after replacing placeholders in the presentation.
+End on https://github.com/madhesh935/SEMICON and the team name after the remaining presentation fields are filled.

@@ -173,4 +173,4 @@ The initial and final Git status contained the same existing untracked top-level
 
 Physical repository content excluding `.git`: 3,430,754,726 bytes (3,271.82 MiB), including the local `.venv`. Prospective Git content from `git ls-files --others --exclude-standard`: 474 files, 117,675,516 bytes (112.22 MiB). No prospective file exceeds 20 MiB or GitHub's 100 MiB limit. The local `.venv` is ignored and contributes 3,312,631,946 physical bytes.
 
-Remaining human actions are limited to replacing team/GitHub/video placeholders, exporting `TeamName_KLA_PS01.pdf`, creating the public GitHub repository, reviewing the dry-run staging list, committing, and pushing manually.
+Remaining human actions: team/contact details, demo video URL, and exporting `TeamName_KLA_PS01.pdf`. The public repository is https://github.com/madhesh935/SEMICON.

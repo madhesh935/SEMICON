@@ -87,7 +87,7 @@ Use only these held-out 480-image validation measurements:
 
 ## Slide 8 — Repository and demo
 
-- Public GitHub: **[ADD PUBLIC GITHUB URL]**
+- Public GitHub: **https://github.com/madhesh935/SEMICON**
 - Demo video: **[ADD VIDEO URL]**
 - One-command inference:
 
