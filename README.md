@@ -51,20 +51,16 @@ Sources: [`reports/validation_summary.json`](reports/validation_summary.json), [
 
 ## Output images
 
-<p>
-<img src="docs/readme_gallery/row1_restore_128_and_256.png" width="32%" alt="128 to 256 and 256 to 512 restoration" />
-<img src="docs/readme_gallery/row1_restore_with_gt.png" width="32%" alt="Noisy input, restored output, and GT reference" />
-<img src="docs/readme_gallery/row1_train_gt_check.png" width="32%" alt="Training-set noisy, restored, and ground truth" />
-</p>
-<p>
-<img src="docs/readme_gallery/row2_official_test.png" width="48%" alt="Official test noisy input versus restored output" />
-<img src="docs/readme_gallery/row2_pair_example.png" width="48%" alt="Example NoisyLR and ground truth pair" />
+<p align="left">
+<img src="docs/readme_gallery/gallery_01.png" width="220" height="220" alt="128 to 256 and 256 to 512 restoration" />
+<img src="docs/readme_gallery/gallery_02.png" width="220" height="220" alt="Noisy input, restored output, and GT reference" />
+<img src="docs/readme_gallery/gallery_03.png" width="220" height="220" alt="Training-set noisy, restored, and ground truth" />
+<br>
+<img src="docs/readme_gallery/gallery_04.png" width="220" height="220" alt="Official test noisy input versus restored output" />
+<img src="docs/readme_gallery/gallery_05.png" width="220" height="220" alt="Example NoisyLR and ground truth pair" />
 </p>
 
-| | |
-|---|---|
-| Row 1 | 128→256 and 256→512 restore · noisy / restored / GT reference · train-set GT check |
-| Row 2 | Official test 128→256 · example NoisyLR vs GT pair |
+Row 1: 128→256 / 256→512 restore · noisy / restored / GT · train-set GT check. Row 2: official test 128→256 · NoisyLR vs GT pair.
 
 More panels: [`reports/figures/`](reports/figures/) and [`reports/final_model_test_figures/`](reports/final_model_test_figures/).
 
