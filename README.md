@@ -102,6 +102,27 @@ The OOD-proxy subset scoring *higher* than the random validation subset (28.847 
 
 More panels: [`reports/figures/`](reports/figures/) and [`reports/final_model_test_figures/`](reports/final_model_test_figures/).
 
+### 256→512 manual proxy check (not an official score)
+
+No real 512×512 array exists anywhere in the provided dataset — every train GT file is `256×256` and every train/test `NoisyLR` file is `128×128`, confirmed by scanning all 3,200 + 3,200 + 400 files (matches [`reports/degradation_analysis/summary.md`](reports/degradation_analysis/summary.md): "Paired 256×256 → 512×512 samples: 0"). A literal PSNR/SSIM against real ground truth is therefore impossible at this scale, and fabricating one — e.g. bicubic-upscaling a 256 GT to pretend it's a 512 target — would just reward blurriness, not accuracy. This is why the compliance table below lists 256→512 as shape/dtype/range-verified only, not GT-scored.
+
+To get *some* generalization signal for this untested scale without inventing fake ground truth, [`score_256_to_512_proxy.py`](score_256_to_512_proxy.py) runs two proxies against the real 256×256 GT images in the held-out seed-42 validation split (480 images), never against a fabricated 512 target:
+
+| Protocol | What it does | Model | Bicubic | Gain |
+|---|---|---:|---:|---:|
+| A — clean cycle-consistency | real `GT_256` → model 256→512 → area-downsample back to 256 → score vs. the same real `GT_256` | 35.435 dB PSNR, 0.913 SSIM | **45.860 dB PSNR, 0.993 SSIM** | model is worse |
+| B — synthetic-noise proxy | real `GT_256` + synthetic Gaussian noise (std 0.0905, matched to the measured real LR-discrepancy std) → model 256→512 → area-downsample back → score vs. real `GT_256` | **25.500 dB PSNR, 0.622 SSIM** | 23.289 dB PSNR, 0.488 SSIM | **model +2.212 dB, +0.134 SSIM** |
+
+Read this carefully, it is not a clean win in both rows:
+
+- **Protocol A is expected to favor bicubic, and that's not a red flag.** A bicubic up/down cycle on an already-clean image is close to a no-op. The model has no way to know its input is clean — it always applies a learned denoising residual matched to the training distribution — so on truly clean input it "corrects" noise that isn't there and loses round-trip fidelity that a no-op transform wouldn't. This says the model assumes degraded input; it does not say the model is broken.
+- **Protocol B is the scenario that actually resembles the competition task** (noisy input → clean output), and there the model shows a real, positive gain over bicubic.
+- The synthetic noise in Protocol B is Gaussian with a std matched to a measured statistic — it is **not** real speckle, so this is a proxy for denoising+SR benefit, not a measurement against the organizer's actual degradation.
+- Both protocols score a *downsample-cycle* of the 512 output against 256 GT, not the 512 output's own fine detail directly, so the absolute numbers are not on the same footing as the real 128→256 PSNR above.
+- The **+2.212 dB gain measured here is smaller than the real +4.954 dB gain at the trained 128→256 scale** — consistent with the model never having been trained on 256-sized inputs, and stated here exactly that way rather than rounded up.
+
+Reproduce: `python score_256_to_512_proxy.py`. Full per-image results: [`reports/manual_256_to_512_proxy.json`](reports/manual_256_to_512_proxy.json).
+
 ---
 
 ## Install
@@ -243,6 +264,7 @@ robustness_test.py           rotation-invariance (0/90/180/270 degree) check
 audit_dataset.py             dataset integrity/statistics audit
 analyze_degradation.py       measured noise/frequency/OOD-proxy analysis
 benchmark_bicubic.py         bicubic baseline metrics
+score_256_to_512_proxy.py    caveated 256->512 proxy scoring (no real 512 GT exists)
 make_comparison.py           presentation comparison figures
 compare_models.py            checkpoint-vs-checkpoint comparison
 score_experiment.py          ablation/experiment scoring
@@ -388,7 +410,7 @@ Verified by actually running the checks below, not by inspection alone.
 | Simultaneous multi-degradation handling (one pipeline) | PASS |
 | 2x super-resolution (learned, not plain interpolation) | PASS |
 | 128→256 support | PASS (480 paired, GT-scored) |
-| 256→512 support | PASS (shape/dtype/range only — not applicable for scoring, no paired GT) |
+| 256→512 support | PASS (shape/dtype/range only — no paired GT exists to score directly; see the [manual proxy check](#256512-manual-proxy-check-not-an-official-score) for a caveated generalization signal) |
 | Range-aware input handling (out-of-range values preserved) | PASS |
 | Single-channel grayscale only | PASS |
 | In-distribution readiness | PASS |
