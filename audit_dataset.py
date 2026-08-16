@@ -15,7 +15,7 @@ import numpy as np
 
 from restoration.data import build_pair_index, create_or_load_split, discover_dataset
 from restoration.io import is_metadata_path, normalize_array_shape
-from restoration.utils import PROJECT_ROOT, relative_or_absolute, write_csv, write_json
+from restoration.utils import PROJECT_ROOT, refuse_existing_outputs, relative_or_absolute, write_csv, write_json
 
 
 PERCENTILES = (0.0, 0.1, 1.0, 5.0, 25.0, 50.0, 75.0, 95.0, 99.0, 99.9, 100.0)
@@ -37,6 +37,7 @@ def parse_args() -> argparse.Namespace:
         default=1024,
         help="Deterministic evenly spaced samples per file for approximate global percentiles",
     )
+    parser.add_argument("--force", action="store_true", help="Overwrite existing report files at --report-dir")
     return parser.parse_args()
 
 
@@ -208,6 +209,11 @@ def scan_role(
 
 def main() -> int:
     args = parse_args()
+    refuse_existing_outputs(
+        [args.report_dir / "dataset_audit.json", args.report_dir / "dataset_audit.csv"],
+        force=args.force,
+        script="audit_dataset.py",
+    )
     root = args.root.resolve()
     if (args.noisy_dir is None) != (args.gt_dir is None):
         raise SystemExit("--noisy-dir and --gt-dir must be provided together")

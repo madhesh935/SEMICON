@@ -10,7 +10,7 @@ import pickle
 import random
 from copy import deepcopy
 from pathlib import Path
-from typing import Any
+from typing import Any, Iterable
 
 import numpy as np
 import torch
@@ -189,6 +189,25 @@ def append_csv(path: str | Path, row: dict[str, Any]) -> None:
         if not exists:
             writer.writeheader()
         writer.writerow(row)
+
+
+def refuse_existing_outputs(paths: Iterable[str | Path], *, force: bool, script: str) -> None:
+    """Refuse to silently overwrite already-existing report files.
+
+    Several report-writing scripts default to paths inside the committed
+    reports/ tree. A quick diagnostic run (e.g. --max-images 8) with the
+    default --report-dir would otherwise silently overwrite the real,
+    committed numbers. Pass force=True (--force) to overwrite intentionally.
+    """
+
+    existing = sorted({str(Path(path)) for path in paths if Path(path).exists()})
+    if existing and not force:
+        listed = "\n".join(f"  - {path}" for path in existing)
+        raise SystemExit(
+            f"{script}: refusing to overwrite existing output(s):\n{listed}\n"
+            "Pass --force to overwrite intentionally (e.g. an official rerun), "
+            "or point the output path elsewhere for a diagnostic/subset run."
+        )
 
 
 def relative_or_absolute(path: Path, root: Path = PROJECT_ROOT) -> str:

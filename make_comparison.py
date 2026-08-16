@@ -20,7 +20,7 @@ from torch.nn import functional as F
 
 from restoration.data import build_pair_index, create_or_load_split, discover_dataset, records_from_split
 from restoration.io import load_grayscale_npy
-from restoration.utils import PROJECT_ROOT, load_model_from_checkpoint, select_device, write_json
+from restoration.utils import PROJECT_ROOT, load_model_from_checkpoint, refuse_existing_outputs, select_device, write_json
 
 
 def parse_args() -> argparse.Namespace:
@@ -35,6 +35,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--keys", nargs="*", help="Optional exact validation keys")
     parser.add_argument("--device", default="auto")
     parser.add_argument("--no-amp", action="store_true")
+    parser.add_argument("--force", action="store_true", help="Overwrite an existing figure_index.json at --output-dir")
     return parser.parse_args()
 
 
@@ -57,6 +58,11 @@ def select_zoom(gt: np.ndarray, size: int) -> tuple[slice, slice]:
 
 def main() -> int:
     args = parse_args()
+    refuse_existing_outputs(
+        [args.output_dir / "figure_index.json"],
+        force=args.force,
+        script="make_comparison.py",
+    )
     root = args.root.resolve()
     if (args.noisy_dir is None) != (args.gt_dir is None):
         raise SystemExit("--noisy-dir and --gt-dir must be supplied together")

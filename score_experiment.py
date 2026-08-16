@@ -25,7 +25,15 @@ from restoration.metrics import (
     psnr,
     ssim,
 )
-from restoration.utils import PROJECT_ROOT, load_model_from_checkpoint, select_device, synchronize, write_csv, write_json
+from restoration.utils import (
+    PROJECT_ROOT,
+    load_model_from_checkpoint,
+    refuse_existing_outputs,
+    select_device,
+    synchronize,
+    write_csv,
+    write_json,
+)
 
 
 EXPERIMENT_FIELDS = [
@@ -85,6 +93,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--latency-warmup", type=int, default=10)
     parser.add_argument("--latency-iterations", type=int, default=30)
     parser.add_argument("--notes", default="")
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Overwrite an existing registry entry / detail files for --experiment-id",
+    )
     return parser.parse_args()
 
 
@@ -177,6 +190,19 @@ def main() -> int:
     args = parse_args()
     if args.lpips and args.lpips_metrics_csv:
         raise SystemExit("choose --lpips or --lpips-metrics-csv, not both")
+    registry_path = args.reports_root / "experiments.csv"
+    detail_dir = args.reports_root / "experiment_details"
+    existing_registry = read_registry(registry_path)
+    if any(item.get("experiment_id") == args.experiment_id for item in existing_registry):
+        refuse_existing_outputs(
+            [
+                registry_path,
+                detail_dir / f"{args.experiment_id}_metrics.csv",
+                detail_dir / f"{args.experiment_id}.json",
+            ],
+            force=args.force,
+            script=f"score_experiment.py (--experiment-id {args.experiment_id} already scored)",
+        )
     if (args.noisy_dir is None) != (args.gt_dir is None):
         raise SystemExit("--noisy-dir and --gt-dir must be supplied together")
     root = args.root.resolve()

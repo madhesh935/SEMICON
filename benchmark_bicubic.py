@@ -16,7 +16,15 @@ from torch.nn import functional as F
 from restoration.data import build_pair_index, create_or_load_split, discover_dataset, records_from_split
 from restoration.io import load_grayscale_npy
 from restoration.metrics import grouped_metric_summary, psnr, ssim
-from restoration.utils import PROJECT_ROOT, relative_or_absolute, select_device, synchronize, write_csv, write_json
+from restoration.utils import (
+    PROJECT_ROOT,
+    refuse_existing_outputs,
+    relative_or_absolute,
+    select_device,
+    synchronize,
+    write_csv,
+    write_json,
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -33,11 +41,17 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--device", default="auto", help="auto, cuda, or cpu")
     parser.add_argument("--max-images", type=int, help="Diagnostic subset only; omit for the official fixed split")
+    parser.add_argument("--force", action="store_true", help="Overwrite existing report files at --report-dir")
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
+    refuse_existing_outputs(
+        [args.report_dir / "bicubic_metrics.csv", args.report_dir / "bicubic_summary.json"],
+        force=args.force,
+        script="benchmark_bicubic.py",
+    )
     root = args.root.resolve()
     if (args.noisy_dir is None) != (args.gt_dir is None):
         raise SystemExit("--noisy-dir and --gt-dir must be supplied together")

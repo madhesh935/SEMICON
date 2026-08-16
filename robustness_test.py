@@ -16,6 +16,7 @@ from restoration.metrics import psnr, ssim, summarize
 from restoration.utils import (
     PROJECT_ROOT,
     load_model_from_checkpoint,
+    refuse_existing_outputs,
     relative_or_absolute,
     select_device,
     synchronize,
@@ -36,11 +37,17 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--workers", type=int, default=0)
     parser.add_argument("--no-amp", action="store_true")
     parser.add_argument("--max-images", type=int, help="Diagnostic subset only")
+    parser.add_argument("--force", action="store_true", help="Overwrite existing report files at --report-dir")
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
+    refuse_existing_outputs(
+        [args.report_dir / "robustness_metrics.csv", args.report_dir / "robustness_summary.json"],
+        force=args.force,
+        script="robustness_test.py",
+    )
     root = args.root.resolve()
     if (args.noisy_dir is None) != (args.gt_dir is None):
         raise SystemExit("--noisy-dir and --gt-dir must be supplied together")
