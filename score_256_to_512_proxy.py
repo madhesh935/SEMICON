@@ -45,7 +45,13 @@ from torch.nn import functional as F
 
 from restoration.io import load_grayscale_npy
 from restoration.metrics import psnr, ssim
-from restoration.utils import PROJECT_ROOT, load_model_from_checkpoint, select_device, set_deterministic
+from restoration.utils import (
+    PROJECT_ROOT,
+    load_model_from_checkpoint,
+    refuse_existing_outputs,
+    select_device,
+    set_deterministic,
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -58,6 +64,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--noise-std", type=float, default=0.0905, help="Protocol B synthetic noise std")
     parser.add_argument("--device", default="auto", help="auto, cuda, or cpu")
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--force", action="store_true", help="Overwrite an existing --report-path")
     return parser.parse_args()
 
 
@@ -77,6 +84,7 @@ def summarize(values: list[float]) -> dict[str, float]:
 
 def main() -> int:
     args = parse_args()
+    refuse_existing_outputs([args.report_path], force=args.force, script="score_256_to_512_proxy.py")
     set_deterministic(args.seed)
     device = select_device(args.device)
 

@@ -108,7 +108,7 @@ Unlike the 256→512 path below, real paired data exists here — every row uses
 
 ![128 to 256 qualitative check: real noisy input, bicubic baseline, model output, and real ground truth for three real held-out images](docs/manual_128_to_256_visual_check.png)
 
-The model output visibly tracks the real ground truth far more closely than bicubic across all three: row 2 (`001595`) recovers the smooth gradient region bicubic leaves grainy, and row 3 (`003193`) keeps the fiber edges sharp while clearing the speckle between them. These are qualitative examples of the same real, GT-scored gains reported in the table above (+4.954 dB PSNR, +0.221 SSIM mean over 480 images) — this section exists to make that number visible, not to replace it. Reproduce: `python visualize_128_to_256.py`.
+The model output visibly tracks the real ground truth far more closely than bicubic across all three: row 2 (`001595`) recovers the smooth gradient region bicubic leaves grainy, and row 3 (`003193`) keeps the fiber edges sharp while clearing the speckle between them. These are qualitative examples of the same real, GT-scored gains reported in the table above (+4.954 dB PSNR, +0.221 SSIM mean over 480 images) — this section exists to make that number visible, not to replace it. Reproduce: `python visualize_128_to_256.py --force` (the image is already committed; `--force` allows overwriting it in place).
 
 ---
 
@@ -131,13 +131,13 @@ Read this carefully, it is not a clean win in both rows:
 - Both protocols score a *downsample-cycle* of the 512 output against 256 GT, not the 512 output's own fine detail directly, so the absolute numbers are not on the same footing as the real 128→256 PSNR above.
 - The **+2.212 dB gain measured here is smaller than the real +4.954 dB gain at the trained 128→256 scale** — consistent with the model never having been trained on 256-sized inputs, and stated here exactly that way rather than rounded up.
 
-Reproduce: `python score_256_to_512_proxy.py`. Full per-image results: [`reports/manual_256_to_512_proxy.json`](reports/manual_256_to_512_proxy.json).
+Reproduce: `python score_256_to_512_proxy.py --force` (the report is already committed; `--force` allows overwriting it in place). Full per-image results: [`reports/manual_256_to_512_proxy.json`](reports/manual_256_to_512_proxy.json).
 
 **Qualitative check**, on 3 real held-out `GT_256` semiconductor images (not the synthetic bundled demo), same synthetic-noise input as Protocol B — synthetic-noisy input | bicubic baseline | model output:
 
 ![256 to 512 qualitative check: noisy input, bicubic baseline, and model output for three real held-out GT images](docs/manual_256_to_512_visual_check.png)
 
-Flat/background regions are visibly cleaned up while fiber/branch structure stays sharp and correctly placed, not smeared — the top row (`000005`) is a genuinely low-signal/high-noise case where the improvement is real but harder to see by eye, consistent with its smaller numeric gain. Reproduce: `python visualize_256_to_512.py`.
+Flat/background regions are visibly cleaned up while fiber/branch structure stays sharp and correctly placed, not smeared — the top row (`000005`) is a genuinely low-signal/high-noise case where the improvement is real but harder to see by eye, consistent with its smaller numeric gain. Reproduce: `python visualize_256_to_512.py --force` (the image is already committed; `--force` allows overwriting it in place).
 
 ---
 

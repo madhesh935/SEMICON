@@ -25,7 +25,13 @@ import torch
 from torch.nn import functional as F
 
 from restoration.io import load_grayscale_npy
-from restoration.utils import PROJECT_ROOT, load_model_from_checkpoint, select_device, set_deterministic
+from restoration.utils import (
+    PROJECT_ROOT,
+    load_model_from_checkpoint,
+    refuse_existing_outputs,
+    select_device,
+    set_deterministic,
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -40,11 +46,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output", type=Path, default=PROJECT_ROOT / "docs" / "manual_256_to_512_visual_check.png"
     )
+    parser.add_argument("--force", action="store_true", help="Overwrite an existing --output image")
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
+    refuse_existing_outputs([args.output], force=args.force, script="visualize_256_to_512.py")
     set_deterministic(args.seed)
     device = select_device(args.device)
 

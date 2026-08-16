@@ -31,7 +31,7 @@ from scipy.spatial import cKDTree
 
 from restoration.data import build_pair_index, create_or_load_split, discover_dataset, records_from_split
 from restoration.io import load_grayscale_npy
-from restoration.utils import PROJECT_ROOT, select_device
+from restoration.utils import PROJECT_ROOT, refuse_existing_outputs, select_device
 
 
 DESCRIPTOR_NAMES = [
@@ -91,6 +91,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--batch-size", type=int, default=32)
     parser.add_argument("--device", default="auto")
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--force", action="store_true", help="Overwrite existing report files at --output-dir")
     return parser.parse_args()
 
 
@@ -377,6 +378,12 @@ def main() -> int:
         raise SystemExit("--ood-fraction must be between 0 and 1")
     if (args.noisy_dir is None) != (args.gt_dir is None):
         raise SystemExit("--noisy-dir and --gt-dir must be supplied together")
+    output_dir = args.output_dir.resolve()
+    refuse_existing_outputs(
+        [output_dir / "statistics.json", output_dir / "summary.md"],
+        force=args.force,
+        script="analyze_degradation.py",
+    )
     root = args.root.resolve()
     if args.noisy_dir:
         noisy_dir = args.noisy_dir.resolve()
@@ -390,7 +397,6 @@ def main() -> int:
     split = create_or_load_split(pairs, args.split, root, seed=args.seed, train_fraction=0.85)
     train_records, validation_records = records_from_split(split, pairs)
     pair_by_key = {record.key: record for record in pairs}
-    output_dir = args.output_dir.resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
     validation_subsets_path = (
         args.validation_subsets.resolve()

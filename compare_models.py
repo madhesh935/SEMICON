@@ -21,7 +21,14 @@ from scipy import ndimage
 from restoration.data import build_pair_index, create_or_load_split, discover_dataset, records_from_split
 from restoration.io import load_grayscale_npy
 from restoration.metrics import psnr, ssim, summarize
-from restoration.utils import PROJECT_ROOT, load_model_from_checkpoint, select_device, write_csv, write_json
+from restoration.utils import (
+    PROJECT_ROOT,
+    load_model_from_checkpoint,
+    refuse_existing_outputs,
+    select_device,
+    write_csv,
+    write_json,
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -63,6 +70,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--no-amp", action="store_true")
     parser.add_argument("--num-images", type=int, default=8)
     parser.add_argument("--zoom-size", type=int, default=64, help="HR crop size")
+    parser.add_argument("--force", action="store_true", help="Overwrite an existing report at --report / --output-dir")
     return parser.parse_args()
 
 
@@ -161,6 +169,12 @@ def main() -> int:
     args = parse_args()
     if (args.noisy_dir is None) != (args.gt_dir is None):
         raise SystemExit("--noisy-dir and --gt-dir must be supplied together")
+    report_path = args.report.resolve() if args.report is not None else args.output_dir / "artifact_analysis.json"
+    refuse_existing_outputs(
+        [report_path, report_path.with_name("artifact_metrics.csv")],
+        force=args.force,
+        script="compare_models.py",
+    )
     root = args.root.resolve()
     if args.noisy_dir:
         noisy_dir, gt_dir = args.noisy_dir.resolve(), args.gt_dir.resolve()
@@ -217,7 +231,6 @@ def main() -> int:
                 print(f"  {index + 1}/{len(records)}")
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
-    report_path = args.report.resolve() if args.report is not None else args.output_dir / "artifact_analysis.json"
     for key, category in selected:
         arrays = selected_arrays[key]
         display_lr = np.repeat(np.repeat(np.clip(arrays["raw"], 0.0, 1.0), 2, axis=0), 2, axis=1)
