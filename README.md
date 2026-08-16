@@ -102,6 +102,16 @@ The OOD-proxy subset scoring *higher* than the random validation subset (28.847 
 
 More panels: [`reports/figures/`](reports/figures/) and [`reports/final_model_test_figures/`](reports/final_model_test_figures/).
 
+### 128→256 qualitative check (real paired data, real ground truth)
+
+Unlike the 256→512 path below, real paired data exists here — every row uses a real degraded `NoisyLR_128` input and its real `GT_256` from the held-out validation split, no synthetic noise or proxy needed. Real noisy input | bicubic baseline | model output | real ground truth:
+
+![128 to 256 qualitative check: real noisy input, bicubic baseline, model output, and real ground truth for three real held-out images](docs/manual_128_to_256_visual_check.png)
+
+The model output visibly tracks the real ground truth far more closely than bicubic across all three: row 2 (`001595`) recovers the smooth gradient region bicubic leaves grainy, and row 3 (`003193`) keeps the fiber edges sharp while clearing the speckle between them. These are qualitative examples of the same real, GT-scored gains reported in the table above (+4.954 dB PSNR, +0.221 SSIM mean over 480 images) — this section exists to make that number visible, not to replace it. Reproduce: `python visualize_128_to_256.py`.
+
+---
+
 ### 256→512 manual proxy check (not an official score)
 
 No real 512×512 array exists anywhere in the provided dataset — every train GT file is `256×256` and every train/test `NoisyLR` file is `128×128`, confirmed by scanning all 3,200 + 3,200 + 400 files (matches [`reports/degradation_analysis/summary.md`](reports/degradation_analysis/summary.md): "Paired 256×256 → 512×512 samples: 0"). A literal PSNR/SSIM against real ground truth is therefore impossible at this scale, and fabricating one — e.g. bicubic-upscaling a 256 GT to pretend it's a 512 target — would just reward blurriness, not accuracy. This is why the compliance table below lists 256→512 as shape/dtype/range-verified only, not GT-scored.
@@ -271,6 +281,7 @@ audit_dataset.py             dataset integrity/statistics audit
 analyze_degradation.py       measured noise/frequency/OOD-proxy analysis
 benchmark_bicubic.py         bicubic baseline metrics
 score_256_to_512_proxy.py    caveated 256->512 proxy scoring (no real 512 GT exists)
+visualize_128_to_256.py      qualitative 128->256 side-by-side using real paired data + real GT
 visualize_256_to_512.py      qualitative 256->512 side-by-side (companion to the proxy script)
 make_comparison.py           presentation comparison figures
 compare_models.py            checkpoint-vs-checkpoint comparison
