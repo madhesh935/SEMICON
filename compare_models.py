@@ -51,7 +51,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--report",
         type=Path,
-        default=PROJECT_ROOT / "reports" / "artifact_analysis.json",
+        default=None,
+        help=(
+            "Where to write artifact_analysis.json (and the sibling "
+            "artifact_metrics.csv). Defaults to <output-dir>/artifact_analysis.json, "
+            "so a diagnostic run (e.g. a different --output-dir) never touches the "
+            "committed reports/artifact_analysis.json unless you point here explicitly."
+        ),
     )
     parser.add_argument("--device", default="auto")
     parser.add_argument("--no-amp", action="store_true")
@@ -211,6 +217,7 @@ def main() -> int:
                 print(f"  {index + 1}/{len(records)}")
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
+    report_path = args.report.resolve() if args.report is not None else args.output_dir / "artifact_analysis.json"
     for key, category in selected:
         arrays = selected_arrays[key]
         display_lr = np.repeat(np.repeat(np.clip(arrays["raw"], 0.0, 1.0), 2, axis=0), 2, axis=1)
@@ -233,7 +240,7 @@ def main() -> int:
         figure.savefig(args.output_dir / f"{key}_{category}.png", dpi=180)
         plt.close(figure)
 
-    write_csv(args.report.with_name("artifact_metrics.csv"), method_rows)
+    write_csv(report_path.with_name("artifact_metrics.csv"), method_rows)
     summary = {
         "official_test_data_used": False,
         "validation_count": len(records),
@@ -271,8 +278,8 @@ def main() -> int:
         summary["methods"][method] = {
             metric: summarize(row[metric] for row in rows) for metric in metric_names
         }
-    write_json(args.report, summary)
-    print(f"Wrote {args.report} and {len(selected)} comparison figures")
+    write_json(report_path, summary)
+    print(f"Wrote {report_path} and {len(selected)} comparison figures")
     return 0
 
 
