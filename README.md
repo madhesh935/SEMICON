@@ -368,17 +368,6 @@ Ordinary photos and synthetic circuit images are outside the KLA training distri
 
 ---
 
-## Limitations
-
-- No official-test PSNR/SSIM/LPIPS is claimed — organizer test ground truth was never available.
-- `256×256 → 512×512` is verified for shape/dtype/range/finiteness only; no paired ground truth exists to score its quality.
-- 12/480 validation images stay below 20 dB PSNR under heavy noise — a genuine hard tail, not hidden from the reported mean.
-- The model restores the input's orientation; it does not un-rotate a rotated image.
-- A filename-random train/validation split cannot guarantee source independence, since no source/group metadata was supplied by the organizer.
-- This is a restoration tool, not a defect-decision system.
-
----
-
 ## Competition compliance
 
 Verified by actually running the checks below, not by inspection alone.
