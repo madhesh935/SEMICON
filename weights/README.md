@@ -6,9 +6,9 @@ The evaluator loads [`best.pt`](best.pt) by default. It is the selected full-tra
 |---|---|
 | Architecture | `RangeAwareLiteNAFSR` |
 | Parameters | 956,609 |
-| Size | 3,993,611 bytes |
-| SHA-256 | `10FE2F02EAA5ABEAFAA5050F8022D60282C03BF89AB864F871C51C41CE0A20AE` |
-| Training kind | `full` |
+| Size | 4,000,107 bytes |
+| SHA-256 | `7E2016F9BE1CA460366F88D0B1B54D6E026D81D3D1E16FBBCBDE3DAF13B349AC` |
+| Training kind | `full` (40 epochs, promoted from an initial 20-epoch selection) |
 | Inference state | selected trained `model_state` |
 
 The checkpoint contains the architecture identifier, model configuration, selected model state, split identity, training-loop validation metrics, and library versions. Its `ema_model_state` field is `None` because the selected inference state was already exported into `model_state`.

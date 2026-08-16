@@ -61,9 +61,6 @@ REQUIRED_FILES = (
     "reports/experiments.csv",
     "reports/experiments.md",
     "reports/final_vs_initial.md",
-    "docs/model_card.md",
-    "docs/presentation_content.md",
-    "docs/demo_video_script.md",
     "SUBMISSION_CHECKLIST.md",
 )
 

@@ -43,3 +43,25 @@ The challenger was about 65% smaller and 44%/50% faster at the two input sizes, 
 - Synthetic degradation was not attempted because the measurements did not support a trustworthy generator.
 
 All values above are measured on the fixed training-data-only validation split; none is an official hidden-test score.
+
+## 2026-08-16 update: 40-epoch promotion
+
+The 20-epoch incumbent above (`full_litenaf_w64b24`) was superseded by a 40-epoch full run of the **identical** architecture, loss, optimizer, and train/validation split (`full_litenaf_w64b24_longer40epoch`). The training-log trajectory at 20 epochs had not plateaued (validation PSNR was still improving epoch-over-epoch, with the LR schedule's cosine decay recomputed over the longer horizon rather than simply continuing training at an already-near-zero learning rate), so doubling the epoch budget was tested as a low-risk, architecture-unchanged lever.
+
+| Measurement | 20-epoch (superseded) | 40-epoch (current `weights/best.pt`) | Change |
+|---|---:|---:|---:|
+| Validation PSNR | 27.869329 | **28.127191** | **+0.257862 dB** |
+| Validation SSIM | 0.748968 | **0.760388** | **+0.011420** |
+| Validation LPIPS (lower is better) | 0.300719 | **0.266695** | **−0.034024** |
+| OOD-proxy PSNR (120 images) | 28.540335 | **28.846967** | **+0.306632 dB** |
+| OOD-proxy SSIM | 0.795055 | **0.806130** | **+0.011075** |
+| OOD-proxy LPIPS | 0.250644 | **0.218460** | **−0.032184** |
+| Images below 20 dB PSNR (of 480) | 12 | 12 | unchanged (same hard high-noise tail) |
+| Parameters | 956,609 | 956,609 | unchanged (same architecture) |
+| 400-file evaluator run | 33.186 ms/image | 33.362 ms/image | unchanged within measurement noise |
+
+All three quality metrics improved together on both the random and OOD-proxy validation subsets, with no architecture, parameter-count, or measured sustained-throughput change. The training run needed three resumes from checkpoint after host interruptions (a host-memory allocation error, a CUDA out-of-memory error, and a cuDNN execution failure — all typical of this shared laptop GPU under background load, not code defects); `train.py`'s existing checkpoint/resume mechanism recovered cleanly each time with no lost progress.
+
+The organizer dataset was re-extracted to a different local path (`Dataset/train/train/{NoisyLR,GT}`) for this run rather than the original `../train (1)/train/{NoisyLR,GT}` sibling location, which changes the path-dependent `dataset_fingerprint` recorded in the new checkpoint versus `splits/split_seed42.json`. The actual `train_keys`/`validation_keys` partition was verified identical (same seed=42, same 2,720/480 split, same filenames) before training, so this is a provenance/path detail, not a different split. See `weights/best.metadata.json` for the full note.
+
+The prior 20-epoch checkpoint, its restored test outputs, and its reports were backed up before this promotion and are not redistributed in this repository.

@@ -1,6 +1,6 @@
 {
   "status": "measured",
-  "input_directory": "Test_NoisyLR (2)/NoisyLR",
+  "input_directory": "Dataset/Test_NoisyLR/NoisyLR",
   "output_directory": "restored_test_outputs",
   "weights": "weights/best.pt",
   "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
@@ -10,11 +10,11 @@
   "inputs_discovered": 400,
   "outputs_saved": 400,
   "failures": 0,
-  "model_load_seconds": 0.182,
-  "total_wall_seconds": 15.245,
-  "model_inference_seconds": 13.274,
-  "average_model_milliseconds_per_image": 33.186,
-  "launch_working_directory": "parent of repository",
+  "model_load_seconds": 0.268,
+  "total_wall_seconds": 16.165,
+  "model_inference_seconds": 13.345,
+  "average_model_milliseconds_per_image": 33.362,
+  "launch_working_directory": "repository root",
   "evaluator_sha256": "6D3A24B8F8A0C9641575EFDB32FC7D72BE9FD9F75D1BD3E5EA92B7C5123DCA7E",
   "published_output_comparison": {
     "relative_names_equal": true,
@@ -30,5 +30,6 @@
     "exactly_2x": true
   },
   "quality_metrics": null,
-  "quality_metrics_note": "No official test GT was used or available; no test quality score is claimed."
+  "quality_metrics_note": "No official test GT was used or available; no test quality score is claimed.",
+  "checkpoint_note": "Regenerated after promoting the 40-epoch checkpoint (full_litenaf_w64b24_longer40epoch), superseding the prior 20-epoch run's 33.186 ms/image figure with this run's 33.362 ms/image on identical architecture/hardware -- consistent within measurement noise."
 }
