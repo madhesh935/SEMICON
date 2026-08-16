@@ -123,6 +123,12 @@ Read this carefully, it is not a clean win in both rows:
 
 Reproduce: `python score_256_to_512_proxy.py`. Full per-image results: [`reports/manual_256_to_512_proxy.json`](reports/manual_256_to_512_proxy.json).
 
+**Qualitative check**, on 3 real held-out `GT_256` semiconductor images (not the synthetic bundled demo), same synthetic-noise input as Protocol B — synthetic-noisy input | bicubic baseline | model output:
+
+![256 to 512 qualitative check: noisy input, bicubic baseline, and model output for three real held-out GT images](docs/manual_256_to_512_visual_check.png)
+
+Flat/background regions are visibly cleaned up while fiber/branch structure stays sharp and correctly placed, not smeared — the top row (`000005`) is a genuinely low-signal/high-noise case where the improvement is real but harder to see by eye, consistent with its smaller numeric gain. Reproduce: `python visualize_256_to_512.py`.
+
 ---
 
 ## Install
@@ -265,6 +271,7 @@ audit_dataset.py             dataset integrity/statistics audit
 analyze_degradation.py       measured noise/frequency/OOD-proxy analysis
 benchmark_bicubic.py         bicubic baseline metrics
 score_256_to_512_proxy.py    caveated 256->512 proxy scoring (no real 512 GT exists)
+visualize_256_to_512.py      qualitative 256->512 side-by-side (companion to the proxy script)
 make_comparison.py           presentation comparison figures
 compare_models.py            checkpoint-vs-checkpoint comparison
 score_experiment.py          ablation/experiment scoring
