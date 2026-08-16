@@ -78,7 +78,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--validation-subsets",
         type=Path,
-        default=PROJECT_ROOT / "splits" / "validation_subsets_seed42.json",
+        default=None,
+        help=(
+            "Where to write the OOD-proxy validation subset JSON. Defaults to "
+            "<output-dir>/validation_subsets_seed42.json, so a diagnostic run "
+            "(e.g. a different --output-dir) never touches the committed "
+            "splits/validation_subsets_seed42.json unless you point here explicitly."
+        ),
     )
     parser.add_argument("--ood-fraction", type=float, default=0.25)
     parser.add_argument("--fft-samples", type=int, default=256)
@@ -386,6 +392,11 @@ def main() -> int:
     pair_by_key = {record.key: record for record in pairs}
     output_dir = args.output_dir.resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
+    validation_subsets_path = (
+        args.validation_subsets.resolve()
+        if args.validation_subsets is not None
+        else output_dir / "validation_subsets_seed42.json"
+    )
     device = select_device(args.device)
 
     print(f"Computing input-only structural descriptors for {len(pairs)} paired samples")
@@ -481,7 +492,7 @@ def main() -> int:
             "keys": ood_keys,
         },
     }
-    write_json(args.validation_subsets.resolve(), validation_subsets)
+    write_json(validation_subsets_path, validation_subsets)
 
     # Fit PCA using the training fold only for visualization/diversity reporting.
     _, singular_values, components = np.linalg.svd(train_z, full_matrices=False)
@@ -840,7 +851,7 @@ def main() -> int:
             "selected_count": len(ood_keys),
             "selected_fraction": args.ood_fraction,
             "score": summarize_array(ood_score),
-            "split_file": str(args.validation_subsets.name),
+            "split_file": str(validation_subsets_path.name),
         },
         "representative_training_keys_by_residual_rmse": representative_keys,
     }
@@ -892,7 +903,7 @@ Across {fft_count} deterministic training-fold samples, the mean energy above 0.
 
 The input-only descriptor combines intensity, out-of-range frequency, gradient density/orientation, four frequency bands, spectral anisotropy/concentration, and simple morphology. The first two train-fitted principal components explain {(explained[0] + explained[1]) * 100:.2f}% of standardized descriptor variance. Train nearest-neighbour distances range from {train_nn.min():.4f} to {train_nn.max():.4f}; validation-to-train distances range from {val_nn.min():.4f} to {val_nn.max():.4f}.
 
-`val_random` retains all {len(validation_records)} saved validation samples. `val_ood_proxy` contains the {len(ood_keys)} highest-scoring validation inputs ({args.ood_fraction:.0%}), ranked by the mean of train-empirical shrinkage-Mahalanobis and nearest-train-distance percentiles. The subset is saved in `{args.validation_subsets.name}` and was constructed without official test information.
+`val_random` retains all {len(validation_records)} saved validation samples. `val_ood_proxy` contains the {len(ood_keys)} highest-scoring validation inputs ({args.ood_fraction:.0%}), ranked by the mean of train-empirical shrinkage-Mahalanobis and nearest-train-distance percentiles. The subset is saved in `{validation_subsets_path.name}` and was constructed without official test information.
 
 ## Architecture implications
 
@@ -921,7 +932,7 @@ The input-only descriptor combines intensity, out-of-range frequency, gradient d
 """
     (output_dir / "summary.md").write_text(summary_text, encoding="utf-8")
     print(f"Wrote degradation analysis to {output_dir}")
-    print(f"OOD proxy: {len(ood_keys)}/{len(validation_records)} validation samples -> {args.validation_subsets.resolve()}")
+    print(f"OOD proxy: {len(ood_keys)}/{len(validation_records)} validation samples -> {validation_subsets_path}")
     return 0
 
 
