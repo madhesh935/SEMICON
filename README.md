@@ -15,18 +15,50 @@ Repository: [https://github.com/madhesh935/SEMICON](https://github.com/madhesh93
 
 ---
 
-## Quickstart: clone, install, run
+## How to run (all systems)
+
+Official evaluator command on **every** OS:
+
+```bash
+python run.py <input-dir> <output-dir>
+```
+
+Copy-paste install + run:
+
+**macOS / Linux**
 
 ```bash
 git clone https://github.com/madhesh935/SEMICON.git
 cd SEMICON
-
 python3 -m venv .venv
-source .venv/bin/activate            # Windows: .\.venv\Scripts\Activate.ps1
+source .venv/bin/activate
 python -m pip install --upgrade pip
-pip install -r requirements-inference.txt   # minimal: numpy + torch (CUDA wheel)
+pip install -r requirements-inference.txt
+python run.py <input-dir> <output-dir>
+```
 
-python run.py /path/to/test_inputs /path/to/outputs
+**Windows (PowerShell)**
+
+```powershell
+git clone https://github.com/madhesh935/SEMICON.git
+cd SEMICON
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+pip install -r requirements-inference.txt
+python run.py <input-dir> <output-dir>
+```
+
+Replace `<input-dir>` with a folder of `.npy` files and `<output-dir>` with where restored `.npy` files should be written. Example:
+
+```bash
+python run.py Test_NoisyLR/NoisyLR restored_test_outputs
+```
+
+Bundled demo (no organizer data needed):
+
+```bash
+python run.py custom_test_256/inputs custom_test_256/outputs
 ```
 
 That's it — `run.py` auto-loads the committed checkpoint at [`models/best.pt`](models/best.pt), auto-creates the output directory, auto-detects CUDA/CPU, needs no source edits, reads no ground truth, and downloads nothing. Every `.npy` under the input directory is restored to exactly 2× height/width and written with the same filename under the output directory. Full details, CPU-only install, and every flag are below in [Install](#install) and [Run inference](#run-inference).
@@ -195,6 +227,8 @@ This repo does not use Git LFS — the checkpoint (~4 MB) is committed directly.
 
 ## Run inference
 
+Copy-paste install for macOS, Linux, and Windows is at the top: [How to run (all systems)](#how-to-run-all-systems).
+
 Official evaluator command (this is what the organizers run):
 
 ```bash
@@ -299,6 +333,30 @@ Official evaluator command (this is what the organizers run):
 
 ```bash
 python run.py <input-dir> <output-dir>
+```
+
+How to run it after clone:
+
+```bash
+# macOS / Linux
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+pip install -r requirements-inference.txt
+python run.py <input-dir> <output-dir>
+
+# Windows PowerShell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+pip install -r requirements-inference.txt
+python run.py <input-dir> <output-dir>
+```
+
+Example:
+
+```bash
+python run.py Test_NoisyLR/NoisyLR restored_test_outputs
 ```
 
 | Organizer requirement | Status in this repo |
