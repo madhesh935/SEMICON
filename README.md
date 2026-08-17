@@ -45,7 +45,7 @@ Images are single-channel grayscale only. Ground truth may be `256×256` or `512
 
 ## 2. Competition objective
 
-The organizer scores restoration accuracy, structural preservation, generalization to unseen (out-of-distribution) semiconductor structures, and inference speed together — not restoration quality alone, and not on an H100-specific claim unless actually measured there. This project is built and reported against that whole objective: see [Accuracy](#accuracy) for quality numbers on both in-distribution and an OOD-proxy subset, [Inference performance](#inference-performance) for speed, and [Competition compliance](#competition-compliance) for a verified requirement-by-requirement checklist.
+The organizer scores restoration accuracy, structural preservation, generalization to unseen (out-of-distribution) semiconductor structures, and inference speed together — not restoration quality alone, and not on an H100-specific claim unless actually measured there. This project is built and reported against that whole objective: see [Accuracy](#accuracy) for quality numbers on both in-distribution and an OOD-proxy subset, [Inference performance](#inference-performance) for speed, the [Official i4C / KLA final submission check](#official-i4c--kla-final-submission-check) for the 17 Aug 2026 packaging contract, and [Competition compliance](#competition-compliance) for the full requirement-by-requirement checklist.
 
 ## 3. Proposed approach
 
@@ -212,8 +212,8 @@ python run.py /path/to/test_inputs /path/to/outputs
 - read every `.npy` file under `<input-dir>`
 - create `<output-dir>` if it does not exist
 - write one restored `.npy` per input, using the same filename
-- save grayscale arrays of shape `(H, W)`, `float32`, finite, clamped to `[0, 1]`, at exactly 2× the input resolution
-- load weights from [`models/best.pt`](models/best.pt) with no internet, API key, or extra config
+- save grayscale arrays of shape `(H, W)` (organizer also accepts `(H, W, 1)`), `float32`, finite, clamped to `[0, 1]`, at exactly 2× the input resolution
+- load weights from [`models/best.pt`](models/best.pt) with no internet, API key, extra download, user prompt, or manual config
 
 Same command with explicit flags (optional):
 
@@ -234,7 +234,7 @@ Useful options: `--weights PATH` (default `models/best.pt`), `--batch-size N` (d
 | 128×128 | 256×256 | paired validation + inference |
 | 256×256 | 512×512 | shape / dtype / range / finiteness verified; no paired GT available to score quality |
 
-Every saved file is 2D grayscale `.npy`, exactly 2× the input's height and width, `float32`, finite, clamped to `[0,1]`, at the same relative path as its input.
+Every saved file is 2D grayscale `.npy` of shape `(H, W)`, exactly 2× the input's height and width, `float32`, finite, clamped to `[0,1]`, at the same relative path as its input. The organizer also accepts `(H, W, 1)`; this evaluator writes `(H, W)`.
 
 ### Run the bundled demo
 
@@ -277,6 +277,52 @@ for ax in axes:
     ax.axis("off")
 plt.tight_layout()
 plt.show()
+```
+
+---
+
+## Official i4C / KLA final submission check
+
+This is the organizer **Final Submission Check for KLA Problem Statement 01** (AI-Based Restoration of Degraded Images). The repository already ships in this required layout:
+
+```text
+SEMICON/                     team folder (this repository)
+|-- run.py                   official entry script
+|-- requirements.txt         pinned dependencies with versions
+|-- README.md                setup and execution instructions
+`-- models/                  required model weights and supporting files
+    |-- best.pt
+    `-- best.metadata.json
+```
+
+Official evaluator command (this is what the organizers run):
+
+```bash
+python run.py <input-dir> <output-dir>
+```
+
+| Organizer requirement | Status in this repo |
+|---|---|
+| Entry script is `run.py` (not `main.py` / `eval.py` / `evaluate.py`) | PASS — `run.py` is the official command; `evaluate.py` is kept only as a compatibility alias |
+| `requirements.txt` with specific version pins | PASS |
+| `README.md` with setup and execution instructions | PASS |
+| `models/` contains all required weights; no extra download | PASS (`models/best.pt`) |
+| `run.py` reads every `.npy` under the input directory | PASS |
+| Creates the output directory if it does not exist | PASS |
+| Writes exactly one restored `.npy` per input | PASS |
+| Output filenames match the corresponding input filenames | PASS |
+| Outputs are grayscale `.npy` of shape `(H, W)` or `(H, W, 1)` | PASS — saved as `(H, W)` |
+| Pixel values normalized to `[0, 1]` | PASS |
+| No `NaN` or `Inf` values | PASS |
+| Restored images match the correct target resolution (exactly 2×) | PASS (`128×128 → 256×256`, `256×256 → 512×512`) |
+| Runs on an NVIDIA GPU | PASS (`--device auto` selects CUDA when available) |
+| Offline: no internet, API keys, extra model downloads, user interaction, or manual config at run time | PASS |
+| `.npy` input/output (not PNG/JPEG as the evaluator format) | PASS |
+
+Reproduce the packaging check:
+
+```bash
+python verify_submission.py
 ```
 
 ---
@@ -428,14 +474,22 @@ Ordinary photos and synthetic circuit images are outside the KLA training distri
 
 ## Competition compliance
 
-Verified by actually running the checks below, not by inspection alone.
+The [Official i4C / KLA final submission check](#official-i4c--kla-final-submission-check) above is the organizer's 17 Aug 2026 packaging contract. The table below is the broader problem-statement / scoring checklist, verified by actually running the checks, not by inspection alone.
 
 | Requirement | Status |
 |---|---|
 | Public GitHub repository | PASS |
+| Required folder: `run.py`, `requirements.txt`, `README.md`, `models/` | PASS |
+| Official command `python run.py <input-dir> <output-dir>` | PASS |
 | Standalone evaluation script (`.py`, no notebook) | PASS (`run.py`) |
-| Input-directory argument | PASS (`python run.py <input-dir> <output-dir>`) |
-| Output-directory argument | PASS (`python run.py <input-dir> <output-dir>`) |
+| Input-directory argument | PASS |
+| Output-directory argument | PASS |
+| Reads all `.npy` inputs; one matching `.npy` output per file | PASS |
+| Creates output directory if missing | PASS |
+| Grayscale output shape `(H, W)` or `(H, W, 1)` | PASS (`(H, W)`) |
+| Output values in `[0, 1]`, no NaN/Inf | PASS |
+| Correct 2× target resolution | PASS |
+| NVIDIA GPU, fully offline (no internet, API keys, downloads, prompts, or extra config) | PASS |
 | Runs as-is, no source edits | PASS |
 | Training script | PASS (`train.py`) |
 | Final trained model weights | PASS (`models/best.pt`, committed directly, no Git LFS) |

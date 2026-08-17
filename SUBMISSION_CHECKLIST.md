@@ -1,8 +1,43 @@
 # Submission checklist
 
-Last documentation audit: 2026-08-16.
+Last documentation audit: 2026-08-17.
 
 Public repository: https://github.com/madhesh935/SEMICON
+
+## Official i4C / KLA final submission check
+
+Organizer email: *Final Submission Check for KLA Problem Statement* (AI-Based Restoration of Degraded Images), 17 Aug 2026.
+
+Required layout:
+
+```text
+SEMICON/
+|-- run.py
+|-- requirements.txt
+|-- README.md
+`-- models/
+```
+
+Required command:
+
+```bash
+python run.py <input-dir> <output-dir>
+```
+
+- [x] Team folder contains `run.py`, `requirements.txt`, `README.md`, and `models/`
+- [x] Official entry script is `run.py` (not `main.py` / `eval.py` / `evaluate.py` as the evaluator)
+- [x] `run.py` reads all `.npy` files from the input directory
+- [x] Creates the output directory if it does not exist
+- [x] Writes exactly one restored `.npy` per input, with the same filename
+- [x] Outputs are grayscale arrays of shape `(H, W)` (organizer also allows `(H, W, 1)`)
+- [x] Pixel values are in `[0, 1]`
+- [x] No `NaN` or `Inf` values
+- [x] Restored images are the correct 2× target resolution
+- [x] `requirements.txt` lists dependencies with versions
+- [x] `README.md` has setup and execution instructions
+- [x] Runs on an NVIDIA GPU
+- [x] Fully offline: no internet, API keys, extra model downloads, user interaction, or manual config at run time
+- [x] Evaluator I/O is `.npy` (not PNG/JPEG)
 
 ## Packaging
 
