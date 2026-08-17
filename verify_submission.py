@@ -33,6 +33,7 @@ REQUIRED_FILES = (
     "train.py",
     "validate.py",
     "robustness_test.py",
+    "run.py",
     "evaluate.py",
     "make_comparison.py",
     "compare_models.py",
@@ -48,6 +49,7 @@ REQUIRED_FILES = (
     "splits/split_seed42.json",
     "splits/validation_subsets_seed42.json",
     "weights/best.metadata.json",
+    "models/best.metadata.json",
     "reports/dataset_audit.json",
     "reports/dataset_audit.csv",
     "reports/bicubic_metrics.csv",
@@ -68,7 +70,7 @@ REQUIRED_FILES = (
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=PROJECT_ROOT)
-    parser.add_argument("--weights", type=Path, help="Defaults to ROOT/weights/best.pt")
+    parser.add_argument("--weights", type=Path, help="Defaults to ROOT/models/best.pt")
     parser.add_argument(
         "--test-input-dir",
         type=Path,
@@ -108,13 +110,20 @@ def check_output(path: Path, input_hw: tuple[int, int]) -> list[str]:
 def main() -> int:
     args = parse_args()
     root = args.root.resolve()
-    weights = (args.weights if args.weights is not None else root / "weights" / "best.pt").resolve()
+    default_models = root / "models" / "best.pt"
+    default_weights = root / "weights" / "best.pt"
+    fallback = default_models if default_models.is_file() else default_weights
+    weights = (args.weights if args.weights is not None else fallback).resolve()
     failures: list[str] = []
     for relative in REQUIRED_FILES:
         if not (root / relative).is_file():
             failures.append(f"missing required file: {relative}")
     if not (root / "restored_test_outputs").is_dir():
         failures.append("missing required directory: restored_test_outputs")
+    if not (root / "models").is_dir():
+        failures.append("missing required directory: models")
+    if default_models.is_file() and default_weights.is_file() and sha256_file(default_models) != sha256_file(default_weights):
+        failures.append("models/best.pt SHA-256 differs from weights/best.pt")
     if not weights.is_file():
         failures.append(f"missing final weights: {weights}")
     else:
@@ -129,17 +138,19 @@ def main() -> int:
                         failures.append(f"loaded model failed {height}x{width} forward invariant")
             if checkpoint.get("training_kind") != "full":
                 failures.append("weights checkpoint is not marked as a full training run")
-            metadata_path = root / "weights" / "best.metadata.json"
-            if metadata_path.is_file():
+            for metadata_path in (root / "models" / "best.metadata.json", root / "weights" / "best.metadata.json"):
+                if not metadata_path.is_file():
+                    continue
                 metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+                label = metadata_path.relative_to(root).as_posix()
                 if metadata.get("training_complete") is not True:
-                    failures.append("weight metadata does not mark training_complete=true")
+                    failures.append(f"{label} does not mark training_complete=true")
                 if metadata.get("checkpoint_sha256") != sha256_file(weights):
-                    failures.append("weight metadata SHA-256 differs from weights/best.pt")
+                    failures.append(f"{label} SHA-256 differs from the loaded checkpoint")
                 if metadata.get("split_identity", {}).get("dataset_fingerprint") != checkpoint.get(
                     "split_identity", {}
                 ).get("dataset_fingerprint"):
-                    failures.append("weight metadata split fingerprint differs from checkpoint")
+                    failures.append(f"{label} split fingerprint differs from checkpoint")
         except Exception as exc:
             failures.append(f"final weights failed to load/run: {exc}")
         finally:
@@ -153,7 +164,7 @@ def main() -> int:
     critical_paths = (
         list((root / "configs").glob("*.json"))
         + list((root / "splits").glob("*.json"))
-        + [root / "weights" / "best.metadata.json"]
+        + [root / "weights" / "best.metadata.json", root / "models" / "best.metadata.json"]
     )
     for path in critical_paths:
         if not path.is_file():
@@ -165,7 +176,7 @@ def main() -> int:
         except Exception as exc:
             failures.append(f"invalid JSON {path.relative_to(root)}: {exc}")
     source_pattern = re.compile(r"[A-Za-z]:[\\/](?:Users|Documents and Settings)[\\/]", re.IGNORECASE)
-    for path in [root / "evaluate.py", *(root / "restoration").glob("*.py")]:
+    for path in [root / "run.py", root / "evaluate.py", *(root / "restoration").glob("*.py")]:
         if path.is_file() and source_pattern.search(path.read_text(encoding="utf-8")):
             failures.append(f"absolute local path embedded in source: {path.relative_to(root)}")
 
@@ -184,7 +195,7 @@ def main() -> int:
             np.save(input_dir / "nested" / "large.npy", rng.normal(0.5, 0.3, (256, 256)).astype(np.float32))
             command = [
                 sys.executable,
-                str(root / "evaluate.py"),
+                str(root / "run.py"),
                 str(input_dir),
                 str(output_dir),
                 "--weights",
@@ -199,7 +210,7 @@ def main() -> int:
             result = subprocess.run(command, cwd=outside_cwd, env=environment, text=True, capture_output=True)
             if result.returncode != 0:
                 failures.append(
-                    "evaluate.py failed from a different working directory: "
+                    "run.py failed from a different working directory: "
                     f"exit={result.returncode}\nstdout={result.stdout}\nstderr={result.stderr}"
                 )
             expected = {Path("small.npy"): (128, 128), Path("nested/large.npy"): (256, 256)}
@@ -271,7 +282,7 @@ def main() -> int:
         return 1
     print("SUBMISSION VERIFICATION PASSED")
     print(f"Weights: {weights}")
-    print("Standalone evaluate.py passed from a different working directory for synthetic 128x128 and 256x256 inputs.")
+    print("Standalone run.py passed from a different working directory for synthetic 128x128 and 256x256 inputs.")
     if not args.skip_official_outputs:
         print("Published output manifest, hashes, shapes, dtype, range, and finiteness passed.")
         if args.test_input_dir is not None:

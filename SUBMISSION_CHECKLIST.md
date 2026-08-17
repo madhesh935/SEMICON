@@ -7,11 +7,13 @@ Public repository: https://github.com/madhesh935/SEMICON
 ## Packaging
 
 - [x] `README.md` has clone URL, install steps, inference command, and output figures
-- [x] `evaluate.py` is standalone and loads `weights/best.pt`
+- [x] `run.py` is the official evaluator: `python run.py <input-dir> <output-dir>`
+- [x] `models/best.pt` is committed and loaded automatically
+- [x] `evaluate.py` remains as a compatibility alias and still loads `weights/best.pt`
 - [x] Checkpoint SHA-256 is `7E2016F9BE1CA460366F88D0B1B54D6E026D81D3D1E16FBBCBDE3DAF13B349AC`
 - [x] 400 restored test arrays are in `restored_test_outputs/`
 - [x] `verify_submission.py` required files are present
-- [x] Unit tests: **43 passed** (`python -m pytest -q`)
+- [x] Unit tests: **44 passed** (`python -m pytest -q`)
 
 ## Measured quality (do not rewrite)
 

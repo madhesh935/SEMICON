@@ -26,10 +26,10 @@ source .venv/bin/activate            # Windows: .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
 pip install -r requirements-inference.txt   # minimal: numpy + torch (CUDA wheel)
 
-python evaluate.py /path/to/test_inputs /path/to/outputs
+python run.py /path/to/test_inputs /path/to/outputs
 ```
 
-That's it — `evaluate.py` auto-loads the committed checkpoint at [`weights/best.pt`](weights/best.pt), auto-detects CUDA/CPU, needs no source edits, reads no ground truth, and downloads nothing. Every `.npy` under the input directory is restored to exactly 2× height/width and written to the same relative path under the output directory. Full details, CPU-only install, and every flag are below in [Install](#install) and [Run inference](#run-inference).
+That's it — `run.py` auto-loads the committed checkpoint at [`models/best.pt`](models/best.pt), auto-creates the output directory, auto-detects CUDA/CPU, needs no source edits, reads no ground truth, and downloads nothing. Every `.npy` under the input directory is restored to exactly 2× height/width and written with the same filename under the output directory. Full details, CPU-only install, and every flag are below in [Install](#install) and [Run inference](#run-inference).
 
 ---
 
@@ -179,8 +179,8 @@ python -c "import torch; print(torch.__version__); print(torch.cuda.is_available
 ### Confirm the checkpoint
 
 ```bash
-shasum -a 256 weights/best.pt
-# Windows: Get-FileHash .\weights\best.pt -Algorithm SHA256
+shasum -a 256 models/best.pt
+# Windows: Get-FileHash .\models\best.pt -Algorithm SHA256
 ```
 
 Expected SHA-256:
@@ -195,19 +195,35 @@ This repo does not use Git LFS — the checkpoint (~4 MB) is committed directly.
 
 ## Run inference
 
-```bash
-python evaluate.py /path/to/test_inputs /path/to/outputs
-```
-
-Same command with explicit flags:
+Official evaluator command (this is what the organizers run):
 
 ```bash
-python evaluate.py --input-dir /path/to/test_inputs --output-dir /path/to/outputs
+python run.py <input-dir> <output-dir>
 ```
 
-Useful options: `--weights PATH` (default `weights/best.pt`), `--batch-size N` (default `8`), `--device auto|cuda|cpu` (default `auto`), `--no-amp`, `--tta` (slower 4-rotation self-ensemble, off by default).
+Example:
 
-`evaluate.py` recursively finds every `.npy` file under the input directory (subdirectories preserved in the output), requires no manual editing, and works from any working directory.
+```bash
+python run.py /path/to/test_inputs /path/to/outputs
+```
+
+`run.py` will:
+
+- read every `.npy` file under `<input-dir>`
+- create `<output-dir>` if it does not exist
+- write one restored `.npy` per input, using the same filename
+- save grayscale arrays of shape `(H, W)`, `float32`, finite, clamped to `[0, 1]`, at exactly 2× the input resolution
+- load weights from [`models/best.pt`](models/best.pt) with no internet, API key, or extra config
+
+Same command with explicit flags (optional):
+
+```bash
+python run.py --input-dir /path/to/test_inputs --output-dir /path/to/outputs
+```
+
+Useful options: `--weights PATH` (default `models/best.pt`), `--batch-size N` (default `8`), `--device auto|cuda|cpu` (default `auto`), `--no-amp`, `--tta` (slower 4-rotation self-ensemble, off by default).
+
+`evaluate.py` remains available and runs the same pipeline. Both scripts recursively find every `.npy` file under the input directory (subdirectories preserved in the output), require no manual editing, and work from any working directory.
 
 ### Input and output contract
 
@@ -225,7 +241,7 @@ Every saved file is 2D grayscale `.npy`, exactly 2× the input's height and widt
 The repo includes a 256×256 synthetic input and its 512×512 restoration, so you can see the pipeline work without any organizer data:
 
 ```bash
-python evaluate.py custom_test_256/inputs custom_test_256/outputs
+python run.py custom_test_256/inputs custom_test_256/outputs
 ```
 
 Input: `custom_test_256/inputs/synthetic_semiconductor_test_256.npy`
@@ -272,7 +288,8 @@ README.md                    this file
 SUBMISSION_CHECKLIST.md      packaging + measured-quality checklist
 requirements.txt             complete pip freeze (training/eval environment)
 requirements-inference.txt   minimal inference-only dependencies
-evaluate.py                  standalone inference (the critical evaluator)
+run.py                       official evaluator: python run.py <input-dir> <output-dir>
+evaluate.py                  compatibility alias for the same inference pipeline
 train.py                     reproducible training
 validate.py                  full paired-GT metrics (PSNR/SSIM/LPIPS/latency/MACs)
 verify_submission.py         packaging + checkpoint + output verification
@@ -289,7 +306,8 @@ score_experiment.py          ablation/experiment scoring
 restoration/                 model, I/O, dataset, losses, metrics, utilities
 configs/                     recorded training configurations
 splits/                      immutable seed-42 train/validation split
-weights/best.pt              final checkpoint (loaded automatically)
+models/best.pt               official checkpoint loaded by run.py
+weights/best.pt              same checkpoint, kept for evaluate.py compatibility
 custom_test_256/             bundled 256→512 demo input/output
 restored_test_outputs/       400 official-test predictions from this checkpoint
 reports/                     measured summaries, ablations, and comparison figures
@@ -309,7 +327,7 @@ python -m pytest -q
 python verify_submission.py
 ```
 
-Passing count from the last full audit: **43 passed**. `verify_submission.py` checks required files, loads the checkpoint, runs `evaluate.py` end-to-end from a different working directory on synthetic inputs, and verifies the committed `restored_test_outputs/` against a SHA-256 manifest. Details: [`SUBMISSION_CHECKLIST.md`](SUBMISSION_CHECKLIST.md).
+Passing count from the last full audit: **44 passed**. `verify_submission.py` checks required files, loads the checkpoint, runs `run.py` end-to-end from a different working directory on synthetic inputs, and verifies the committed `restored_test_outputs/` against a SHA-256 manifest. Details: [`SUBMISSION_CHECKLIST.md`](SUBMISSION_CHECKLIST.md).
 
 If organizer test inputs are present locally, this additionally verifies exact filename and 2× shape matching against them:
 
@@ -380,7 +398,7 @@ Resume an interrupted run with the same command plus `--resume` (uses checkpoint
 
 - **CUDA missing:** `--device auto` falls back to CPU. `--device cpu` forces it. CPU works; it is slower.
 - **Out of memory:** `--batch-size 1`, leave TTA off.
-- **Missing checkpoint:** confirm `weights/best.pt` and the SHA-256 above.
+- **Missing checkpoint:** confirm `models/best.pt` and the SHA-256 above.
 - **Bad input:** grayscale `.npy` only. Convert PNG/JPG first (Pillow is in `requirements.txt`).
 
 PNG/JPG conversion:
@@ -415,12 +433,12 @@ Verified by actually running the checks below, not by inspection alone.
 | Requirement | Status |
 |---|---|
 | Public GitHub repository | PASS |
-| Standalone evaluation script (`.py`, no notebook) | PASS |
-| Input-directory argument | PASS (`--input-dir` / positional) |
-| Output-directory argument | PASS (`--output-dir` / positional) |
+| Standalone evaluation script (`.py`, no notebook) | PASS (`run.py`) |
+| Input-directory argument | PASS (`python run.py <input-dir> <output-dir>`) |
+| Output-directory argument | PASS (`python run.py <input-dir> <output-dir>`) |
 | Runs as-is, no source edits | PASS |
 | Training script | PASS (`train.py`) |
-| Final trained model weights | PASS (`weights/best.pt`, committed directly, no Git LFS) |
+| Final trained model weights | PASS (`models/best.pt`, committed directly, no Git LFS) |
 | Actual restored test outputs | PASS (400/400, hash-verified against `reports/test_output_manifest.json`) |
 | Complete `pip freeze` requirements | PASS (byte-for-byte match against the training environment, verified) |
 | Speckle-noise restoration | PASS |

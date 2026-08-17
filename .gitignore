@@ -34,15 +34,20 @@ htmlcov/
 # Transient training and duplicate inference artifacts
 /runs/
 /fresh_machine_outputs/
+/gallery/
 *.log
 events.out.tfevents.*
 /weights/metric_cache/
 
-# Only the final public checkpoint belongs under weights/
+# Only the final public checkpoint belongs under weights/ and models/
 /weights/*
 !/weights/README.md
 !/weights/best.pt
 !/weights/best.metadata.json
+/models/*
+!/models/README.md
+!/models/best.pt
+!/models/best.metadata.json
 
 # Official restored arrays are mandatory public artifacts
 /restored_test_outputs/*

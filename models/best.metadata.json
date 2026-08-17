@@ -1,0 +1,45 @@
+{
+  "metadata_format": 1,
+  "checkpoint": "models/best.pt",
+  "checkpoint_sha256": "7E2016F9BE1CA460366F88D0B1B54D6E026D81D3D1E16FBBCBDE3DAF13B349AC",
+  "training_complete": true,
+  "experiment_name": "full_litenaf_w64b24_longer40epoch",
+  "selected_epoch": 39,
+  "optimizer_steps": 13260,
+  "state_used_for_inference": "ema_model_state",
+  "validation_psnr": 28.12719124521842,
+  "validation_ssim": 0.7603879021206285,
+  "validation_lpips": 0.26669511252160494,
+  "model_config": {
+    "width": 64,
+    "num_blocks": 24,
+    "num_hr_blocks": 1,
+    "expansion": 2,
+    "dropout": 0.0,
+    "scale": 2,
+    "input_representation": "raw_clipped_oor",
+    "context_kernel": 0,
+    "context_dilation": 1
+  },
+  "data_config": {
+    "train_pairs": 2720,
+    "validation_pairs": 480,
+    "lr_patch_size": 64,
+    "batch_size": 8,
+    "augmentation": "joint horizontal/vertical flips and rotations by multiples of 90 degrees",
+    "synthetic_degradation": false,
+    "official_test_data_used": false
+  },
+  "optimizer": "AdamW",
+  "learning_rate": 0.0002,
+  "scheduler": "one-epoch linear warm-up then cosine decay to 0.02x, paced over 40 epochs",
+  "ema_decay": 0.995,
+  "loss": "0.70 Charbonnier + 0.15 (1-SSIM) + 0.10 Sobel + 0.05 log-FFT magnitude",
+  "split_identity": {
+    "path": "splits/split_seed42.json",
+    "seed": 42,
+    "dataset_fingerprint": "258d7860d1eb97c3056c2468104982fae940eb5fd9b46758d4f63224120ce3b8",
+    "split_file_sha256": "4BD106897BDE7A128D9B8CCD01C909562ACB5475E031374749F0A60F2016A18C"
+  },
+  "provenance_note": "This checkpoint supersedes the original 20-epoch full_litenaf_w64b24 selection (backed up, see reports/final_vs_initial.md) after a controlled 40-epoch re-run of the identical architecture, loss, optimizer, and train/validation partition. The organizer dataset was re-extracted to a different local path (Dataset/train/train/{NoisyLR,GT}) for this run, which changes the path-dependent dataset_fingerprint above versus splits/split_seed42.json's recorded value (cf110aa7...); the underlying train_keys/validation_keys partition was verified identical (same seed=42, same filenames, same 2720/480 split) before training. Sidecar values come from the fresh full-validation report (reports/validation_summary.json) and the training run's own log. The selected checkpoint itself is preserved byte-for-byte."
+}

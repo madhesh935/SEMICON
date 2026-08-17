@@ -8,10 +8,13 @@ from pathlib import Path
 import numpy as np
 import torch
 
+import pytest
+
 from restoration.model import RangeAwareLiteNAFSR
 
 
-def test_standalone_evaluate_from_different_cwd_preserves_names(tmp_path):
+@pytest.mark.parametrize("script", ["run.py", "evaluate.py"])
+def test_standalone_evaluate_from_different_cwd_preserves_names(tmp_path, script):
     root = Path(__file__).resolve().parents[1]
     input_dir = tmp_path / "inputs"
     output_dir = tmp_path / "outputs"
@@ -38,7 +41,7 @@ def test_standalone_evaluate_from_different_cwd_preserves_names(tmp_path):
     result = subprocess.run(
         [
             sys.executable,
-            str(root / "evaluate.py"),
+            str(root / script),
             str(input_dir),
             str(output_dir),
             "--weights",
@@ -67,7 +70,7 @@ def test_standalone_evaluate_from_different_cwd_preserves_names(tmp_path):
     flag_result = subprocess.run(
         [
             sys.executable,
-            str(root / "evaluate.py"),
+            str(root / script),
             "--input_dir",
             str(input_dir),
             "--output_dir",
